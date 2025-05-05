@@ -30,7 +30,7 @@ Check out these demos showcasing PowerWorkflow in action:
 
 - [**Electricity Market Expert Demo**](https://www.youtube.com/watch?v=7znHBHHVgW4): An automated workflow that handles electricity market inquiries, generates professional responses using an LLM, logs all actions for traceability, and supports human-in-the-loop review.
 
-![Electricity Market Expert Workflow](Market%20Expert%20WF.png)
+![Electricity Market Expert Workflow](Electricity%20Market%20Expert/Market%20Expert%20WF.png)
 
 ### Useful Agentic Workflow Development Platforms
 
@@ -39,7 +39,7 @@ Check out these demos showcasing PowerWorkflow in action:
 - [**Coze**](https://www.coze.com/): Bot development platform
 - [**n8n**](https://n8n.io/): Workflow automation platform
 - [**Gumloop**](https://gumloop.com/): No-code workflow builder
-- [**Microsoft Copilot Studio**](https://www.microsoft.com/en-us/microsoft-copilot-studio): Enterprise workflow development
+- [**Microsoft Copilot Studio**](https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio): Enterprise workflow development
 
 ### Representative Agent Orchestration Frameworks
 
