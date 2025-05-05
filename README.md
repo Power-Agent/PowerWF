@@ -61,6 +61,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- The open-source community for their continuous support
+### Core Team
+- [Qian Zhang](https://seas.harvard.edu/person/qian-zhang) 
+
+### Special Thanks
 - All contributors who help make this project better
 - [The Power and AI Initiative (PAI) at Harvard SEAS](https://pai.seas.harvard.edu/)
