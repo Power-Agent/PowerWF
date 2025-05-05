@@ -1,0 +1,931 @@
+{
+  "name": "Eletricity Market Expert",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": false,
+        "filters": {},
+        "options": {}
+      },
+      "id": "7105b689-9f9c-4354-aad9-8f1abb6c0a06",
+      "name": "On email received",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "position": [
+        -1180,
+        660
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "aQE5BjBuMoTvYTgV",
+          "name": "Gmail account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "number": [
+            {
+              "name": "maxTokenSize",
+              "value": 4000
+            },
+            {
+              "name": "replyTokenSize",
+              "value": 3000
+            }
+          ],
+          "string": [
+            {
+              "name": "spreadsheetName",
+              "value": "Power Agent Reply Recording"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d1425dff-0fc1-4a4b-9202-418ce30d7cd9",
+      "name": "Configure",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -940,
+        660
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "reply",
+        "messageId": "={{ $node[\"On email received\"].json.id }}",
+        "emailType": "text",
+        "message": "={{ $json.output }}",
+        "options": {
+          "replyToSenderOnly": true
+        }
+      },
+      "id": "2dc3e403-f2a0-43c2-a1e4-187d901d692f",
+      "name": "Send reply to recipient",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        140,
+        440
+      ],
+      "typeVersion": 2,
+      "webhookId": "33a9ff21-3c6d-47df-a5d5-c7a7ad4c97bc",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "aQE5BjBuMoTvYTgV",
+          "name": "Gmail account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"error\"] }}",
+              "value2": "The resource you are requesting could not be found"
+            }
+          ]
+        }
+      },
+      "id": "4f6998f6-88a8-4b8b-acea-33c3f33d04dd",
+      "name": "If spreadsheet doesn't exist",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1480,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "f3564023-a1c5-42f5-923d-a8e98c95c284",
+      "name": "Successfully created or updated row",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        1640,
+        800
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "resource": "spreadsheet",
+        "title": "={{ $(\"Configure\").first().json[\"spreadsheetName\"] }}",
+        "sheetsUi": {
+          "sheetValues": [
+            {
+              "title": "={{ $(\"Configure\").first().json[\"worksheetName\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ab0348c2-f688-42d3-815b-63290e95baad",
+      "name": "Create spreadsheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1200,
+        620
+      ],
+      "typeVersion": 3,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "QmDr4vOzmNjtGM7h",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const staticData = $getWorkflowStaticData('global');\n\nstaticData.googleSheetsSpreadsheetId = $('Create spreadsheet').first().json.spreadsheetId\nstaticData.googleSheetsWorksheetId = $('Create spreadsheet').first().json.sheets[0].properties.sheetId\n\nreturn {\n  \"spreadsheetId\": staticData.googleSheetsSpreadsheetId,\n  \"worksheetId\": staticData.googleSheetsWorksheetId\n}"
+      },
+      "id": "c56522b2-5eca-497d-afbb-d713abd8d810",
+      "name": "Store spreadsheet ID",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1340,
+        620
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $node[\"Store spreadsheet ID\"].json[\"spreadsheetId\"] }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $node[\"Store spreadsheet ID\"].json[\"worksheetId\"] }}"
+        },
+        "dataMode": "autoMapInputData",
+        "options": {
+          "cellFormat": "RAW"
+        }
+      },
+      "id": "ba62fd4d-912b-4b37-9fda-2f80cdeb65f8",
+      "name": "Paste data",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1620,
+        620
+      ],
+      "typeVersion": 3,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "QmDr4vOzmNjtGM7h",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"spreadsheetId\"] }}",
+              "operation": "isEmpty"
+            },
+            {
+              "value1": "={{ $json[\"worksheetId\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "a8be831a-f2be-48c9-a661-bc8c5cde6444",
+      "name": "If no sheet IDs",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        920,
+        700
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $node[\"If no sheet IDs\"].json[\"spreadsheetId\"] }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $node[\"If no sheet IDs\"].json[\"worksheetId\"] }}"
+        },
+        "dataMode": "autoMapInputData",
+        "columnToMatchOn": "ID",
+        "options": {
+          "cellFormat": "RAW"
+        }
+      },
+      "id": "efdb343d-f5bf-4ba4-bc27-850b9e7935ac",
+      "name": "Create or update rows",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1340,
+        780
+      ],
+      "typeVersion": 3,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "QmDr4vOzmNjtGM7h",
+          "name": "Google Sheets account 2"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "return $('Format data').all()"
+      },
+      "id": "091ad4fa-21aa-42e0-abc5-17221cdf8fb7",
+      "name": "Get data from `Format data`",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1220,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsCode": "return $('Format data').all()"
+      },
+      "id": "97071540-59b2-48dd-8f88-ab44446832fc",
+      "name": "Get data from `Format data` node",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1480,
+        620
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Initial message",
+              "value": "={{ $('Get Full Message').item.json.text }}"
+            },
+            {
+              "name": "Generated reply",
+              "value": "={{ $('AI Agent').item.json.output }}"
+            },
+            {
+              "name": "Good response?"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ecf03802-51c8-43b1-84d8-5ed5826fd444",
+      "name": "Format data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        140,
+        820
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "9eedd7b7-ec4e-4dbf-a257-33e73bdff9c1",
+      "name": "Send email reply",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        -40,
+        440
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsCode": "const staticData = $getWorkflowStaticData('global');\n\nreturn {\n  \"spreadsheetId\": staticData.googleSheetsSpreadsheetId,\n  \"worksheetId\": staticData.googleSheetsWorksheetId\n}"
+      },
+      "id": "2da7a7b1-e96d-4759-b3cb-13558e2ad1d4",
+      "name": "Get sheet IDs #1",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        700,
+        640
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $('Configure').item.json.spreadsheetName }}",
+              "operation": "isEmpty"
+            }
+          ]
+        }
+      },
+      "id": "fae8cbc5-7462-4eb0-9f60-85e8e7cfd10e",
+      "name": "If no spreadsheet in configuration #1",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        320,
+        820
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsCode": "const staticData = $getWorkflowStaticData('global');\n\nstaticData.googleSheetsSpreadsheetId = $('Configure').all()[0].json.spreadsheetId\nstaticData.googleSheetsWorksheetId = $('Configure').all()[0].json.worksheetId\n\nreturn {\n  \"spreadsheetId\": staticData.googleSheetsSpreadsheetId,\n  \"worksheetId\": staticData.googleSheetsWorksheetId\n}"
+      },
+      "id": "67312347-74c0-4ce4-a78c-615da6937bcf",
+      "name": "Store specific sheet IDs #1",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        700,
+        800
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "triggeredFrom",
+              "value": "gmail"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8c27f798-d947-432c-bfc9-d22727d0159e",
+      "name": "Identify trigger #1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -1060,
+        660
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "330c67dd-e538-414d-a144-e05dbf5effb3",
+      "name": "Send reply to database",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        -40,
+        820
+      ],
+      "typeVersion": 1,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $json.triggeredFrom }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "gmail"
+            },
+            {
+              "value2": "webhook",
+              "output": 1
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "9d5e780e-4282-4c7e-b083-3f769f7dc740",
+      "name": "Determine which trigger ran",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        -820,
+        640
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text}}",
+        "options": {
+          "systemMessage": "You are an ERCOT electricity market expert. You need to reply to the market-related question from the market participant."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        -460,
+        620
+      ],
+      "id": "fdc470d7-90ff-4503-bcb9-e2f0c68b3b37",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "messageId": "={{ $json.id }}",
+        "simple": false,
+        "options": {}
+      },
+      "id": "47e16e7b-2ab0-4317-99a6-6d2a8e751013",
+      "name": "Get Full Message",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        -700,
+        620
+      ],
+      "webhookId": "d20c5a51-4078-47e2-bec4-54af54ddf4dd",
+      "typeVersion": 2.1,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "aQE5BjBuMoTvYTgV",
+          "name": "Gmail account 3"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -340,
+        800
+      ],
+      "id": "1f439bf3-2911-43c3-aa67-187498afcbe2",
+      "name": "ERCOT Market Rules",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        800
+      ],
+      "id": "f140fddc-d9b6-43d8-98d0-cfb40cb43727",
+      "name": "LLM",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "9TW59Dovd6h6xB2T",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "markAsRead",
+        "messageId": "={{ $json.id }}"
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        300,
+        440
+      ],
+      "id": "48758978-d8b2-47c9-a0bc-373f8ef93da7",
+      "name": "Mark as Read",
+      "webhookId": "215fa562-eca6-4b96-a90b-9c53c0e54d1a",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "aQE5BjBuMoTvYTgV",
+          "name": "Gmail account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# LLM in the Loop\n## An LLM responds to electricity market inquiries by referencing an internal database of market rules.",
+        "height": 480,
+        "width": 440
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        440
+      ],
+      "id": "7346eaff-d176-474d-9902-d63de093e089",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "# Human in the Loop\n## Users can either send the LLM-generated email directly or save it as a draft for manual review before sending.\n",
+        "height": 340,
+        "width": 560
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        260
+      ],
+      "id": "0b4f5db5-bcba-4b11-a818-518c0ab44aa4",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "# Action Logging\n## All user and agent actions are recorded in the database for full traceability and auditability.\n",
+        "height": 340,
+        "width": 560
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        660
+      ],
+      "id": "13678745-906c-465a-b4a9-4190c588ab4f",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "# Automation\n## Workflows are automatically triggered upon receiving electricity market-related inquiries.\n",
+        "height": 480,
+        "width": 640
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1220,
+        440
+      ],
+      "id": "13c1c28c-11af-43c2-964c-f4b15f086907",
+      "name": "Sticky Note3"
+    }
+  ],
+  "pinData": {
+    "On email received": [
+      {
+        "json": {
+          "id": "19682351b58c1593",
+          "threadId": "19682351b58c1593",
+          "labelIds": [
+            "UNREAD",
+            "IMPORTANT",
+            "CATEGORY_PERSONAL",
+            "INBOX"
+          ],
+          "sizeEstimate": 5857,
+          "headers": {
+            "delivered-to": "Delivered-To: your@email",
+            "received": "Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])\r\n        by mx.google.com with SMTPS id 3f1490d57ef6-e730462cf45sor5470994276.3.2025.04.29.08.40.40\r\n        for <your@email>\r\n        (Google Transport Security);\r\n        Tue, 29 Apr 2025 08:40:40 -0700 (PDT)",
+            "x-received": "X-Received: by 2002:a05:6902:1241:b0:e73:22c4:117b with SMTP id\r\n 3f1490d57ef6-e73511f9d1cmr4412463276.47.1745941239792; Tue, 29 Apr 2025\r\n 08:40:39 -0700 (PDT)",
+            "arc-seal": "ARC-Seal: i=1; a=rsa-sha256; t=1745941240; cv=none;\r\n        d=google.com; s=arc-20240605;\r\n        b=CaEBgiYYWsC6os5agZbwtnMNt4ja+tIwrBqHHSRLsRhB3QIt/S7D1qJ4m4Z2IfAgfG\r\n         XCiY3FggyJVS/2YqWJezG6+FSiro8nCc89uh35aKuXj6t2RYdihjgdwODli81+g+agi/\r\n         /kjNXaSUYVo9C0UjyAgzofxW7kskhAcgh8vryF41pHCqH3xzm2WnSrjav9qIYyF+5CY5\r\n         yaMnoO273vhOQEE/x0HInyiEooqBCiH7yDZ4ZzDcnjDZc70bA6Nc12o2oZyJzJ0guJml\r\n         3qWv5fQmve7DH/J1bPyoXYY+78M/wF+olrIo8n6LWAxlIuG0G1SevoORWAInPPAQ6R3Z\r\n         HX/A==",
+            "arc-message-signature": "ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;\r\n        h=to:subject:message-id:date:from:mime-version:dkim-signature;\r\n        bh=4XyuUwcHHFs0Aj8pIu5tYYntz8nSibv0K7jIkhnsXgk=;\r\n        fh=uf6rveAPDyEuy06AsigxbNXkABEKeKn34AVZQKVjlwU=;\r\n        b=eg/1ZukjYaESxDDS6jsE0xfoc9gTMk3O8AzpCGyT82TOF8Olm3M0fQrzUBHcNaDupW\r\n         yZv1lL6f59/lKMc8J/Zgv7lSnou2XbajLT62YItpcXZmlrYT0J3D41iGTg/YaAezGKel\r\n         HnJe4oYdiWLDR1/Jhc2fdq/LpbjAiI5BGte1jTUo4oXAueQOO6JmMEIAX6UMuClU//sa\r\n         0/QXlp24ymu0S2Z63okRHzO6rITjZZ324U4Xp5Me8sCVEuT4PLUmYcBkNm7/IMiJSuQR\r\n         RU3hcYA1gcB75GJ7Yz7MX4WbN241j3+N0mUKRVYTP+QXTV+y5nIbmKu9Q5iHraUG8PB2\r\n         9AMg==;\r\n        dara=google.com",
+            "arc-authentication-results": "ARC-Authentication-Results: i=1; mx.google.com;\r\n       dkim=pass header.i=@tamu.edu header.s=google header.b=\"fu+B/BNi\";\r\n       spf=pass (google.com: domain of zhangqianleo@tamu.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=zhangqianleo@tamu.edu;\r\n       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=tamu.edu;\r\n       dara=pass header.i=@gmail.com",
+            "return-path": "Return-Path: <zhangqianleo@tamu.edu>",
+            "received-spf": "Received-SPF: pass (google.com: domain of zhangqianleo@tamu.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;",
+            "authentication-results": "Authentication-Results: mx.google.com;\r\n       dkim=pass header.i=@tamu.edu header.s=google header.b=\"fu+B/BNi\";\r\n       spf=pass (google.com: domain of zhangqianleo@tamu.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=zhangqianleo@tamu.edu;\r\n       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=tamu.edu;\r\n       dara=pass header.i=@gmail.com",
+            "dkim-signature": "DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;\r\n        d=tamu.edu; s=google; t=1745941240; x=1746546040; dara=google.com;\r\n        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject\r\n         :date:message-id:reply-to;\r\n        bh=4XyuUwcHHFs0Aj8pIu5tYYntz8nSibv0K7jIkhnsXgk=;\r\n        b=fu+B/BNi0ho3XKpW8RMmjrxyY8+e5F22CcNoY20PQfVj8sXEF4HQVAWHhnh1TFFLts\r\n         MaD+TCayHw12AGIwXwRDquOYbeihzWAK4yUEEs/uWSODN2a5X+3nJ0lHxTRf1hXn4JVs\r\n         XyjmTXhIEE662BLYpl5sPpnkSz0ZUpW/CtTHS/ulYLZfjMRJVQB6zP2GRVrtUZIj8RHU\r\n         Obol9HCjm+u6lsC6oqjvJ0ZPwVhncJ/JOMGiBtTm2ZpClwfFguCvCPT7Nt48nxt5axdS\r\n         UZOKPVrYdaAFO6M6jK0nKwV5XAQ70dyE9eIV0eR2I7xKl7qy6GQomDPsGbJePZv46bwB\r\n         lg+A==",
+            "x-google-dkim-signature": "X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;\r\n        d=1e100.net; s=20230601; t=1745941240; x=1746546040;\r\n        h=to:subject:message-id:date:from:mime-version:x-gm-message-state\r\n         :from:to:cc:subject:date:message-id:reply-to;\r\n        bh=4XyuUwcHHFs0Aj8pIu5tYYntz8nSibv0K7jIkhnsXgk=;\r\n        b=Y7XO0FJ9YYwBl2K7CTtDlO9I+VIaC0FDBxZqPz5vtHo99PMBztSoctIX28NjBmlz0R\r\n         oxxShFhTFCmylCP9YTZl2FUpr1jBtnNaj7N5bU94zDarZVxCALRGLLb46rlyaWPtDb3s\r\n         pM0caf2lHz5I9vX1/a66MwFUFfMZa1WJaaCQEz9dviaH294SHTqFDVMiP+X/xiaMMO0M\r\n         JBBzdYMOP0MzfiqDfobbdMuf4+uZWXQJU14OHa/IIMZClV0A6ZCIIrqp/OSjVR+HUGS/\r\n         H5tgHLMxt7KRnqHg8m6klWR62bbvWyDtmozY+XbgxoAxAYbCPCS6qhayeAspz4we8l3+\r\n         ntFQ==",
+            "x-gm-message-state": "X-Gm-Message-State: AOJu0YwfS8XYUJYc+DhooEylfCJOMVGm8GoSa7WjKdLgMOHeZL8PWBok\r\n\tG3OWgTU3E0fHsA/iHiSuZB4XwbXsm1Hfcudcq7ylzPB7OIuI84lEJE5Vab+SbF48ZnzKlNmoMtt\r\n\tWtFc7O8xGfRdfVO7pUQbqiJkgwH2cVqcMSX4UFKq6K35j9Qpg1LI=",
+            "x-gm-gg": "X-Gm-Gg: ASbGnctu/huvtPUKN/obrA/csfBCK68aQZU1qIPAjwxS8x+6RPkRmD8F4wOfgNN+BKw\r\n\tSUy8DNIXhqZ+mKHzTlyuergLS2uc8WvF5R5qwg4tNz8nOqCjYs+p09hEOh42Ye/iBevw+xmLUXQ\r\n\t5l9oERTy77bMwnUaQ6KZw=",
+            "x-google-smtp-source": "X-Google-Smtp-Source: AGHT+IFm9yf5FAkh8muw3ecJr3DmLsLk+0RvR17bbR+kB5OJZ2TeHHjvXveQV1tBWPftWJvxAK5D5JdCqCcg0grWvX4=",
+            "mime-version": "MIME-Version: 1.0",
+            "from": "From: Qian Zhang <zhangqianleo@tamu.edu>",
+            "date": "Date: Tue, 29 Apr 2025 11:40:28 -0400",
+            "x-gm-features": "X-Gm-Features: ATxdqUForzs4iJg4sKsPNQtnTaqXHudmFPgaGQeQHX_22ySYVXTRQ53Peqn2wJU",
+            "message-id": "Message-ID: <CA+SeyuBdkOME+MVu+9W=FBTgdGH8oSX4Go+8U_6xpT86jVKZyA@mail.gmail.com>",
+            "subject": "Subject: ERCOT Market Question",
+            "to": "To: your@email",
+            "content-type": "Content-Type: multipart/alternative; boundary=\"00000000000065a61f0633ec9f98\""
+          },
+          "html": "<div dir=\"ltr\">Hi ERCOT,<div><br></div><div>What&#39;s the requirement for battery storage to participate in the ancillary service market?</div><div><br></div><div>Thanks,</div><div>Qian</div></div>\n",
+          "text": "Hi ERCOT,\n\nWhat's the requirement for battery storage to participate in the ancillary\nservice market?\n\nThanks,\nQian\n",
+          "textAsHtml": "<p>Hi ERCOT,</p><p>What&apos;s the requirement for battery storage to participate in the ancillary<br/>service market?</p><p>Thanks,<br/>Qian</p>",
+          "subject": "ERCOT Market Question",
+          "date": "2025-04-29T15:40:28.000Z",
+          "to": {
+            "value": [
+              {
+                "address": "your@email",
+                "name": ""
+              }
+            ],
+            "html": "<span class=\"mp_address_group\"><a href=\"mailto:your@email\" class=\"mp_address_email\">your@email</a></span>",
+            "text": "your@email"
+          },
+          "from": {
+            "value": [
+              {
+                "address": "your@email",
+                "name": "Qian Zhang"
+              }
+            ],
+            "html": "<span class=\"mp_address_group\"><span class=\"mp_address_name\">Qian Zhang</span> &lt;<a href=\"mailto:your@email\" class=\"mp_address_email\">your@email</a>&gt;</span>",
+            "text": "\"Qian Zhang\" <your@email>"
+          },
+          "messageId": "<CA+SeyuBdkOME+MVu+9W=FBTgdGH8oSX4Go+8U_6xpT86jVKZyA@mail.gmail.com>"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Configure": {
+      "main": [
+        [
+          {
+            "node": "Determine which trigger ran",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format data": {
+      "main": [
+        [
+          {
+            "node": "If no spreadsheet in configuration #1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If no sheet IDs": {
+      "main": [
+        [
+          {
+            "node": "Create spreadsheet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get data from `Format data`",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get sheet IDs #1": {
+      "main": [
+        [
+          {
+            "node": "If no sheet IDs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send email reply": {
+      "main": [
+        [
+          {
+            "node": "Send reply to recipient",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "On email received": {
+      "main": [
+        [
+          {
+            "node": "Identify trigger #1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create spreadsheet": {
+      "main": [
+        [
+          {
+            "node": "Store spreadsheet ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Identify trigger #1": {
+      "main": [
+        [
+          {
+            "node": "Configure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Store spreadsheet ID": {
+      "main": [
+        [
+          {
+            "node": "Get data from `Format data` node",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create or update rows": {
+      "main": [
+        [
+          {
+            "node": "If spreadsheet doesn't exist",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send reply to database": {
+      "main": [
+        [
+          {
+            "node": "Format data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Determine which trigger ran": {
+      "main": [
+        [
+          {
+            "node": "Get Full Message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        null,
+        []
+      ]
+    },
+    "Get data from `Format data`": {
+      "main": [
+        [
+          {
+            "node": "Create or update rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Store specific sheet IDs #1": {
+      "main": [
+        [
+          {
+            "node": "If no sheet IDs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If spreadsheet doesn't exist": {
+      "main": [
+        [
+          {
+            "node": "Create spreadsheet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Successfully created or updated row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get data from `Format data` node": {
+      "main": [
+        [
+          {
+            "node": "Paste data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If no spreadsheet in configuration #1": {
+      "main": [
+        [
+          {
+            "node": "Get sheet IDs #1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Store specific sheet IDs #1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send reply to database",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send email reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Full Message": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ERCOT Market Rules": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send reply to recipient": {
+      "main": [
+        [
+          {
+            "node": "Mark as Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f83fabd8-75c2-49ae-8466-ec8e45ee2809",
+  "meta": {
+    "templateId": "1898",
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ac47f0d5797328b9c66a2a538104f35a296946cf752f03a38bad8eaca21bbfd6"
+  },
+  "id": "FOw4Zq0fImubP0Qy",
+  "tags": []
+}
