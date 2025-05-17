@@ -30,7 +30,7 @@ Check out these demos showcasing PowerWorkflow in action:
 
 - [**Electricity Market Expert Demo**](https://www.youtube.com/watch?v=ccY93ssvUwU): An automated workflow that handles electricity market inquiries, generates professional responses using an LLM, logs all actions for traceability, and supports human-in-the-loop review.
 
-![Electricity Market Expert Workflow](Electricity%20Market%20Expert/Market%20Expert%20WF.png)
+![Electricity Market Expert Workflow](MEWF.png)
 
 ### Useful Agentic Workflow Development Platforms
 
