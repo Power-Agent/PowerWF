@@ -39,6 +39,7 @@ Check out these demos showcasing PowerWorkflow in action:
 - [**Coze**](https://www.coze.com/): Bot development platform
 - [**n8n**](https://n8n.io/): Workflow automation platform
 - [**Gumloop**](https://gumloop.com/): No-code workflow builder
+- [*Relevance AI*](https://relevanceai.com/): No-code Agent and workflow builder
 - [**Microsoft Copilot Studio**](https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio): Enterprise workflow development
 
 ### Representative Agent Orchestration Frameworks
