@@ -1,0 +1,69 @@
+[project]
+name = "grid-impact-study-agent"
+version = "1.0.0"
+description = "Grid Impact Study Agent - LangGraph backend with PowerWorld integration for electrical power system analysis"
+authors = [
+    { name = "Power Systems Team", email = "team@gridstudy.com" },
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "langgraph>=0.2.6",
+    "langchain>=0.3.19",
+    "langchain-core>=0.3.19",
+    "langchain-google-genai",
+    "langchain-openai>=0.3.0",
+    "python-dotenv>=1.0.1",
+    "langgraph-sdk>=0.1.57",
+    "langgraph-cli",
+    "langgraph-api",
+    "langsmith>=0.1.0",
+    "fastapi",
+    "google-genai",
+    "esa>=0.3.0",
+    "pywin32>=300",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "pydantic>=2.0.0",
+    "scipy>=1.9.0",
+    "networkx>=2.8.0",
+]
+
+
+[project.optional-dependencies]
+dev = ["mypy>=1.11.1", "ruff>=0.6.1"]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+lint.select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort
+    "D",    # pydocstyle
+    "D401", # First line should be in imperative mood
+    "T201",
+    "UP",
+]
+lint.ignore = [
+    "UP006",
+    "UP007",
+    # We actually do want to import from typing_extensions
+    "UP035",
+    # Relax the convention by _not_ requiring documentation for every function parameter.
+    "D417",
+    "E501",
+]
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "UP"]
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[dependency-groups]
+dev = [
+    "langgraph-cli[inmem]>=0.1.71",
+    "pytest>=8.3.5",
+]
