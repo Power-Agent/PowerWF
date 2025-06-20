@@ -28,7 +28,7 @@ We're building an open-source community focused on advancing workflow automation
 
 Check out these demos showcasing PowerWorkflow in action:
 
-- [**Grid Impact Evaluation for Large Load Interconnection**](https://www.youtube.com/embed/LxF8RqsNf04): This demo showcases how Agentic AI can streamline the grid impact evaluation process for large loads like data centers. Using domain-adapted AI Agents equipped with tools such as PowerWorld, the workflow automates data analysis, contingency studies, and report generation—accelerating a process that traditionally requires extensive manual effort.
+- [**Grid Impact Evaluation for Large Load Interconnection**](https://www.youtube.com/watch?v=LxF8RqsNf04): This demo showcases how Agentic AI can streamline the grid impact evaluation process for large loads like data centers. Using domain-adapted AI Agents equipped with tools such as PowerWorld, the workflow automates data analysis, contingency studies, and report generation—accelerating a process that traditionally requires extensive manual effort.
 
 ![Grid Impact Evaluation](Grid%20Impact%20Evaluation/graph.png)
 
