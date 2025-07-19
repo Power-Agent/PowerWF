@@ -68,7 +68,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 ### Core Team
-- Lin Dong, [Qian Zhang](https://seas.harvard.edu/person/qian-zhang)
+- Lin Dong, [Qian Zhang](https://www.linkedin.com/in/qian-zhang-75323111b/)
 
 ### Special Thanks
 - All contributors who help make this project better
