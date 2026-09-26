@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="B2G-Agent simulation-grounded building-grid co-design room" />
+    <title>B2G-Agent · Building–Grid Co-Design</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="B2G-Agent home">
+        <span class="brand-mark">B2G</span>
+        <span>
+          <strong>B2G-Agent</strong>
+          <small>Building ↔ Grid co-design</small>
+        </span>
+      </a>
+      <div class="topbar-status">
+        <span class="status-dot" id="service-dot"></span>
+        <span id="service-status">Checking local service…</span>
+      </div>
+    </header>
+
+    <main class="shell">
+      <nav class="progress" aria-label="Collaboration stages">
+        <button class="progress-step active" data-step="1" disabled>
+          <span>01</span><em>Choose role</em>
+        </button>
+        <i></i>
+        <button class="progress-step" data-step="2" disabled>
+          <span>02</span><em>Choose scenario</em>
+        </button>
+        <i></i>
+        <button class="progress-step" data-step="3" disabled>
+          <span>03</span><em>Co-design room</em>
+        </button>
+        <i></i>
+        <button class="progress-step" data-step="4" disabled>
+          <span>04</span><em>Final review</em>
+        </button>
+      </nav>
+
+      <section class="stage active" id="stage-1" aria-labelledby="role-heading">
+        <div class="hero-copy">
+          <p class="eyebrow">Simulation-grounded professional dialogue</p>
+          <h1 id="role-heading">Choose your engineering perspective.</h1>
+          <p class="hero-lede">
+            You bring the professional judgment. B2G-Agent translates across disciplines,
+            operates the scenario model, and keeps every proposal tied to explicit evidence.
+          </p>
+        </div>
+
+        <div class="role-grid" id="role-grid">
+          <button class="role-card" data-role="building_engineer">
+            <span class="role-icon building-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M9 55h46M15 55V25l17-14 17 14v30M24 55V39h16v16M22 29h5m10 0h5" /></svg>
+            </span>
+            <span class="role-kicker">Building side</span>
+            <strong>Building Engineer</strong>
+            <span class="role-description">
+              Shape comfort, retrofit, electrification, rooftop PV, and demand flexibility.
+            </span>
+            <span class="select-label">Work with an AI power engineer <b>→</b></span>
+          </button>
+
+          <button class="role-card" data-role="distribution_power_engineer">
+            <span class="role-icon power-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M32 7 19 30h11l-5 27 20-32H33l8-18ZM9 55h46" /></svg>
+            </span>
+            <span class="role-kicker">Grid side</span>
+            <strong>Distribution Power Engineer</strong>
+            <span class="role-description">
+              Protect voltage, equipment margins, connection feasibility, and upgrade cost.
+            </span>
+            <span class="select-label">Work with an AI building engineer <b>→</b></span>
+          </button>
+        </div>
+
+        <aside class="trust-strip">
+          <span>Three-way dialogue</span>
+          <span>Validated parameter space</span>
+          <span>Traceable simulations</span>
+          <span>Human-approved decisions</span>
+        </aside>
+      </section>
+
+      <section class="stage" id="stage-2" aria-labelledby="scenario-heading">
+        <div class="stage-heading split-heading">
+          <div>
+            <p class="eyebrow">Research pathway</p>
+            <h1 id="scenario-heading">Choose a co-design scenario.</h1>
+          </div>
+          <span class="role-badge" id="selected-role-badge">Building Engineer</span>
+        </div>
+
+        <div class="scenario-options" id="scenario-options"></div>
+
+        <div class="scenario-detail is-hidden" id="scenario-detail">
+          <div class="selected-scenario-heading">
+            <p class="eyebrow" id="scenario-kicker"></p>
+            <h2 id="brief-heading"></h2>
+          </div>
+          <div class="brief-grid">
+            <article class="brief-main panel">
+              <div class="city-illustration" id="scenario-illustration" aria-hidden="true">
+                <div class="skyline"></div>
+                <div class="power-line"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <h2>The joint assignment</h2>
+              <p id="scenario-summary">Select a scenario to load its project context.</p>
+              <div class="baseline-row" id="baseline-row"></div>
+            </article>
+
+            <article class="panel mission-panel">
+              <span class="panel-number">Your mission</span>
+              <h2 id="mission-title">Building Engineer</h2>
+              <p id="mission-text"></p>
+              <h3>Your AI counterpart</h3>
+              <p id="counterpart-text"></p>
+            </article>
+
+            <article class="panel constraints-panel">
+              <span class="panel-number">Joint guardrails</span>
+              <ul class="check-list" id="constraint-list"></ul>
+              <div class="model-note">
+                <strong>Evidence boundary</strong>
+                <p id="simulation-note"></p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <label class="accept-row">
+          <input type="checkbox" id="accept-brief" />
+          <span>I accept the selected scenario, AI counterpart, and evidence boundary.</span>
+        </label>
+        <div class="stage-actions">
+          <button class="button ghost" data-back="1">← Change role</button>
+          <button class="button primary" id="enter-room" disabled>Enter co-design room <span>→</span></button>
+        </div>
+      </section>
+
+      <section class="stage workspace-stage" id="stage-3" aria-labelledby="room-heading">
+        <div class="workspace-header">
+          <div>
+            <p class="eyebrow">Live mediated session</p>
+            <h1 id="room-heading">B2G Co-Design Room</h1>
+          </div>
+          <div class="workspace-actions">
+            <span class="backend-pill" id="backend-pill">Preparing mediator…</span>
+            <button class="button ghost small" id="restart-session-button">Start over</button>
+            <button class="button ghost small" id="rerun-button">Run current case</button>
+            <button class="button dark small" id="review-button">Review plan →</button>
+          </div>
+        </div>
+
+        <div class="workspace-grid">
+          <section class="chat-panel panel">
+            <div class="participant-row" id="participant-row"></div>
+            <div class="messages" id="messages" aria-live="polite"></div>
+            <form class="composer" id="composer">
+              <textarea
+                id="message-input"
+                rows="3"
+                maxlength="4000"
+                placeholder="Share a professional judgment, constraint, or proposed change…"
+              ></textarea>
+              <div class="composer-footer">
+                <span>Free-form input · B2G-Agent will clarify before material changes</span>
+                <button class="send-button" type="submit" aria-label="Send message">Send <b>↑</b></button>
+              </div>
+            </form>
+          </section>
+
+          <aside class="evidence-column">
+            <section class="panel evidence-panel">
+              <div class="panel-heading">
+                <div><span class="panel-number">Shared evidence</span><h2>Latest run</h2></div>
+                <span class="feasibility-badge" id="feasibility-badge">Baseline</span>
+              </div>
+              <div class="metric-grid" id="metric-grid"></div>
+              <canvas id="load-chart" width="600" height="180" aria-label="24-hour feeder load chart"></canvas>
+              <p class="chart-caption" id="chart-caption">24-hour shared evidence</p>
+            </section>
+
+            <section class="panel state-panel">
+              <div class="panel-heading">
+                <div><span class="panel-number">Boundary object</span><h2>Shared case state</h2></div>
+                <span id="run-count">1 run</span>
+              </div>
+              <dl class="parameter-list" id="parameter-list"></dl>
+            </section>
+
+            <section class="panel ledger-panel">
+              <div class="panel-heading">
+                <div><span class="panel-number">Secretary</span><h2>Decision ledger</h2></div>
+              </div>
+              <ol id="decision-ledger"><li>No negotiated decisions yet.</li></ol>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section class="stage" id="stage-4" aria-labelledby="review-heading">
+        <div class="stage-heading split-heading">
+          <div>
+            <p class="eyebrow">Evidence package · Human approval required</p>
+            <h1 id="review-heading">Final joint-plan review</h1>
+          </div>
+          <span class="review-status" id="review-status">Preparing…</span>
+        </div>
+
+        <div class="review-grid">
+          <article class="panel recommendation-card">
+            <span class="panel-number">Recommended candidate</span>
+            <h2 id="final-summary">Selecting the best available run…</h2>
+            <div class="score-row">
+              <div><span>Building satisfaction</span><strong id="building-score">—</strong><i></i></div>
+              <div><span>Grid reliability</span><strong id="grid-score">—</strong><i></i></div>
+              <div><span id="third-score-label">Indicative capital cost</span><strong id="capital-cost">—</strong></div>
+            </div>
+          </article>
+
+          <article class="panel final-decisions">
+            <span class="panel-number">Agreed scenario</span>
+            <h2>Decision package</h2>
+            <ul class="check-list" id="accepted-decisions"></ul>
+          </article>
+
+          <article class="panel final-evidence">
+            <span class="panel-number">Physics evidence</span>
+            <h2>Constraint check</h2>
+            <div class="constraint-table" id="final-constraints"></div>
+          </article>
+
+          <article class="panel unresolved-panel">
+            <span class="panel-number">Before approval</span>
+            <h2>Unresolved items</h2>
+            <ul id="unresolved-items"></ul>
+            <p class="disclaimer" id="final-disclaimer"></p>
+          </article>
+        </div>
+
+        <details class="report-details panel">
+          <summary>View reproducible Markdown report</summary>
+          <pre id="report-markdown"></pre>
+        </details>
+
+        <div class="stage-actions">
+          <button class="button ghost" data-back="3">← Continue discussion</button>
+          <button class="button ghost" id="download-report">Download report</button>
+          <button class="button primary" id="new-session-button">Start new session →</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
