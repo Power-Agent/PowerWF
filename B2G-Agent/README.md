@@ -2,6 +2,8 @@
 
 > **Project ownership and maintenance:** B2G-Agent is independently developed and maintained by [Xueyuan Cui](https://github.com/cuixueyuan). This directory is a PowerWorkflow community entry for the collaboration. The canonical source code, releases, issues, and development history remain at [cuixueyuan/B2G-Agent](https://github.com/cuixueyuan/B2G-Agent).
 
+This directory contains a complete runnable snapshot of **B2G-Agent v0.3.0**, synchronized from canonical commit [`8b3965b`](https://github.com/cuixueyuan/B2G-Agent/commit/8b3965bc09c0a76c0dc293984f1383ee9ec640fb). The snapshot includes the Python package, browser interface, tests, documentation, screenshots, configuration example, and B2G-Agent license. Future changes in the canonical repository do not automatically update this snapshot.
+
 B2G-Agent is an LLM-mediated research environment for collaboration between Building Engineers and Distribution Power Engineers. A human chooses one role, an LLM plays the other as an AI counterpart, and the agent translates free-form professional input into a shared, validated engineering case. It then runs transparent scenario calculations, explains the consequences to both disciplines, and records the path to a jointly reviewed plan.
 
 ![B2G-Agent four-stage interface](https://raw.githubusercontent.com/cuixueyuan/B2G-Agent/main/docs/assets/screenshots/03-codesign-room.png)
@@ -31,21 +33,36 @@ The current release uses an OpenAI model for intent interpretation and an AI cou
 3. Negotiate with the AI counterpart in a mediated natural-language dialogue.
 4. Review the selected candidate, constraint checks, unresolved items, and reproducible report.
 
-## Run the Canonical Project Locally
+## Run This PowerWorkflow Snapshot Locally
 
 Each tester supplies their own OpenAI API key. No API key is stored in this PowerWorkflow repository or in the B2G-Agent source repository.
 
 ```bash
-git clone https://github.com/cuixueyuan/B2G-Agent.git
-cd B2G-Agent
+git clone https://github.com/Power-Agent/PowerWF.git
+cd PowerWF/B2G-Agent
 python -m venv .venv
-python -m pip install -e ".[dev]"
 ```
 
-Activate the virtual environment, copy `.env.example` to `.env`, and replace the placeholder with your own key:
+Activate the environment and install the snapshot. On Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m pip install -e ".[dev]"
+Copy-Item .env.example .env
+```
+
+On macOS or Linux:
+
+```bash
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+cp .env.example .env
+```
+
+Edit `.env` and replace the placeholder with your own key:
 
 ```dotenv
-OPENAI_API_KEY=replace_with_your_actual_api_key
+OPENAI_API_KEY=replace_with_your_own_api_key
 B2G_MODEL=gpt-4.1-mini
 B2G_LLM_ENABLED=true
 B2G_REQUIRE_LLM=true
@@ -57,7 +74,9 @@ Then run:
 b2g-web
 ```
 
-Open <http://127.0.0.1:8000>. See the canonical repository's [complete local deployment guide](https://github.com/cuixueyuan/B2G-Agent/blob/main/docs/local-deployment.md) for platform-specific activation commands, verification, and troubleshooting.
+Open <http://127.0.0.1:8000>. See the included [complete local deployment guide](docs/local-deployment.md) for verification and troubleshooting.
+
+For the newest B2G-Agent release rather than the reviewed PowerWorkflow snapshot, clone the [canonical repository](https://github.com/cuixueyuan/B2G-Agent) directly.
 
 ## Tool Boundary
 
