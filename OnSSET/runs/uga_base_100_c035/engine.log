@@ -1,0 +1,30 @@
+Warning 3: Cannot find header.dxf (GDAL_DATA is not defined)
+C:\Users\corra\anaconda3\envs\onsset_env_mcp\Lib\site-packages\pyogrio\core.py:35: RuntimeWarning: Could not detect GDAL data files.  Set GDAL_DATA environment variable to the correct path.
+  _init_gdal_data()
+Wed Oct 28 20:55:39 2026 Starting off-grid LCOE calculation for year 2030
+Wed Oct 28 20:55:41 2026 Calculating off-grid investment cost for year 2030
+Wed Oct 28 20:55:43 2026 Calculate grid extension for year 2030
+10614  new settlements connected to the grid Wed Oct 28 20:55:53 2026
+366  new settlements connected to the grid Wed Oct 28 20:55:54 2026
+63  new settlements connected to the grid Wed Oct 28 20:55:55 2026
+19  new settlements connected to the grid Wed Oct 28 20:55:56 2026
+5  new settlements connected to the grid Wed Oct 28 20:55:56 2026
+C:\Users\corra\Desktop\onsset\onsset\onsset.py:2768: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.df.loc[self.df[SET_MIN_OVERALL + "{}".format(year)] == all_techs[i],
+C:\Users\corra\Desktop\onsset\onsset\onsset.py:2799: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.df[SET_INVESTMENT_COST + "{}".format(year)] = 0
+C:\Users\corra\Desktop\onsset\onsset\onsset.py:2820: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.df[SET_NEW_CAPACITY + "{}".format(year)] = 0
+C:\Users\corra\Desktop\onsset\onsset\onsset.py:2899: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.df[SET_LIMIT + "{}".format(year)] = 0
+C:\Users\corra\Desktop\onsset\onsset\onsset.py:2905: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.df[SET_INVEST_PER_CONNECTION + "{}".format(year)] = \
+C:\Users\corra\Desktop\onsset\onsset\onsset.py:2939: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.df[SET_ELEC_FINAL_CODE + "{}".format(year)] = self.df[SET_MIN_OVERALL_CODE + "{}".format(year)]
+C:\Users\corra\Desktop\onsset\onsset\onsset.py:2951: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.df[SET_ELEC_POP + "{}".format(year)] = self.df[SET_POP + "{}".format(year)]
+C:\Users\corra\Desktop\onsset\onsset\onsset.py:2958: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.df['Technology{}'.format(year)] = 'Unelectrified'
+The electrification rate achieved in 2030 is 100.0 %
+C:\Users\corra\Desktop\onsset\onsset\onsset.py:3020: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.df['AnnualEmissions' + "{}".format(year)] = 0.
