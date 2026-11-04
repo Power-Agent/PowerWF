@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "scenario_name": "uga_base_100_c035",
+  "years": [
+    2030
+  ],
+  "start_year_stats": {
+    "population": 49938407.89794922,
+    "electrification_rate": 0.3502401358731049,
+    "urban_ratio": 0.2737772020678615
+  },
+  "electrification_rate": {
+    "2030": 1.0
+  },
+  "summary": {
+    "Grid_dens": {
+      "Population2030": 23335396,
+      "NewConnections2030": 1194308,
+      "Capacity2030 (MW)": 348.02,
+      "Investment2030 (million USD)": 1494.72,
+      "Emissions2030 (ktCO2)": 965.28
+    },
+    "Grid_ext": {
+      "Population2030": 13869856,
+      "NewConnections2030": 2773923,
+      "Capacity2030 (MW)": 335.04,
+      "Investment2030 (million USD)": 4031.74,
+      "Emissions2030 (ktCO2)": 929.2
+    },
+    "SA_PV": {
+      "Population2030": 20601718,
+      "NewConnections2030": 4123376,
+      "Capacity2030 (MW)": 49.7,
+      "Investment2030 (million USD)": 1111.68,
+      "Emissions2030 (ktCO2)": 0.0
+    },
+    "MG_PV_Hybrid": {
+      "Population2030": 443029,
+      "NewConnections2030": 63294,
+      "Capacity2030 (MW)": 29.78,
+      "Investment2030 (million USD)": 159.96,
+      "Emissions2030 (ktCO2)": 0.0
+    },
+    "MG_Wind": {
+      "Population2030": 0,
+      "NewConnections2030": 0,
+      "Capacity2030 (MW)": 0.0,
+      "Investment2030 (million USD)": 0.0,
+      "Emissions2030 (ktCO2)": 0.0
+    },
+    "MG_Hydro": {
+      "Population2030": 0,
+      "NewConnections2030": 0,
+      "Capacity2030 (MW)": 0.0,
+      "Investment2030 (million USD)": 0.0,
+      "Emissions2030 (ktCO2)": 0.0
+    },
+    "Non-electrified": {
+      "Population2030": 0,
+      "NewConnections2030": 0,
+      "Capacity2030 (MW)": 0.0,
+      "Investment2030 (million USD)": 0.0,
+      "Emissions2030 (ktCO2)": 0.0
+    },
+    "Total": {
+      "Population2030": 58249999,
+      "NewConnections2030": 8154901,
+      "Capacity2030 (MW)": 762.54,
+      "Investment2030 (million USD)": 6798.1,
+      "Emissions2030 (ktCO2)": 1894.48
+    }
+  },
+  "files": {
+    "results": "C:\\Users\\corra\\Desktop\\MCP\\PowerMCP\\OnSSET\\runs\\uga_base_100_c035\\uga_base_100_c035_Results.csv",
+    "summary": "C:\\Users\\corra\\Desktop\\MCP\\PowerMCP\\OnSSET\\runs\\uga_base_100_c035\\uga_base_100_c035_Summaries.csv",
+    "params": "C:\\Users\\corra\\Desktop\\MCP\\PowerMCP\\OnSSET\\runs\\uga_base_100_c035\\uga_base_100_c035_Params.json",
+    "new_mv_lines": {
+      "2030": "C:\\Users\\corra\\Desktop\\MCP\\PowerMCP\\OnSSET\\runs\\uga_base_100_c035\\new_mv_lines_uga_base_100_c035_2030.geojson"
+    }
+  },
+  "timing_s": {
+    "load": 3.9,
+    "model": 119.4,
+    "total": 155.5
+  }
+}

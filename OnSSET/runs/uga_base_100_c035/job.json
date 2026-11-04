@@ -1,0 +1,37 @@
+{
+  "name": "uga_base_100_c035",
+  "kind": "scenario",
+  "status": "succeeded",
+  "pid": 19076,
+  "started": "2026-10-28T19:53:53+00:00",
+  "finished": "2026-10-28T19:56:32+00:00",
+  "returncode": 0,
+  "inputs": {
+    "input_csv": "C:\\Users\\corra\\Desktop\\onsset\\test\\inputTestUganda\\OnSSET_InputFile_Calibrated_v1.csv",
+    "pv_csv": "C:\\Users\\corra\\Desktop\\onsset\\test\\inputTestUganda\\ug-2-pv.csv",
+    "wind_csv": "C:\\Users\\corra\\Desktop\\onsset\\test\\inputTestUganda\\ug-2-wind.csv",
+    "mv_lines": "C:\\Users\\corra\\Desktop\\onsset\\test\\inputTestUganda\\UGA\\UGA\\UGA_mv_lines.shp"
+  },
+  "command": [
+    "C:\\Users\\corra\\anaconda3\\envs\\onsset_env_mcp\\python.exe",
+    "-u",
+    "C:\\Users\\corra\\Desktop\\MCP\\PowerMCP\\OnSSET\\onsset_engine.py",
+    "--input-csv",
+    "C:\\Users\\corra\\Desktop\\onsset\\test\\inputTestUganda\\OnSSET_InputFile_Calibrated_v1.csv",
+    "--pv-csv",
+    "C:\\Users\\corra\\Desktop\\onsset\\test\\inputTestUganda\\ug-2-pv.csv",
+    "--wind-csv",
+    "C:\\Users\\corra\\Desktop\\onsset\\test\\inputTestUganda\\ug-2-wind.csv",
+    "--mv-lines",
+    "C:\\Users\\corra\\Desktop\\onsset\\test\\inputTestUganda\\UGA\\UGA\\UGA_mv_lines.shp",
+    "--params",
+    "C:\\Users\\corra\\Desktop\\MCP\\PowerMCP\\OnSSET\\runs\\uga_base_100_c035\\params.json",
+    "--output-dir",
+    "C:\\Users\\corra\\Desktop\\MCP\\PowerMCP\\OnSSET\\runs\\uga_base_100_c035",
+    "--scenario-name",
+    "uga_base_100_c035",
+    "--result-json",
+    "C:\\Users\\corra\\Desktop\\MCP\\PowerMCP\\OnSSET\\runs\\uga_base_100_c035\\uga_base_100_c035_Run.json"
+  ],
+  "directory": "C:\\Users\\corra\\Desktop\\MCP\\PowerMCP\\OnSSET\\runs\\uga_base_100_c035"
+}
