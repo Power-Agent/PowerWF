@@ -1,0 +1,27 @@
+name: Cross-engine transient workflow
+
+on:
+  push:
+    branches:
+      - feat/cross-engine-transient-workflow
+  pull_request:
+    paths:
+      - "cross_engine_validation/**"
+      - "tests/test_cross_engine_validation.py"
+      - ".github/workflows/cross-engine-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test runner
+        run: python -m pip install --upgrade pytest
+      - name: Run workflow tests
+        run: python -m pytest tests/test_cross_engine_validation.py -q
