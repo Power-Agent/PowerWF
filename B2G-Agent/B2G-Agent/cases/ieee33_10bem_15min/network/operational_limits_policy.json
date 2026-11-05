@@ -1,0 +1,8 @@
+{
+  "line_limit_formula": "Imax_l = max(0.05 kA, 1.20 * P99(I_l over frozen development baseline))",
+  "upstream_transformer_rating_formula": "S_rated = 1.20 * P99(S_slack over frozen development baseline)",
+  "derivation_split": "development",
+  "test_data_excluded": true,
+  "status": "derived and frozen from 24768 development-only 15-minute intervals",
+  "reporting_label": "experiment-specific operational limit"
+}

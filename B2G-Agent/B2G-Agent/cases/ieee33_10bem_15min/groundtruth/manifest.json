@@ -1,0 +1,522 @@
+{
+  "schema_version": "1.0",
+  "case_id": "ieee33_10bem_15min",
+  "generator_version": "episode-generator-v7",
+  "seed": 2026,
+  "oracle_count": 200,
+  "contract_oracle_count": 200,
+  "programmatically_verified_contract_count": 200,
+  "expert_verified_contract_count": 0,
+  "physics_verified_count": 100,
+  "physics_pending_count": 0,
+  "physics_not_required_count": 100,
+  "programmatically_verified_numeric_count": 100,
+  "episodes_sha256": "fab5d82e4d90398432998954df0796eec2240f6f502ef69f01f72fb22fcb9824",
+  "contract_oracles_sha256": "ff26b5b8db832d7481a9b0a3ff3e82e6ed90a574614165331053c9c316b83c63",
+  "contract_verification_path": "contract_verification.jsonl",
+  "contract_verification_sha256": "7f5976ccbd445c06ec1d43589e5464db527815191ce48f142c78f45298a40aea",
+  "numeric_oracle_directory": "numeric_oracles",
+  "publication_gate": "Contract oracles must pass deterministic schema, direction, window, and source-hash checks; direct-task numeric oracles require the frozen RC/dispatch optimization followed by EnergyPlus and pandapower validation.",
+  "numeric_oracles": [
+    {
+      "episode_id": "ep-001",
+      "path": "numeric_oracles/ep-001.json",
+      "sha256": "d9da6d5300eb4448036e8e68f138e0137851a660d7603cc9b23184cc22b59a40"
+    },
+    {
+      "episode_id": "ep-006",
+      "path": "numeric_oracles/ep-006.json",
+      "sha256": "fbd113e4429b3e01482653010ea85e32cd059b1388b66f8221b536176997261d"
+    },
+    {
+      "episode_id": "ep-008",
+      "path": "numeric_oracles/ep-008.json",
+      "sha256": "8816e6d380590d170840bacf179fe54ea6a0eb6b7a78493a542cea2ff267e3f1"
+    },
+    {
+      "episode_id": "ep-009",
+      "path": "numeric_oracles/ep-009.json",
+      "sha256": "2bc45a0d8196a226c5916739f75aaeec3325d264c9a27f9906764f25cb6bf6f0"
+    },
+    {
+      "episode_id": "ep-010",
+      "path": "numeric_oracles/ep-010.json",
+      "sha256": "a23384bf27357fe8fdf5044d4f7364c918e42ee317ba2176261a2c2163e77ff3"
+    },
+    {
+      "episode_id": "ep-012",
+      "path": "numeric_oracles/ep-012.json",
+      "sha256": "0ab4bddbea54a6be406643b31550d23ac7a72344b9f1e38271c4b66df9e79468"
+    },
+    {
+      "episode_id": "ep-013",
+      "path": "numeric_oracles/ep-013.json",
+      "sha256": "d568660d4dac6a8c34dc9ecede88e3977dd424fcc2a1c5c86191a453341ab629"
+    },
+    {
+      "episode_id": "ep-014",
+      "path": "numeric_oracles/ep-014.json",
+      "sha256": "aeeaa7fc1285cedd2d90425343d8a676891ea9bbca298696d28564a9be7db2b2"
+    },
+    {
+      "episode_id": "ep-016",
+      "path": "numeric_oracles/ep-016.json",
+      "sha256": "d521453a0b668841417ab9fd08e9021815a4b92968116afa28f4546f11ce8766"
+    },
+    {
+      "episode_id": "ep-018",
+      "path": "numeric_oracles/ep-018.json",
+      "sha256": "502c2168350883a8702001978949e9a9236fff1e9f7822436073bdfc69c1b940"
+    },
+    {
+      "episode_id": "ep-021",
+      "path": "numeric_oracles/ep-021.json",
+      "sha256": "a24ae55f18a6ce7b97bc1df80ed1e7621112a43e2e59d7c7927fc55d1f9cd512"
+    },
+    {
+      "episode_id": "ep-022",
+      "path": "numeric_oracles/ep-022.json",
+      "sha256": "6bed195d4fe9d8eff6c942c0db55091bb3c4b3e3d139396ff3bb2c97491485ae"
+    },
+    {
+      "episode_id": "ep-025",
+      "path": "numeric_oracles/ep-025.json",
+      "sha256": "bf888a60eee89cf30a8fcbb4a6a84983b3792a91ff0a3597902af404b21f0faa"
+    },
+    {
+      "episode_id": "ep-026",
+      "path": "numeric_oracles/ep-026.json",
+      "sha256": "45a225ed230883faca160ae56964e9f49ff6f89676b9fe4748eaa55610bec71f"
+    },
+    {
+      "episode_id": "ep-027",
+      "path": "numeric_oracles/ep-027.json",
+      "sha256": "8d48dff459d5e4624b52ec4ceaf4307cc37c79fea4abd9cab54043a34e6a6835"
+    },
+    {
+      "episode_id": "ep-029",
+      "path": "numeric_oracles/ep-029.json",
+      "sha256": "87d4b349d13109fa2f820565a558dba49ab26192c4e53d484ca02f0181ffa03d"
+    },
+    {
+      "episode_id": "ep-037",
+      "path": "numeric_oracles/ep-037.json",
+      "sha256": "d82ae5911471244d4419e575f2461e73b797c81a0d03d83f951fc897e25d13b2"
+    },
+    {
+      "episode_id": "ep-038",
+      "path": "numeric_oracles/ep-038.json",
+      "sha256": "b37089fa4f45cf5cdc14e86b065c6d047b5c361c76ae5e92415b969520d5917a"
+    },
+    {
+      "episode_id": "ep-041",
+      "path": "numeric_oracles/ep-041.json",
+      "sha256": "79f2828d47a4dc869a189b31a8d1b9befa8af59537b26eebcb9897846d8018f4"
+    },
+    {
+      "episode_id": "ep-043",
+      "path": "numeric_oracles/ep-043.json",
+      "sha256": "4286422d04fd0adebe66ac806bdfe0893e9c4e3aaa0e5ab1a4f0c543c05947e8"
+    },
+    {
+      "episode_id": "ep-044",
+      "path": "numeric_oracles/ep-044.json",
+      "sha256": "65095f0406de4c863752463c8630957709c40f95f3c1508bdd6ba2d754b7f2fe"
+    },
+    {
+      "episode_id": "ep-046",
+      "path": "numeric_oracles/ep-046.json",
+      "sha256": "b0549ba163452eabf795d9a0f0e65eb00e3a2c44b0b1c3f3c1c75601f6d38567"
+    },
+    {
+      "episode_id": "ep-047",
+      "path": "numeric_oracles/ep-047.json",
+      "sha256": "1b72941fcae0bee80aac35a7648a905535dc492d8cbff5fcf052df1b34d52d53"
+    },
+    {
+      "episode_id": "ep-052",
+      "path": "numeric_oracles/ep-052.json",
+      "sha256": "e08c37201775596bb1a0341adba6529226de4d696575e4bfe2325d9f0c90c486"
+    },
+    {
+      "episode_id": "ep-054",
+      "path": "numeric_oracles/ep-054.json",
+      "sha256": "5b41c72b4a4d24b2e164671ce1dbc02878b4ff4799821c359bde36bdcf2a4c24"
+    },
+    {
+      "episode_id": "ep-055",
+      "path": "numeric_oracles/ep-055.json",
+      "sha256": "71738af7687f0415312ecabdf544fb41ee7f729dd806a0e6057f6cf98c50a7ee"
+    },
+    {
+      "episode_id": "ep-059",
+      "path": "numeric_oracles/ep-059.json",
+      "sha256": "03aa0a0f9a214b8af04642e9454c4c6f05f21bb9478a6c4b94165ef2e74d7ac6"
+    },
+    {
+      "episode_id": "ep-060",
+      "path": "numeric_oracles/ep-060.json",
+      "sha256": "f06509d3b18f6a5b1f92fe8d2363e5c07e7cfa61c0e7f23a036e073bec49aed5"
+    },
+    {
+      "episode_id": "ep-062",
+      "path": "numeric_oracles/ep-062.json",
+      "sha256": "6c010671d8e1c168e6e5062e4de7689a6bcac9ae6dad9a7e69c9b01e69d1cfe9"
+    },
+    {
+      "episode_id": "ep-064",
+      "path": "numeric_oracles/ep-064.json",
+      "sha256": "2adc2e0d4d70eae73180a195ad62997a5995b91fb014e870372b11af6b10a72d"
+    },
+    {
+      "episode_id": "ep-065",
+      "path": "numeric_oracles/ep-065.json",
+      "sha256": "fcfa65894841d92b217b00d6f14118362be9dab62b599d829919c9bf87e70b64"
+    },
+    {
+      "episode_id": "ep-069",
+      "path": "numeric_oracles/ep-069.json",
+      "sha256": "1c353f3f0df74c9cfc5bf65653f8bf2d1a74b1749d99a0a9eb75052b5f182e5b"
+    },
+    {
+      "episode_id": "ep-071",
+      "path": "numeric_oracles/ep-071.json",
+      "sha256": "3a80422abcbce8df78f28b46dfbe654bdf667b0918b329cb30df4a484394b255"
+    },
+    {
+      "episode_id": "ep-072",
+      "path": "numeric_oracles/ep-072.json",
+      "sha256": "fa20a95572a61037e69d8fb19de0136c291d8286a277cb31cf0dce064ab2ed56"
+    },
+    {
+      "episode_id": "ep-077",
+      "path": "numeric_oracles/ep-077.json",
+      "sha256": "37bb6df01cc00833fd0d75d82bb48974d2fad05e931aa30f70435cbe0633694b"
+    },
+    {
+      "episode_id": "ep-080",
+      "path": "numeric_oracles/ep-080.json",
+      "sha256": "77e02f257aef65151962e14ab2f3b3dee4a8245e0b60acfdcb1ff83e0038a6f5"
+    },
+    {
+      "episode_id": "ep-082",
+      "path": "numeric_oracles/ep-082.json",
+      "sha256": "1f708afdc629bf6dfd724378ed95c7a9dbfa491b8a57c2a1d89d48e3034c46a7"
+    },
+    {
+      "episode_id": "ep-083",
+      "path": "numeric_oracles/ep-083.json",
+      "sha256": "f992cc1b1f6ff47430782c5211ef780427ea94df29d1dd77df956325d4a32ad7"
+    },
+    {
+      "episode_id": "ep-084",
+      "path": "numeric_oracles/ep-084.json",
+      "sha256": "56bd51d3dfb6c350db95aa955b6628637a970f8a8b694679ae2b1c28b0f58c02"
+    },
+    {
+      "episode_id": "ep-085",
+      "path": "numeric_oracles/ep-085.json",
+      "sha256": "fca593c5d60c078cdd878843d45552aec0acffca26c28c1075321d9d9bcdd0e4"
+    },
+    {
+      "episode_id": "ep-086",
+      "path": "numeric_oracles/ep-086.json",
+      "sha256": "15f51b01122f82d2b65db6c93c21e80da28350e8f683c21a1616f68ffe894991"
+    },
+    {
+      "episode_id": "ep-089",
+      "path": "numeric_oracles/ep-089.json",
+      "sha256": "80e84fba0e7ee82543ff6d48050061d28bebc51c28eed4bde3f7decabe079f48"
+    },
+    {
+      "episode_id": "ep-093",
+      "path": "numeric_oracles/ep-093.json",
+      "sha256": "8a91c26ef13466fdc00c2b2ec717ad93856c8ca7c5fb390edba5b8fdf292c7e1"
+    },
+    {
+      "episode_id": "ep-094",
+      "path": "numeric_oracles/ep-094.json",
+      "sha256": "fc0b919f64798b0bdbe3f81f3fc312fd323829153653cf6eae29b4b87c8751b9"
+    },
+    {
+      "episode_id": "ep-095",
+      "path": "numeric_oracles/ep-095.json",
+      "sha256": "bb661ec07b0a086605c4231d15f6ae9aa23e97fe82b1729e32d42111e44f19d6"
+    },
+    {
+      "episode_id": "ep-103",
+      "path": "numeric_oracles/ep-103.json",
+      "sha256": "2ed9b788d51116fc4bdb3abebd5aa29948c1ea6e43281f8dc7dfefa1848ad599"
+    },
+    {
+      "episode_id": "ep-107",
+      "path": "numeric_oracles/ep-107.json",
+      "sha256": "dc4f6c131ebb6a7cd2fb36b735c7c7a40f3956dd48488ec3ba5ea053fa6e6d8c"
+    },
+    {
+      "episode_id": "ep-110",
+      "path": "numeric_oracles/ep-110.json",
+      "sha256": "4e5dfdca9f41bdbf7ef4d1d3e2855aa7fd6a319856998538fc962bb05fa252aa"
+    },
+    {
+      "episode_id": "ep-111",
+      "path": "numeric_oracles/ep-111.json",
+      "sha256": "b75e76f2082ebb32e914860791bb8cb045e91b964426253b13c06d44cc9cb782"
+    },
+    {
+      "episode_id": "ep-112",
+      "path": "numeric_oracles/ep-112.json",
+      "sha256": "d2d7ba55b78adf9ec053369c29adb8f7be0b97c0890af6ca9fd1c83365f211cc"
+    },
+    {
+      "episode_id": "ep-115",
+      "path": "numeric_oracles/ep-115.json",
+      "sha256": "f07def3897143f11a76ca473d0ed2f38413e9c98ff1e91a5fd2ddd79c0861bc8"
+    },
+    {
+      "episode_id": "ep-116",
+      "path": "numeric_oracles/ep-116.json",
+      "sha256": "da22b278d453e1521dbb8e4559edd55177ed5b89cddec1ebdf6d83a160ef4e90"
+    },
+    {
+      "episode_id": "ep-118",
+      "path": "numeric_oracles/ep-118.json",
+      "sha256": "256cb408c9c891901710c985cb368bf62439267f4023f94ca94d2ecdd6c94292"
+    },
+    {
+      "episode_id": "ep-119",
+      "path": "numeric_oracles/ep-119.json",
+      "sha256": "ef44242b7478fd6390be89339252509fd55a8a6e91babc7b7dedf41c941ed810"
+    },
+    {
+      "episode_id": "ep-120",
+      "path": "numeric_oracles/ep-120.json",
+      "sha256": "494571ce7d11884e6c5f7957e61ec64f2520c4d4d8cfb4768ccdfb4f6fe73b06"
+    },
+    {
+      "episode_id": "ep-122",
+      "path": "numeric_oracles/ep-122.json",
+      "sha256": "f03dc27312bf3dc10e90f692dc63fd500c8b167e639153ebe27c2cbc4c0df984"
+    },
+    {
+      "episode_id": "ep-124",
+      "path": "numeric_oracles/ep-124.json",
+      "sha256": "5d8bc034225a1124b54739ce4dc7fca4f0f7196ba1d48f6dc38ad9d08ea0632b"
+    },
+    {
+      "episode_id": "ep-125",
+      "path": "numeric_oracles/ep-125.json",
+      "sha256": "ac5f1dec59b975e88ec97f3f4b462adb0983376a194fc1efb6c2d9d73db9a0a5"
+    },
+    {
+      "episode_id": "ep-126",
+      "path": "numeric_oracles/ep-126.json",
+      "sha256": "48436d1d95b54ff5787ad69e70100733794c2d88c4ba291189c33db7ecfff85e"
+    },
+    {
+      "episode_id": "ep-127",
+      "path": "numeric_oracles/ep-127.json",
+      "sha256": "5b49304fe0a6b82fa067694dc181ab9c07d070c98d55d3adf8fddd6fea9f831e"
+    },
+    {
+      "episode_id": "ep-128",
+      "path": "numeric_oracles/ep-128.json",
+      "sha256": "d303eaa01367141f6c2d30a720e04f238fac0bf07ad2edc09f0a3aae4d7c19cf"
+    },
+    {
+      "episode_id": "ep-129",
+      "path": "numeric_oracles/ep-129.json",
+      "sha256": "93fc817bb49a2a8ef07b209ad927cb373f20636887de5dc3fa77cf0aa7e8106d"
+    },
+    {
+      "episode_id": "ep-130",
+      "path": "numeric_oracles/ep-130.json",
+      "sha256": "74271f2aab657dc6baa8f10ace6c2227ad1094db21ef03ac09a07ed48518e9d9"
+    },
+    {
+      "episode_id": "ep-131",
+      "path": "numeric_oracles/ep-131.json",
+      "sha256": "0c3bd91fbb67cceba20834329a6a8a27a5d91bd5aa29f098e9dd39b22252d42c"
+    },
+    {
+      "episode_id": "ep-134",
+      "path": "numeric_oracles/ep-134.json",
+      "sha256": "19be60fac6f287b719889360e0134a97a91c01e5e68373d9b40e2b6dd24310d3"
+    },
+    {
+      "episode_id": "ep-135",
+      "path": "numeric_oracles/ep-135.json",
+      "sha256": "6672d5bd03aa7cf579ac0dc83d7cd44dfffbb9a587d1341263d2d34562fe5d40"
+    },
+    {
+      "episode_id": "ep-136",
+      "path": "numeric_oracles/ep-136.json",
+      "sha256": "619f37e746a9f5119d7bcff4c9ccd1fab4a44b952747492a29bdc60f694c28d3"
+    },
+    {
+      "episode_id": "ep-143",
+      "path": "numeric_oracles/ep-143.json",
+      "sha256": "dc14102cf0ad1b2124c81cc867778294cfbfcbf790a691e30e4911cb7b3541d5"
+    },
+    {
+      "episode_id": "ep-144",
+      "path": "numeric_oracles/ep-144.json",
+      "sha256": "6f5b71d466f0ecf355963b260437a94f2221904cfc676eb347f4cbe0cad8afc3"
+    },
+    {
+      "episode_id": "ep-146",
+      "path": "numeric_oracles/ep-146.json",
+      "sha256": "72df7bb8f083154625456e10dcc737a2dfee024621116ad9b559af76479c70e4"
+    },
+    {
+      "episode_id": "ep-148",
+      "path": "numeric_oracles/ep-148.json",
+      "sha256": "2c6368bc5943853b58ea1e59d9a3916059243b20c90a3a51208e791b203054d2"
+    },
+    {
+      "episode_id": "ep-151",
+      "path": "numeric_oracles/ep-151.json",
+      "sha256": "66ea2e241e62d335452f27f2dd2b6e5d733292126c58370e9f1f66be530cdf9c"
+    },
+    {
+      "episode_id": "ep-153",
+      "path": "numeric_oracles/ep-153.json",
+      "sha256": "0c5b12ad1c240bfa06da5acf357b9c9c14e71db750daa24b257d90095e975a0c"
+    },
+    {
+      "episode_id": "ep-155",
+      "path": "numeric_oracles/ep-155.json",
+      "sha256": "96d15c7816a939a69fb9f20005b67053a8083f652bd828e59d3bb883b5103c47"
+    },
+    {
+      "episode_id": "ep-156",
+      "path": "numeric_oracles/ep-156.json",
+      "sha256": "b538fece06afbf445de473874e8009de5641cec8b359cf645cbf78568614836c"
+    },
+    {
+      "episode_id": "ep-157",
+      "path": "numeric_oracles/ep-157.json",
+      "sha256": "265e62ba30888c4106443e13dfd56b7e67eab7d842ab307356c53d8170b058d0"
+    },
+    {
+      "episode_id": "ep-158",
+      "path": "numeric_oracles/ep-158.json",
+      "sha256": "46522397c5f629067d381539e79758e816fc03db459ad7988b852fd09c5b75e4"
+    },
+    {
+      "episode_id": "ep-160",
+      "path": "numeric_oracles/ep-160.json",
+      "sha256": "c45e3706a38de2ed32d8e54672026be1ef637a824185851aeecd49ec084f17b2"
+    },
+    {
+      "episode_id": "ep-161",
+      "path": "numeric_oracles/ep-161.json",
+      "sha256": "1362302a3736ae1a9f9ae1fb5b47f5452b9250114893d25bb56d0c511674a4a8"
+    },
+    {
+      "episode_id": "ep-163",
+      "path": "numeric_oracles/ep-163.json",
+      "sha256": "61793e13e12a4842e68c43dc7d809f350dccc64e417a3f23f38f0ce3152502d2"
+    },
+    {
+      "episode_id": "ep-164",
+      "path": "numeric_oracles/ep-164.json",
+      "sha256": "cfbdc0ad64c3e35eac59d44b0804fddbcdc6f2d8c055f9dd1811a162a04bd9f7"
+    },
+    {
+      "episode_id": "ep-167",
+      "path": "numeric_oracles/ep-167.json",
+      "sha256": "3438de42ffd702659e44a90ca1771b7ca59ff1c77f65ee327dc6312715ad3b23"
+    },
+    {
+      "episode_id": "ep-168",
+      "path": "numeric_oracles/ep-168.json",
+      "sha256": "4adb9810cebe82f45f32bacabf565cb8eccd4b58dc69781cf1eaf9cbde5a3f75"
+    },
+    {
+      "episode_id": "ep-169",
+      "path": "numeric_oracles/ep-169.json",
+      "sha256": "e69000bc65b6e5ba9dd0e3117fa3d224d137694737657056e8bebfc8dda67670"
+    },
+    {
+      "episode_id": "ep-170",
+      "path": "numeric_oracles/ep-170.json",
+      "sha256": "9977e3adcae9bf46b728273c4ea5c3550a4d2c243eb933d72ba9c936395f76b8"
+    },
+    {
+      "episode_id": "ep-171",
+      "path": "numeric_oracles/ep-171.json",
+      "sha256": "7b9914415204807b7987f5bde6d20d6f30cb0d083fb53a49e8c80d48fdcf94d0"
+    },
+    {
+      "episode_id": "ep-176",
+      "path": "numeric_oracles/ep-176.json",
+      "sha256": "240d5af5ec1c6ccaff559c5199754cb1a2a11e253f9706651b32b9399b105f6b"
+    },
+    {
+      "episode_id": "ep-177",
+      "path": "numeric_oracles/ep-177.json",
+      "sha256": "484b99fd44a25e78f8e39d605e0d7d6c8eeca959f9eae64a7df7261c64b232f9"
+    },
+    {
+      "episode_id": "ep-178",
+      "path": "numeric_oracles/ep-178.json",
+      "sha256": "0181e22787cc54fc9c4db4fd353b92c24611a73408b3d7f197db3e0f890d79ac"
+    },
+    {
+      "episode_id": "ep-179",
+      "path": "numeric_oracles/ep-179.json",
+      "sha256": "787eb994bc6b9c38eb5bd5f1dd1f1bfb9e1dc31c0284ca6e8c608ce0dc3affad"
+    },
+    {
+      "episode_id": "ep-182",
+      "path": "numeric_oracles/ep-182.json",
+      "sha256": "ec442de65682e9dc6be24501a02be83f65be040751fbfbe1f40930f40005acb2"
+    },
+    {
+      "episode_id": "ep-185",
+      "path": "numeric_oracles/ep-185.json",
+      "sha256": "4dca78d950516a8a343152ffc1a46d6c2b848bbf03b768646571139b736f9d86"
+    },
+    {
+      "episode_id": "ep-186",
+      "path": "numeric_oracles/ep-186.json",
+      "sha256": "e76a6e62d96ad6a6ab004cd5aa95746a0a98dd34c45aaa3685b67677753eea29"
+    },
+    {
+      "episode_id": "ep-187",
+      "path": "numeric_oracles/ep-187.json",
+      "sha256": "403f44cc5098c733da5f5fb026ceffe348d0e8d2c783cf6c26a16087fc04a910"
+    },
+    {
+      "episode_id": "ep-189",
+      "path": "numeric_oracles/ep-189.json",
+      "sha256": "0427c0714eca62a83e909ca7f1b2d88992952b59fed54f097fb946d0ffd7d127"
+    },
+    {
+      "episode_id": "ep-192",
+      "path": "numeric_oracles/ep-192.json",
+      "sha256": "7100bf15c894309d7b8f726ae63658d27d5b3b9a08c40bd2c1a96f73681ab6df"
+    },
+    {
+      "episode_id": "ep-195",
+      "path": "numeric_oracles/ep-195.json",
+      "sha256": "65be03e76d905db4e112617c8c90709e11de8173576aa47062d5ca37a41f5799"
+    },
+    {
+      "episode_id": "ep-197",
+      "path": "numeric_oracles/ep-197.json",
+      "sha256": "7d933b455d19e210c89a563d02fb946d545ef31d0a3f59ac2a7abc1575c357d3"
+    },
+    {
+      "episode_id": "ep-198",
+      "path": "numeric_oracles/ep-198.json",
+      "sha256": "dd13f7c192c937a48c1a407d5db7c785886f12771f8f38d6c756cf4381c66df8"
+    },
+    {
+      "episode_id": "ep-200",
+      "path": "numeric_oracles/ep-200.json",
+      "sha256": "ceef0e84b101f7d9647d9e67dee7c6fb5b7fd53dfd265c8e683dabd6262e672d"
+    }
+  ]
+}

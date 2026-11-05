@@ -1,0 +1,13 @@
+{
+  "source": "pandapower.networks.case33bw()",
+  "pandapower_version": "3.5.6",
+  "bus_numbering": "paper numbering 1-33; pandapower internal indexes are 0-32",
+  "selection_method": "For each bus, sum in-service branch resistance along the shortest path from the slack. Sort the 32 non-slack buses by that distance and select the nearest-rank deciles of the empirical distance distribution; report paper bus numbers.",
+  "selected_buses_in_electrical_distance_order": [3, 5, 21, 27, 8, 29, 11, 33, 15, 18],
+  "selected_buses_in_numeric_order": [3, 5, 8, 11, 15, 18, 21, 27, 29, 33],
+  "source_base_load_mw": 3.715,
+  "source_base_reactive_load_mvar": 2.3,
+  "in_service_radial_lines": 32,
+  "out_of_service_tie_lines": 5,
+  "warning": "case33bw exposes placeholder max_i_ka values and no upstream transformer. Study line and transformer limits are experiment-specific derived quantities, not original Baran-Wu data."
+}

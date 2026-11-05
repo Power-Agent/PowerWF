@@ -1,0 +1,422 @@
+{
+  "assets": {
+    "boptest-bestest-air-config": {
+      "bytes": 132,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "00e132431218da23edb81382c4a591adb4000489be79a3e805d007e2f86e0aca",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/bestest_air/models/config.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_air/models/config.json"
+    },
+    "boptest-bestest-air-days": {
+      "bytes": 109,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "1e34729925115dbb2955701fbaee925065b7549e5881f092fe1f6a62ac99640d",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/bestest_air/models/days.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_air/models/days.json"
+    },
+    "boptest-bestest-air-kpis": {
+      "bytes": 179,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "0daca2399b95dc594159f439f6d1e5bde9caf59b5ee9b73084d0af2f2eabd3e3",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/bestest_air/models/kpis.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_air/models/kpis.json"
+    },
+    "boptest-commercial-config": {
+      "bytes": 153,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "6bf1b9a38cb487afd7a2ba6e1cc70df6ab20d908412933dd357288f793be5012",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/singlezone_commercial_hydronic/models/config.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/singlezone_commercial_hydronic/models/config.json"
+    },
+    "boptest-commercial-days": {
+      "bytes": 47,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "e23e3ee62bd42cc2a4ff20a123b91343f4eae986b6af143ee549199e25bcb520",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/singlezone_commercial_hydronic/models/days.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/singlezone_commercial_hydronic/models/days.json"
+    },
+    "boptest-commercial-kpis": {
+      "bytes": 192,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "c70e0c1e31efaa9d98a3e318ca40d5bcb61257b81ca7922a3a79b7b1dff540f4",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/singlezone_commercial_hydronic/models/kpis.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/singlezone_commercial_hydronic/models/kpis.json"
+    },
+    "boptest-heat-pump-config": {
+      "bytes": 148,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "2c37eec6342fbb884ee1af544eaf4b1eba950a6b0fa200c7ae384f7801e38087",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/bestest_hydronic_heat_pump/models/config.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic_heat_pump/models/config.json"
+    },
+    "boptest-heat-pump-days": {
+      "bytes": 47,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "147c5b546d599d14c9d9f03710ff631793540de65004238cd4b053fcffa1ad2c",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/bestest_hydronic_heat_pump/models/days.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic_heat_pump/models/days.json"
+    },
+    "boptest-heat-pump-kpis": {
+      "bytes": 154,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "c07e1dc6e2cf9930594355e26c361bb6f2ef24f9e5a6edb21f7b78b3390a7bca",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/bestest_hydronic_heat_pump/models/kpis.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/bestest_hydronic_heat_pump/models/kpis.json"
+    },
+    "boptest-office-config": {
+      "bytes": 151,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "c92906bed7417aa8e959391e1d67802a6467c0305771ecd39ffcdb587b0970e8",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/multizone_office_simple_air/models/config.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/multizone_office_simple_air/models/config.json"
+    },
+    "boptest-office-days": {
+      "bytes": 108,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "b1b51f524b51b037ef42130be821f2345c395318090421f4cd75afbf6207b187",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/multizone_office_simple_air/models/days.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/multizone_office_simple_air/models/days.json"
+    },
+    "boptest-office-kpis": {
+      "bytes": 718,
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "sha256": "858ccbf004f9f14216f3e89982c82c0c75fcef8a4691f60a01e2b850712083b4",
+      "source_id": "boptest",
+      "upstream_locator": "testcases/multizone_office_simple_air/models/kpis.json",
+      "url": "https://raw.githubusercontent.com/ibpsa/project1-boptest/a29024f8c453517ccbd1186006a3fa6af8de1ae2/testcases/multizone_office_simple_air/models/kpis.json"
+    },
+    "brick-building-meter": {
+      "bytes": 2478,
+      "revision": "ed436f08989e44dfbb64ef1aca3b2d028b84c4bb",
+      "sha256": "adbff7c0e9835743c2d328220489f82188d87576ae45b92fdb6914a9965803f4",
+      "source_id": "brick",
+      "upstream_locator": "examples/building_meter/building_meter.ttl",
+      "url": "https://raw.githubusercontent.com/BrickSchema/Brick/ed436f08989e44dfbb64ef1aca3b2d028b84c4bb/examples/building_meter/building_meter.ttl"
+    },
+    "brick-definitions": {
+      "bytes": 179274,
+      "revision": "ed436f08989e44dfbb64ef1aca3b2d028b84c4bb",
+      "sha256": "5bae7ba6895a239f7ebe02a424b72d40bfd92786c32d63156a6baa5f0c1fc89f",
+      "source_id": "brick",
+      "upstream_locator": "bricksrc/definitions.csv",
+      "url": "https://raw.githubusercontent.com/BrickSchema/Brick/ed436f08989e44dfbb64ef1aca3b2d028b84c4bb/bricksrc/definitions.csv"
+    },
+    "brick-evse": {
+      "bytes": 2344,
+      "revision": "ed436f08989e44dfbb64ef1aca3b2d028b84c4bb",
+      "sha256": "d186f6fb7326f0ae482c4dd07d706cce542454e9148fb6066894e493757cd5db",
+      "source_id": "brick",
+      "upstream_locator": "examples/evse/evse.ttl",
+      "url": "https://raw.githubusercontent.com/BrickSchema/Brick/ed436f08989e44dfbb64ef1aca3b2d028b84c4bb/examples/evse/evse.ttl"
+    },
+    "brick-solar-array": {
+      "bytes": 5356,
+      "revision": "ed436f08989e44dfbb64ef1aca3b2d028b84c4bb",
+      "sha256": "34430458ce04862b6236ce80b6d7a2b8233e45818e04337d38dca29b9683706f",
+      "source_id": "brick",
+      "upstream_locator": "examples/solar_array/solar_array.ttl",
+      "url": "https://raw.githubusercontent.com/BrickSchema/Brick/ed436f08989e44dfbb64ef1aca3b2d028b84c4bb/examples/solar_array/solar_array.ttl"
+    },
+    "brick-submeter": {
+      "bytes": 2335,
+      "revision": "ed436f08989e44dfbb64ef1aca3b2d028b84c4bb",
+      "sha256": "603c65391b2f848fbca199cc2e1400826c0b9982c27295291fc696fca1236488",
+      "source_id": "brick",
+      "upstream_locator": "examples/submeter_hierarchies/main-and-submeter.ttl",
+      "url": "https://raw.githubusercontent.com/BrickSchema/Brick/ed436f08989e44dfbb64ef1aca3b2d028b84c4bb/examples/submeter_hierarchies/main-and-submeter.ttl"
+    },
+    "citylearn-ev-schema": {
+      "bytes": 27644,
+      "revision": "834575c1a0194c8ae9d648ae858376a94dfceb78",
+      "sha256": "4bdb1e684de8b79a6896baeacf4314d6ac63de6bbb733ea271efa876b28b8538",
+      "source_id": "citylearn",
+      "upstream_locator": "data/datasets/citylearn_challenge_2022_phase_all_plus_evs/schema.json",
+      "url": "https://raw.githubusercontent.com/citylearn-project/CityLearn/834575c1a0194c8ae9d648ae858376a94dfceb78/data/datasets/citylearn_challenge_2022_phase_all_plus_evs/schema.json"
+    },
+    "citylearn-schema-definition": {
+      "bytes": 7261,
+      "revision": "834575c1a0194c8ae9d648ae858376a94dfceb78",
+      "sha256": "80d24e611a5ce6a5d8f282c045457a116c473d47137324d34448c833c585c7b7",
+      "source_id": "citylearn",
+      "upstream_locator": "assets/tables/citylearn_schema_definition.csv",
+      "url": "https://raw.githubusercontent.com/citylearn-project/CityLearn/834575c1a0194c8ae9d648ae858376a94dfceb78/assets/tables/citylearn_schema_definition.csv"
+    },
+    "citylearn-three-phase-schema": {
+      "bytes": 29089,
+      "revision": "834575c1a0194c8ae9d648ae858376a94dfceb78",
+      "sha256": "e4543c2fb0b0905ac9b6b351f080fcc07a8b6259edfae10a61d52cfefd3ca84e",
+      "source_id": "citylearn",
+      "upstream_locator": "data/datasets/citylearn_three_phase_electrical_service_demo/schema.json",
+      "url": "https://raw.githubusercontent.com/citylearn-project/CityLearn/834575c1a0194c8ae9d648ae858376a94dfceb78/data/datasets/citylearn_three_phase_electrical_service_demo/schema.json"
+    },
+    "ochre-battery-parameters": {
+      "bytes": 1028,
+      "revision": "0bf050355048a92301ece3122f8e5043889ad81c",
+      "sha256": "8b67d68f401e50318f69f52218deed0800da76f7b5d0b0e059455428c60c35bc",
+      "source_id": "ochre",
+      "upstream_locator": "ochre/defaults/Battery/default_parameters.csv",
+      "url": "https://raw.githubusercontent.com/NatLabRockies/OCHRE/0bf050355048a92301ece3122f8e5043889ad81c/ochre/defaults/Battery/default_parameters.csv"
+    },
+    "ochre-building-template": {
+      "bytes": 73,
+      "revision": "0bf050355048a92301ece3122f8e5043889ad81c",
+      "sha256": "166bb596a3440b5f683180451b0762f8d40bd2d854317bc130db7a3c0f770015",
+      "source_id": "ochre",
+      "upstream_locator": "ochre/defaults/OSW Templates/Minimal_building.csv",
+      "url": "https://raw.githubusercontent.com/NatLabRockies/OCHRE/0bf050355048a92301ece3122f8e5043889ad81c/ochre/defaults/OSW%20Templates/Minimal_building.csv"
+    },
+    "ochre-ev-profiles": {
+      "bytes": 7236758,
+      "revision": "0bf050355048a92301ece3122f8e5043889ad81c",
+      "sha256": "c9e2d8e67aca946c463b8dd0d666291bf4abd6257cff6551a6112faf33010d42",
+      "source_id": "ochre",
+      "upstream_locator": "ochre/defaults/EV/EV Profiles.csv",
+      "url": "https://raw.githubusercontent.com/NatLabRockies/OCHRE/0bf050355048a92301ece3122f8e5043889ad81c/ochre/defaults/EV/EV%20Profiles.csv"
+    },
+    "ochre-variable-units": {
+      "bytes": 22136,
+      "revision": "0bf050355048a92301ece3122f8e5043889ad81c",
+      "sha256": "c1a6a227a964d5ce975224a1ad730f3a39d04cfbe60c3dfa2a395ff905b64371",
+      "source_id": "ochre",
+      "upstream_locator": "ochre/defaults/Variable names and units.csv",
+      "url": "https://raw.githubusercontent.com/NatLabRockies/OCHRE/0bf050355048a92301ece3122f8e5043889ad81c/ochre/defaults/Variable%20names%20and%20units.csv"
+    },
+    "ochre-water-heater-parameters": {
+      "bytes": 168,
+      "revision": "0bf050355048a92301ece3122f8e5043889ad81c",
+      "sha256": "65660cd841603a263220893a2fafe06963d80f6b67c5e5ae51ebf7e894e97951",
+      "source_id": "ochre",
+      "upstream_locator": "ochre/defaults/Water Heating/default_paramters.csv",
+      "url": "https://raw.githubusercontent.com/NatLabRockies/OCHRE/0bf050355048a92301ece3122f8e5043889ad81c/ochre/defaults/Water%20Heating/default_paramters.csv"
+    },
+    "openleadr-active-period": {
+      "bytes": 1348,
+      "revision": "3276fd5c46c5626044c77493c3406a7fd938c84c",
+      "sha256": "7f231ec60f9b46a619ea5667882639282e8a3221e8a9116ac8c4ddb3668b0511",
+      "source_id": "openleadr",
+      "upstream_locator": "openleadr/templates/parts/eiActivePeriod.xml",
+      "url": "https://raw.githubusercontent.com/OpenLEADR/openleadr-python/3276fd5c46c5626044c77493c3406a7fd938c84c/openleadr/templates/parts/eiActivePeriod.xml"
+    },
+    "openleadr-distribute-event": {
+      "bytes": 908,
+      "revision": "3276fd5c46c5626044c77493c3406a7fd938c84c",
+      "sha256": "a1625ef1e0bb66c8c4f44b426af351e49e7a9d1c0617d854e42b4218cc625cc9",
+      "source_id": "openleadr",
+      "upstream_locator": "openleadr/templates/oadrDistributeEvent.xml",
+      "url": "https://raw.githubusercontent.com/OpenLEADR/openleadr-python/3276fd5c46c5626044c77493c3406a7fd938c84c/openleadr/templates/oadrDistributeEvent.xml"
+    },
+    "openleadr-enums": {
+      "bytes": 19416,
+      "revision": "3276fd5c46c5626044c77493c3406a7fd938c84c",
+      "sha256": "2a952bb94b6af75a8a597a04e7aed9ad2a700ea72c735755290f0b3eace84e51",
+      "source_id": "openleadr",
+      "upstream_locator": "openleadr/enums.py",
+      "url": "https://raw.githubusercontent.com/OpenLEADR/openleadr-python/3276fd5c46c5626044c77493c3406a7fd938c84c/openleadr/enums.py"
+    },
+    "openleadr-event": {
+      "bytes": 840,
+      "revision": "3276fd5c46c5626044c77493c3406a7fd938c84c",
+      "sha256": "2037a60a7fe956976417ad33d73bc9b501233c4e43f6b9bbd0b5bfd042bdb7fa",
+      "source_id": "openleadr",
+      "upstream_locator": "openleadr/templates/parts/eiEvent.xml",
+      "url": "https://raw.githubusercontent.com/OpenLEADR/openleadr-python/3276fd5c46c5626044c77493c3406a7fd938c84c/openleadr/templates/parts/eiEvent.xml"
+    },
+    "openleadr-event-signal": {
+      "bytes": 1643,
+      "revision": "3276fd5c46c5626044c77493c3406a7fd938c84c",
+      "sha256": "d205092c743b89685bcaf7e2531b0b18ccdff0782f1648d67ccf4c66324af5ba",
+      "source_id": "openleadr",
+      "upstream_locator": "openleadr/templates/parts/eiEventSignal.xml",
+      "url": "https://raw.githubusercontent.com/OpenLEADR/openleadr-python/3276fd5c46c5626044c77493c3406a7fd938c84c/openleadr/templates/parts/eiEventSignal.xml"
+    },
+    "openleadr-event-target": {
+      "bytes": 1138,
+      "revision": "3276fd5c46c5626044c77493c3406a7fd938c84c",
+      "sha256": "c7e5523a8d17192a7c51a388dbb043213b695d49e9358f59118edb00761778bf",
+      "source_id": "openleadr",
+      "upstream_locator": "openleadr/templates/parts/eiEventTarget.xml",
+      "url": "https://raw.githubusercontent.com/OpenLEADR/openleadr-python/3276fd5c46c5626044c77493c3406a7fd938c84c/openleadr/templates/parts/eiEventTarget.xml"
+    },
+    "openleadr-objects": {
+      "bytes": 13165,
+      "revision": "3276fd5c46c5626044c77493c3406a7fd938c84c",
+      "sha256": "cbb7d71eb9d45e5637a5653a1224794ebefdbbf047e1cad1a4467d1f67c608d0",
+      "source_id": "openleadr",
+      "upstream_locator": "openleadr/objects.py",
+      "url": "https://raw.githubusercontent.com/OpenLEADR/openleadr-python/3276fd5c46c5626044c77493c3406a7fd938c84c/openleadr/objects.py"
+    },
+    "saref4bldg-ontology": {
+      "bytes": 140408,
+      "revision": "saref4bldg-2.1.1+saref4grid-1.1.1",
+      "sha256": "589fdf212e82886bac714a484495e0513156d5195e5108395c2d22b3bd404d53",
+      "source_id": "saref",
+      "upstream_locator": "https://saref.etsi.org/saref4bldg/v2.1.1/saref4bldg.ttl",
+      "url": "https://saref.etsi.org/saref4bldg/v2.1.1/saref4bldg.ttl"
+    },
+    "saref4grid-ontology": {
+      "bytes": 54601,
+      "revision": "saref4bldg-2.1.1+saref4grid-1.1.1",
+      "sha256": "a50683e78ca4575597febfe56066e87430b72123908848639a11d1bfb08abd32",
+      "source_id": "saref",
+      "upstream_locator": "https://saref.etsi.org/saref4grid/v1.1.1/saref4grid.ttl",
+      "url": "https://saref.etsi.org/saref4grid/v1.1.1/saref4grid.ttl"
+    },
+    "simbench-external-net": {
+      "bytes": 274,
+      "revision": "876e7a7be470258cefa524a36eeb08293008b5dc",
+      "sha256": "eab5de4cc78cb96fde43de05e008119de89f94f405ea10db16ff9b5177a66b8d",
+      "source_id": "simbench",
+      "upstream_locator": "simbench/test/converter/test_network/ExternalNet.csv",
+      "url": "https://raw.githubusercontent.com/e2nIEE/simbench/876e7a7be470258cefa524a36eeb08293008b5dc/simbench/test/converter/test_network/ExternalNet.csv"
+    },
+    "simbench-line": {
+      "bytes": 494,
+      "revision": "876e7a7be470258cefa524a36eeb08293008b5dc",
+      "sha256": "ed8467f38d3030f017e4acfcde0f693cdf5a7022c105af79aa742003e26b0987",
+      "source_id": "simbench",
+      "upstream_locator": "simbench/test/converter/test_network/Line.csv",
+      "url": "https://raw.githubusercontent.com/e2nIEE/simbench/876e7a7be470258cefa524a36eeb08293008b5dc/simbench/test/converter/test_network/Line.csv"
+    },
+    "simbench-load": {
+      "bytes": 218,
+      "revision": "876e7a7be470258cefa524a36eeb08293008b5dc",
+      "sha256": "945d005418ca8a103778c652c11689da838ad9acd8261af0f7ba463506d72087",
+      "source_id": "simbench",
+      "upstream_locator": "simbench/test/converter/test_network/Load.csv",
+      "url": "https://raw.githubusercontent.com/e2nIEE/simbench/876e7a7be470258cefa524a36eeb08293008b5dc/simbench/test/converter/test_network/Load.csv"
+    },
+    "simbench-load-profile": {
+      "bytes": 1078487,
+      "revision": "876e7a7be470258cefa524a36eeb08293008b5dc",
+      "sha256": "a95fe5669bd26efeebd9852ff64593a6167a646ecd0a74a5613c3244e0015a26",
+      "source_id": "simbench",
+      "upstream_locator": "simbench/test/converter/test_network/LoadProfile.csv",
+      "url": "https://raw.githubusercontent.com/e2nIEE/simbench/876e7a7be470258cefa524a36eeb08293008b5dc/simbench/test/converter/test_network/LoadProfile.csv"
+    },
+    "simbench-node": {
+      "bytes": 1027,
+      "revision": "876e7a7be470258cefa524a36eeb08293008b5dc",
+      "sha256": "07b3ce7e607087f1815aa9b61711dee19b351a1985ce69b419a300917c44f4b1",
+      "source_id": "simbench",
+      "upstream_locator": "simbench/test/converter/test_network/Node.csv",
+      "url": "https://raw.githubusercontent.com/e2nIEE/simbench/876e7a7be470258cefa524a36eeb08293008b5dc/simbench/test/converter/test_network/Node.csv"
+    },
+    "simbench-study-cases": {
+      "bytes": 710,
+      "revision": "876e7a7be470258cefa524a36eeb08293008b5dc",
+      "sha256": "834d518fb2408555e0f88f3c8a0431ea73515f21a1dc8edafcaad88b9d89808d",
+      "source_id": "simbench",
+      "upstream_locator": "simbench/networks/1-complete_data-mixed-all-0-sw/StudyCases.csv",
+      "url": "https://raw.githubusercontent.com/e2nIEE/simbench/876e7a7be470258cefa524a36eeb08293008b5dc/simbench/networks/1-complete_data-mixed-all-0-sw/StudyCases.csv"
+    },
+    "simbench-transformer": {
+      "bytes": 172,
+      "revision": "876e7a7be470258cefa524a36eeb08293008b5dc",
+      "sha256": "dc3ef4124c34e21de8818902dc350dcdfd3798f16b7d4cd217e7eacb0774b69a",
+      "source_id": "simbench",
+      "upstream_locator": "simbench/test/converter/test_network/Transformer.csv",
+      "url": "https://raw.githubusercontent.com/e2nIEE/simbench/876e7a7be470258cefa524a36eeb08293008b5dc/simbench/test/converter/test_network/Transformer.csv"
+    },
+    "tesp-energyplus-readme": {
+      "bytes": 550,
+      "revision": "812271479f42f2a203f780229f0be7773571f81c",
+      "sha256": "d56e8738ba2e2b176da4b1d285315573e260b3da27ec08d401e1bc6b4c970999",
+      "source_id": "tesp",
+      "upstream_locator": "data/energyplus/README.md",
+      "url": "https://raw.githubusercontent.com/pnnl/tesp/812271479f42f2a203f780229f0be7773571f81c/data/energyplus/README.md"
+    },
+    "tesp-eplus-agent": {
+      "bytes": 4151,
+      "revision": "812271479f42f2a203f780229f0be7773571f81c",
+      "sha256": "4a67a32a84ff622bd1e8aae913ba96ebe96327feb728264414d0423298fcbf19",
+      "source_id": "tesp",
+      "upstream_locator": "examples/capabilities/energyplus/eplus_agentH.json",
+      "url": "https://raw.githubusercontent.com/pnnl/tesp/812271479f42f2a203f780229f0be7773571f81c/examples/capabilities/energyplus/eplus_agentH.json"
+    },
+    "tesp-eplus-agent-example": {
+      "bytes": 4151,
+      "revision": "812271479f42f2a203f780229f0be7773571f81c",
+      "sha256": "4a67a32a84ff622bd1e8aae913ba96ebe96327feb728264414d0423298fcbf19",
+      "source_id": "tesp",
+      "upstream_locator": "examples/capabilities/energyplus/eplusHelicsExample/helics_eplus_agent2.json",
+      "url": "https://raw.githubusercontent.com/pnnl/tesp/812271479f42f2a203f780229f0be7773571f81c/examples/capabilities/energyplus/eplusHelicsExample/helics_eplus_agent2.json"
+    },
+    "tesp-eplus-federate": {
+      "bytes": 3717,
+      "revision": "812271479f42f2a203f780229f0be7773571f81c",
+      "sha256": "9c4b857ebc16a13f69e1bb3cc107816dd3e20bae0fc827d2874add79efcc9d28",
+      "source_id": "tesp",
+      "upstream_locator": "examples/capabilities/energyplus/eplusH.json",
+      "url": "https://raw.githubusercontent.com/pnnl/tesp/812271479f42f2a203f780229f0be7773571f81c/examples/capabilities/energyplus/eplusH.json"
+    },
+    "tesp-loadshed-agent": {
+      "bytes": 4019,
+      "revision": "812271479f42f2a203f780229f0be7773571f81c",
+      "sha256": "8922294c86a7b87b0257ae91499862026edec7476291dc57bcd0a8a1cc2d363a",
+      "source_id": "tesp",
+      "upstream_locator": "examples/capabilities/loadshed-HELICS3-EPlus/helics_eplus_agent.json",
+      "url": "https://raw.githubusercontent.com/pnnl/tesp/812271479f42f2a203f780229f0be7773571f81c/examples/capabilities/loadshed-HELICS3-EPlus/helics_eplus_agent.json"
+    },
+    "tesp-loadshed-eplus": {
+      "bytes": 2656,
+      "revision": "812271479f42f2a203f780229f0be7773571f81c",
+      "sha256": "749d4902dd81e85b4c87420f3f6e218fbc0cb4338710ce7c573593e1304992f0",
+      "source_id": "tesp",
+      "upstream_locator": "examples/capabilities/loadshed-HELICS3-EPlus/helics_eplus.json",
+      "url": "https://raw.githubusercontent.com/pnnl/tesp/812271479f42f2a203f780229f0be7773571f81c/examples/capabilities/loadshed-HELICS3-EPlus/helics_eplus.json"
+    },
+    "urbanopt-baseline-scenario": {
+      "bytes": 935,
+      "revision": "46d70351e308c8da210b42e6baf57f8180d2c189",
+      "sha256": "17b4075839cf175352a644eade97bac9cd9a6ddbd5a2b47c71be14ea0ac5338d",
+      "source_id": "urbanopt",
+      "upstream_locator": "example_project/baseline_scenario.csv",
+      "url": "https://raw.githubusercontent.com/urbanopt/urbanopt-example-geojson-project/46d70351e308c8da210b42e6baf57f8180d2c189/example_project/baseline_scenario.csv"
+    },
+    "urbanopt-electric-network": {
+      "bytes": 45103,
+      "revision": "46d70351e308c8da210b42e6baf57f8180d2c189",
+      "sha256": "cc36d8e1e379e4f48300494ab1e703ef52d73ee9bf47af2f8f29f63d308d4897",
+      "source_id": "urbanopt",
+      "upstream_locator": "example_project/example_project_with_electric_network.json",
+      "url": "https://raw.githubusercontent.com/urbanopt/urbanopt-example-geojson-project/46d70351e308c8da210b42e6baf57f8180d2c189/example_project/example_project_with_electric_network.json"
+    },
+    "urbanopt-mels-shedding": {
+      "bytes": 1188,
+      "revision": "46d70351e308c8da210b42e6baf57f8180d2c189",
+      "sha256": "ea10f9f88aac071e66ccecac067724f93312605033b10b3bca4919d116387f9a",
+      "source_id": "urbanopt",
+      "upstream_locator": "example_project/peak_hours_mels_shedding_scenario.csv",
+      "url": "https://raw.githubusercontent.com/urbanopt/urbanopt-example-geojson-project/46d70351e308c8da210b42e6baf57f8180d2c189/example_project/peak_hours_mels_shedding_scenario.csv"
+    },
+    "urbanopt-pv-project": {
+      "bytes": 19952,
+      "revision": "46d70351e308c8da210b42e6baf57f8180d2c189",
+      "sha256": "73969cd57e873226d34218dfa611617a1d685d9184080e1f85b12f3ad98d103a",
+      "source_id": "urbanopt",
+      "upstream_locator": "example_project/example_project_with_PV.json",
+      "url": "https://raw.githubusercontent.com/urbanopt/urbanopt-example-geojson-project/46d70351e308c8da210b42e6baf57f8180d2c189/example_project/example_project_with_PV.json"
+    },
+    "urbanopt-thermostat-shedding": {
+      "bytes": 1260,
+      "revision": "46d70351e308c8da210b42e6baf57f8180d2c189",
+      "sha256": "0a44e19ec00ac4581a3537dfc6d5f09609aee32d87b1a02f4f52bc944fcf0438",
+      "source_id": "urbanopt",
+      "upstream_locator": "example_project/peak_hours_thermostat_adjust_scenario.csv",
+      "url": "https://raw.githubusercontent.com/urbanopt/urbanopt-example-geojson-project/46d70351e308c8da210b42e6baf57f8180d2c189/example_project/peak_hours_thermostat_adjust_scenario.csv"
+    }
+  },
+  "extractor_version": "case-derived-kb-extractor-v2",
+  "schema_version": "1.0"
+}

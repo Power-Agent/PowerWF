@@ -1,0 +1,11 @@
+{
+  "assumption_type": "synthetic_research_assumption",
+  "capacity_kwh_per_bem": 500.0,
+  "maximum_charge_kw_per_bem": 250.0,
+  "maximum_discharge_kw_per_bem": 250.0,
+  "minimum_soc_fraction": 0.1,
+  "maximum_soc_fraction": 0.9,
+  "initial_soc_fraction": 0.5,
+  "round_trip_efficiency": 0.9,
+  "terminal_soc_tolerance_fraction": 0.02
+}

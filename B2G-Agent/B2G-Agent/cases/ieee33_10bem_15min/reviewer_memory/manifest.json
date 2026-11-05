@@ -1,0 +1,36 @@
+{
+  "excluded_splits": [
+    "test"
+  ],
+  "failure_channel_counts": {
+    "evidence": 80,
+    "semantic": 70
+  },
+  "failure_signature_counts": {
+    "E-BEM-BUS-MAPPING": 10,
+    "E-HARD-CONSTRAINT-VIOLATION": 10,
+    "E-INVALID-DAG": 10,
+    "E-MISSING-OUTPUT": 10,
+    "E-NONCONVERGENCE": 10,
+    "E-STALE-PROVENANCE": 10,
+    "E-TIME-ALIGNMENT": 10,
+    "E-WRONG-TOOL": 10,
+    "S-ACTION-DIRECTION-REVERSAL": 10,
+    "S-BEM-BUS-MISMATCH": 10,
+    "S-CONSTRAINT-OMISSION": 10,
+    "S-OBJECT-OMISSION": 10,
+    "S-REQUESTED-OUTPUT-OMISSION": 10,
+    "S-TIME-WINDOW-DRIFT": 10,
+    "S-UNIT-MISMATCH": 10
+  },
+  "mutations_per_episode": 3,
+  "path": "cases/ieee33_10bem_15min/reviewer_memory/verified_seed.jsonl",
+  "record_count": 150,
+  "schema_version": "2.0",
+  "sha256": "19d038b77a7cefee58dfc086bf734776609d1b54ab6adccd94a6cd36a762e14b",
+  "source_splits": [
+    "development",
+    "memory_seed"
+  ],
+  "validator_version": "reviewer-failure-validator-v1"
+}

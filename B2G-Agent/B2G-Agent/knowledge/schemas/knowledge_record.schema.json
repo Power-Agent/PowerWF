@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://b2g-agent.local/schemas/knowledge-record-v2.json",
+  "title": "B2G structured knowledge record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_id",
+    "domain",
+    "record_type",
+    "title",
+    "summary",
+    "keywords",
+    "entities",
+    "relations",
+    "rules",
+    "applicability",
+    "limitations",
+    "units",
+    "time_scales",
+    "spatial_levels",
+    "applicable_roles",
+    "business_types",
+    "directions",
+    "review_status",
+    "source_refs"
+  ],
+  "properties": {
+    "record_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$"},
+    "domain": {"enum": ["building", "grid", "cross_domain"]},
+    "record_type": {"type": "string"},
+    "title": {"type": "string", "minLength": 3},
+    "summary": {"type": "string", "minLength": 10},
+    "keywords": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "entities": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "relations": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "rules": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "applicability": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "limitations": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "units": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "time_scales": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "spatial_levels": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "applicable_roles": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "business_types": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "directions": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "review_status": {"enum": ["source_derived", "source_derived_method_frozen"]},
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "asset_id", "upstream_locator", "sha256"],
+        "properties": {
+          "source_id": {"type": "string"},
+          "asset_id": {"type": "string"},
+          "upstream_locator": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    }
+  }
+}

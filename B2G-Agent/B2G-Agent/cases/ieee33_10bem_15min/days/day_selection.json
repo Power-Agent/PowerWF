@@ -1,0 +1,24 @@
+{
+  "rule_version": "1.0",
+  "selection_uses": "operational limits use only calendar_split development dates; target days are ranked only within the frozen test-candidate pool; reference days come only from the separate reference pool",
+  "candidate_labels": [
+    "winter_peak_01",
+    "winter_peak_02",
+    "shoulder_01",
+    "shoulder_02",
+    "summer_peak_01",
+    "summer_peak_02",
+    "pv_surplus_01",
+    "pv_surplus_02",
+    "voltage_risk_01",
+    "congestion_risk_01"
+  ],
+  "rules": {
+    "peak": "top two daily feeder peak values after removing data-quality failures",
+    "pv_surplus": "top two midday gross-PV-to-load ratios",
+    "voltage_risk": "lowest baseline bus voltage among otherwise converged days",
+    "congestion_risk": "highest baseline experiment-specific line loading",
+    "reference_days": "same weekday class and nearest daily mean dry-bulb temperature, excluding event day and test split"
+  },
+  "status": "calendar dates are frozen only after full-year EnergyPlus and profile preparation"
+}

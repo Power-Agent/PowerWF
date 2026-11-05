@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "b2g-agent"
+version = "1.0.0"
+description = "A reproducible Translator-Actor-Reviewer framework for building-grid interactions."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "B2G-Agent contributors" }]
+dependencies = [
+  "fastapi==0.141.1",
+  "openai==3.19.2",
+  "pydantic==2.13.5",
+  "python-dotenv==1.2.3",
+  "uvicorn[standard]==0.53.0",
+]
+
+[project.optional-dependencies]
+dev = ["httpx==0.28.1", "pytest==9.1.1"]
+simulation = [
+  "networkx==3.7",
+  "numpy==2.4.6",
+  "pandas==2.3.3",
+  "pandapower==3.5.6",
+  "pvlib==0.16.1",
+  "scipy==1.18.1",
+]
+retrieval = [
+  "huggingface-hub==0.36.2",
+  "safetensors==0.8.0",
+  "scikit-learn==1.9.1",
+  "sentence-transformers==5.1.2",
+  "tokenizers==0.22.2",
+  "torch==2.14.1",
+  "transformers==4.57.6",
+]
+
+[project.scripts]
+b2g-web = "b2g_agent.web.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+b2g_agent = ["web/static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["integration: requires locally installed external simulators"]

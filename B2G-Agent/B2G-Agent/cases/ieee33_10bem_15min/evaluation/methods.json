@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "shared_invariants": {
+    "llm_snapshot": "gpt-6-luna",
+    "max_output_tokens_per_call": 9000,
+    "maximum_agent_revisions": 4,
+    "maximum_schema_repairs": 2,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 2026,
+    "knowledge_input_budget": "matched_by_runner",
+    "tool_catalog": "matched_by_runner",
+    "physics_executor": "identical_local_energyplus_pandapower",
+    "scoring_protocol": "evaluation/scoring.json"
+  },
+  "methods": [
+    {
+      "method_id": "full_multi_agent",
+      "label": "Proposed Translator-Actor-Reviewer",
+      "pipeline_kind": "multi_agent",
+      "retrieval_enabled": true,
+      "schema_plan_enabled": true,
+      "reviewer_memory_enabled": true,
+      "implementation_status": "ready"
+    },
+    {
+      "method_id": "same_llm_single_agent",
+      "label": "Same-LLM tool-enabled single-agent baseline",
+      "pipeline_kind": "single_agent",
+      "retrieval_enabled": true,
+      "schema_plan_enabled": false,
+      "reviewer_memory_enabled": false,
+      "implementation_status": "ready"
+    },
+    {
+      "method_id": "plain_translator",
+      "label": "Plain-Translator v2",
+      "pipeline_kind": "multi_agent",
+      "retrieval_enabled": false,
+      "schema_plan_enabled": true,
+      "reviewer_memory_enabled": true,
+      "implementation_status": "ready"
+    },
+    {
+      "method_id": "unstructured_actor",
+      "label": "Unstructured-Actor v2",
+      "pipeline_kind": "multi_agent",
+      "retrieval_enabled": true,
+      "schema_plan_enabled": false,
+      "reviewer_memory_enabled": true,
+      "implementation_status": "ready"
+    },
+    {
+      "method_id": "reviewer_no_feedback",
+      "label": "Reviewer without corrective feedback v4",
+      "pipeline_kind": "multi_agent",
+      "retrieval_enabled": true,
+      "schema_plan_enabled": true,
+      "reviewer_memory_enabled": true,
+      "implementation_status": "ready"
+    }
+  ]
+}

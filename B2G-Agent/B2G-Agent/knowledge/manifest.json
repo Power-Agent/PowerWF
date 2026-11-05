@@ -1,0 +1,107 @@
+{
+  "asset_lock_sha256": "4173c70b095eea9d7155a3db67aa305bd52b41db05ce586c466156424720a2a4",
+  "balance_policy": {
+    "duplicate_padding": false,
+    "selection": "deterministic round-robin over record_type and source strata",
+    "target_per_domain": 180
+  },
+  "candidate_record_counts": {
+    "building": 964,
+    "cross_domain": 180,
+    "grid": 456
+  },
+  "extractor_version": "case-derived-kb-extractor-v2",
+  "knowledge_release": "case-derived-kb-v3",
+  "leakage_boundary": {
+    "allowed_content": [
+      "general domain concepts",
+      "open-source case structures",
+      "unit and temporal conventions",
+      "building-grid interface patterns",
+      "interaction protocol vocabulary"
+    ],
+    "excluded_content": [
+      "cases/**/tasks",
+      "cases/**/groundtruth",
+      "episode-specific final actions",
+      "episode-specific numeric oracle values",
+      "reviewer episodic memory"
+    ],
+    "raw_storage": ".local-data/knowledge_sources",
+    "redistribution_rule": "Only the deterministic derived records, lock file, and provenance manifest are committed. Raw upstream assets remain ignored local data."
+  },
+  "outputs": {
+    "building": {
+      "path": "knowledge/building/records.jsonl",
+      "record_count": 180,
+      "record_type_counts": {
+        "building_control_benchmark": 4,
+        "building_output_variable": 41,
+        "coordination_case_schema": 1,
+        "device_case_schema": 4,
+        "district_control_case": 3,
+        "ontology_concept": 41,
+        "schema_field": 40,
+        "spatial_case_schema": 6,
+        "standard_ontology_concept": 40
+      },
+      "sha256": "9f78d3e4815d1f62bbf0ac3416745adeee6a40270c71b2099d4dd943a65fd063",
+      "source_reference_counts": {
+        "boptest": 12,
+        "brick": 41,
+        "citylearn": 41,
+        "ochre": 45,
+        "saref": 40,
+        "urbanopt": 9
+      }
+    },
+    "cross_domain": {
+      "path": "knowledge/cross_domain/records.jsonl",
+      "record_count": 180,
+      "record_type_counts": {
+        "co_simulation_case": 5,
+        "coordination_case_schema": 1,
+        "executable_mapping_rule": 24,
+        "interaction_message_template": 5,
+        "interaction_vocabulary": 12,
+        "message_field": 129,
+        "ontology_example": 4
+      },
+      "sha256": "c16f0e172a935c6c680e4d2b3875651821a07655a388db25cd3c79d0d676016a",
+      "source_reference_counts": {
+        "boptest": 10,
+        "brick": 11,
+        "citylearn": 4,
+        "ochre": 7,
+        "openleadr": 27,
+        "saref": 2,
+        "simbench": 10,
+        "tesp": 140,
+        "urbanopt": 7
+      }
+    },
+    "grid": {
+      "path": "knowledge/grid/records.jsonl",
+      "record_count": 180,
+      "record_type_counts": {
+        "grid_coordination_schema_field": 57,
+        "grid_data_schema": 7,
+        "grid_schema_field": 57,
+        "spatial_case_schema": 2,
+        "standard_ontology_concept": 57
+      },
+      "sha256": "4b3b2c6f80beb5ce317a4554a0bddee35a1f312d9a43a078fe37790189a9b296",
+      "source_reference_counts": {
+        "citylearn": 57,
+        "saref": 57,
+        "simbench": 64,
+        "urbanopt": 2
+      }
+    }
+  },
+  "raw_asset_bytes": 8920613,
+  "raw_asset_count": 52,
+  "release_sha256": "b82a8a7ed309daf8cf57aec6ee6608a2a3cf5adf5f69dad06815ef20e7a6505b",
+  "schema_version": "1.0",
+  "source_registry_sha256": "f49f1e9c82cb491c251eaed831a18739d059ac39d19eb8b795881ad4a6f5590e"
+}

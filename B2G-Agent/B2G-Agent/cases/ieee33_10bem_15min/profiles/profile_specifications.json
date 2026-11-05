@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "time_resolution_minutes": 15,
+  "timezone": "America/New_York",
+  "annual_interval_count": 35040,
+  "leap_year": false,
+  "files": {
+    "background_load_15min.csv": {
+      "source_id": "oedi-eulp-2021-tmy3-ny",
+      "columns": ["timestamp", "paper_bus", "p_kw", "q_kvar", "source_building_class", "source_record_id"],
+      "required_paper_buses": "2-33",
+      "derivation": "Use the official 2021 ComStock/ResStock TMY3 New York state building-class aggregates as heterogeneous shapes. Match each BEM bus to its corresponding class, including ResStock Multi-Family with 5+ Units for BEM08; cycle the frozen class set over other buses; normalize each bus to 60% of the original case33bw node P peak and preserve its original Q/P ratio.",
+      "quality_gates": ["35040 rows per bus", "strict 15-minute monotonic timestamps", "no missing values", "p_kw >= 0", "source record IDs preserved"]
+    },
+    "bem_baseline_15min.csv": {
+      "source_id": "doe-commercial-prototypes-2019",
+      "columns": ["timestamp", "bem_id", "paper_bus", "single_building_kw", "aggregation_factor", "portfolio_kw"],
+      "derivation": "Run each transitioned Buffalo IDF; set aggregation_factor so portfolio baseline peak equals 40% of the original case33bw node peak. Never scale temperature.",
+      "quality_gates": ["35040 rows per BEM", "zero EnergyPlus severe errors", "four timesteps per hour", "input hashes recorded"]
+    },
+    "pv_15min.csv": {
+      "source_id": "doe-buffalo-tmy3",
+      "columns": ["timestamp", "bem_id", "paper_bus", "pv_kw"],
+      "derivation": "Pinned local pvlib ModelChain driven by the shared EPW and der/pv.json; generation is positive and subtracted from consumption at the coupling boundary.",
+      "quality_gates": ["35040 rows per BEM", "pv_kw >= 0", "component and pvlib versions recorded"]
+    },
+    "prices_15min.csv": {
+      "source_id": "iso-ne-2025-smd-hourly",
+      "columns": ["timestamp", "location", "rt_lmp_usd_per_mwh"],
+      "derivation": "Freeze the official ISO-NE 2025 SMD Hourly Data workbook for the NEMA/Boston load zone and repeat each final hourly RT LMP over its four contained 15-minute intervals. No unobserved within-hour variation is invented.",
+      "quality_gates": ["35040 rows", "final rather than preliminary data", "hour-ending conversion and DST rule documented", "source workbook hash recorded", "resolution labelled hourly-expanded"]
+    },
+    "reserve_15min.csv": {
+      "source_id": "iso-ne-2025-five-minute-reserve",
+      "columns": ["timestamp", "reserve_product", "designation_mw", "price_usd_per_mwh"],
+      "derivation": "Select official ISO-NE reserve zone 7002 (NEMA/Boston); arithmetically average every three consecutive 5-minute TMSR, TMNSR, and TMOR price/designation values to 15 minutes. Preserve designation terminology rather than relabelling it as a requirement.",
+      "quality_gates": ["35040 rows per product", "three products preserved", "DST normalization documented", "source workbook hash recorded", "designation not mislabelled as requirement"]
+    },
+    "daily_metrics.csv": {
+      "source_id": "derived-development-and-test-baseline",
+      "columns": ["date", "mean_dry_bulb_c", "feeder_peak_kw", "minimum_voltage_pu", "maximum_line_loading_pct", "gross_pv_to_load_ratio"],
+      "derivation": "Deterministic daily aggregation of frozen full-year inputs and baseline pandapower outputs; used only by select_target_days.py.",
+      "quality_gates": ["365 unique dates", "no episode outcomes", "input and script hashes recorded"]
+    },
+    "models/rc_parameters.json": {
+      "source_id": "derived-energyplus-observational-rc",
+      "derivation": "Fit seasonal scalar ARX forms of the RC state equation by standardized ridge least squares on development dates; evaluate only on reference dates and exclude target/test-candidate dates.",
+      "quality_gates": ["ten BEMs", "heating/shoulder/cooling regimes", "training and validation counts recorded", "input hashes recorded", "limitations disclosed"]
+    }
+  },
+  "forbidden_shortcuts": [
+    "Do not replace missing OEDI or market inputs with an unlabeled sinusoid.",
+    "Do not copy target/test intervals into development-derived limits.",
+    "Do not imply that TMY weather and historical market prices are causally paired."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "2.0",
+  "method": "pvlib ModelChain with PVWatts DC and AC models using the frozen Buffalo TMY3 EPW",
+  "pvlib_version": "0.16.1",
+  "tilt_degrees": 35.0,
+  "azimuth_degrees": 180.0,
+  "dc_ac_ratio": 1.2,
+  "losses_fraction_after_inverter": 0.14,
+  "module_parameters": {
+    "pdc0_w_per_kw_nameplate": 1000.0,
+    "gamma_pdc_per_c": -0.0035
+  },
+  "inverter_parameters": {
+    "pdc0_w_per_kw_nameplate": 833.3333333333
+  },
+  "temperature_model": "sapm/open_rack_glass_polymer",
+  "aoi_model": "physical",
+  "spectral_model": "no_loss",
+  "weather_upsampling": "cyclic linear interpolation from hourly EPW records to a fixed 15-minute local-standard-time grid",
+  "capacity_kw_by_bem": {
+    "bem_01": 150.0,
+    "bem_02": 250.0,
+    "bem_03": 300.0,
+    "bem_04": 350.0,
+    "bem_05": 400.0,
+    "bem_06": 450.0,
+    "bem_07": 200.0,
+    "bem_08": 300.0,
+    "bem_09": 350.0,
+    "bem_10": 250.0
+  },
+  "sign_convention": "pv_kw is nonnegative generation and is subtracted from load at the coupling boundary"
+}

@@ -1,0 +1,26 @@
+{
+  "bem_id": "bem_09",
+  "building_type": "Stand-alone Retail (replicate)",
+  "prototype_standard": "ANSI/ASHRAE/IES 90.1-2019",
+  "source_energyplus_version": "22.1.0",
+  "runtime_energyplus_version": "23.1.0",
+  "climate_zone": "5A",
+  "representative_city": "Buffalo, NY",
+  "source_archive": "https://www.energycodes.gov/sites/default/files/2023-10/ASHRAE901_RetailStandalone_STD2019.zip",
+  "source_selector": {
+    "required_tokens": [
+      "RetailStandalone",
+      "Buffalo",
+      "STD2019"
+    ],
+    "extension": ".idf"
+  },
+  "local_raw_path": "buildings/bem_09/source.idf",
+  "local_runtime_path": "buildings/bem_09/energyplus_23_1.idf",
+  "replicate_runtime_from": "bem_05",
+  "timestep_per_hour": 4,
+  "portfolio_scaling": {
+    "target_peak_share_of_original_node_load": 0.4,
+    "temperature_scaling": false
+  }
+}

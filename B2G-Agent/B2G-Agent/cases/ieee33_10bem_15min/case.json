@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "case_id": "ieee33_10bem_15min",
+  "title": "IEEE 33-bus / 10-BEM / 15-minute building-grid interaction case",
+  "description": "One frozen radial 33-bus feeder, ten node-level building energy managers, seven interaction task families, and 200 complete bidirectional episodes.",
+  "time_resolution_minutes": 15,
+  "intervals_per_day": 96,
+  "timezone": "America/New_York",
+  "weather_location": "Buffalo Niagara International Airport, NY, ASHRAE climate zone 5A",
+  "energyplus_source_version": "22.1.0",
+  "energyplus_runtime_version": "23.1.0",
+  "pandapower_case": "pandapower.networks.case33bw",
+  "pandapower_version": "3.5.6",
+  "network_policy": {
+    "radial_lines_in_service": 32,
+    "tie_lines_out_of_service": 5,
+    "reconfiguration_enabled": false,
+    "thermal_limits_are_experiment_specific": true
+  },
+  "building_model_policy": {
+    "representative_idfs_per_bem": 1,
+    "power_portfolio_scaling_enabled": true,
+    "temperature_scaling_enabled": false
+  },
+  "bem_peak_share_of_original_node_load": 0.4,
+  "background_peak_share_of_original_node_load": 0.6,
+  "bems": [
+    {"bem_id": "bem_01", "bus": 3, "building_type": "Small Office", "prototype_slug": "OfficeSmall"},
+    {"bem_id": "bem_02", "bus": 5, "building_type": "Medium Office", "prototype_slug": "OfficeMedium"},
+    {"bem_id": "bem_03", "bus": 8, "building_type": "Small Office (replicate)", "prototype_slug": "OfficeSmall"},
+    {"bem_id": "bem_04", "bus": 11, "building_type": "Medium Office (replicate)", "prototype_slug": "OfficeMedium"},
+    {"bem_id": "bem_05", "bus": 15, "building_type": "Stand-alone Retail", "prototype_slug": "RetailStandalone"},
+    {"bem_id": "bem_06", "bus": 18, "building_type": "Strip Mall", "prototype_slug": "RetailStripmall"},
+    {"bem_id": "bem_07", "bus": 21, "building_type": "Small Hotel", "prototype_slug": "HotelSmall"},
+    {"bem_id": "bem_08", "bus": 27, "building_type": "Mid-rise Apartment", "prototype_slug": "ApartmentMidRise"},
+    {"bem_id": "bem_09", "bus": 29, "building_type": "Stand-alone Retail (replicate)", "prototype_slug": "RetailStandalone"},
+    {"bem_id": "bem_10", "bus": 33, "building_type": "Warehouse (non-refrigerated)", "prototype_slug": "Warehouse"}
+  ],
+  "task_families": [
+    "peak_shaving",
+    "congestion_management",
+    "voltage_management",
+    "reserve_service",
+    "renewable_absorption",
+    "baseline_flexibility",
+    "market_trading",
+    "composite"
+  ],
+  "episode_count": 200,
+  "random_seed": 2026
+}
