@@ -1,0 +1,5 @@
+{
+  "llm_mode": "offline",
+  "maximum_agent_revisions": 4,
+  "online_memory_enabled": true
+}

@@ -1,0 +1,1763 @@
+{
+  "canonical_repository": "https://github.com/cuixueyuan/B2G-Agent",
+  "canonical_commit": "cd4343b739e1bf67b3d342cb52b3abcac9e1dcf8",
+  "canonical_commit_date": "2026-11-05T11:01:45-05:00",
+  "layout": "Canonical repository root is mirrored in PowerWF/B2G-Agent; Python project is B2G-Agent/B2G-Agent from the PowerWF root.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 357,
+      "sha256": "bdc80f373126fc4f516826904ed65bf1812020315063926275531c5465d1392b"
+    },
+    {
+      "path": "B2G-Agent/.env.example",
+      "bytes": 1688,
+      "sha256": "035c37a56528b192ed7f59e5cf6a20c34ef6ac42e21d70c3d5b9a0b84d6f47e0"
+    },
+    {
+      "path": "B2G-Agent/.gitignore",
+      "bytes": 191,
+      "sha256": "dd8cef1f9896527eec4f6c54188a17a0a54e1553ce59379def54dde6ee3bc166"
+    },
+    {
+      "path": "B2G-Agent/AGENTS.md",
+      "bytes": 5158,
+      "sha256": "7591ac4f3e463719099efe89f3a467b82113926a25741f308c0df3581f77f73d"
+    },
+    {
+      "path": "B2G-Agent/Interface.png",
+      "bytes": 156340,
+      "sha256": "bf884e9d253861f8eeb47392b916a1aefba6ac0551ba36faaf94adc4edd685fe"
+    },
+    {
+      "path": "B2G-Agent/LICENSE",
+      "bytes": 1068,
+      "sha256": "71bb9c44b4338896605402d28fc2c621e06338cfbe82e2d4bfe435f39b9cd50b"
+    },
+    {
+      "path": "B2G-Agent/README.md",
+      "bytes": 730,
+      "sha256": "ccfe8063689eb56acb77d34a884043cb3f11af365a29b148aaa9856277ace620"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/README.md",
+      "bytes": 4085,
+      "sha256": "bba7e53c16ebac74826f2ea5cad9b9b95a31171d087ed2677680bf9bbbf20865"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/buildings/bem_01/building.json",
+      "bytes": 767,
+      "sha256": "9fddb87a2c6c12b90bb75847621e0edf2f04c64fe036b094de8aa64d52845542"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/buildings/bem_02/building.json",
+      "bytes": 770,
+      "sha256": "c61b278731d5c7f182f0bea6f70fbb1f61b133baaa7c65bd575baa5b3d4b4f2c"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/buildings/bem_03/building.json",
+      "bytes": 817,
+      "sha256": "5a358568f4dc9862e67a5571a5d4c66b6c8f0cdb23b3f86243165e55f1e3cbf3"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/buildings/bem_04/building.json",
+      "bytes": 820,
+      "sha256": "23f69b934e124b446edcc2c04fcefe44ec49e1694cb70da88bf391f2a8177f3f"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/buildings/bem_05/building.json",
+      "bytes": 783,
+      "sha256": "3adc498e726678b75c7b7c333aeb9ad83b8a7ddef532d0e7062695f0f2d4d9fe"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/buildings/bem_06/building.json",
+      "bytes": 773,
+      "sha256": "0b7ec02707b1c24b29a0eea65b56d9e7e557e79ed3e58e42852c30099fa978f1"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/buildings/bem_07/building.json",
+      "bytes": 764,
+      "sha256": "99d1135b01dfc04e96b96219e7d903198266c12613ec80922e63a79d72c65ffa"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/buildings/bem_08/building.json",
+      "bytes": 783,
+      "sha256": "d946f57ee8449c909f2af2d9f820f2f2aedec72a9e8fc42a3c68806c778e36b7"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/buildings/bem_09/building.json",
+      "bytes": 833,
+      "sha256": "9239259c6ccb7def58949708fb35916b12b3f9c81d8496b20335f2f840f41d70"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/buildings/bem_10/building.json",
+      "bytes": 779,
+      "sha256": "2f46fe9f649de078e1b5ec56b482db0f533798a7da1ec4342c0cf0a371dd91c1"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/case.json",
+      "bytes": 2505,
+      "sha256": "27a9ccac000bb22c84452ea80e6dd82b00ccc06b163f54050772125f9ff27e72"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/days/calendar_split.json",
+      "bytes": 7244,
+      "sha256": "ee7f26e6797cdd7b54e611e2d65c5bd3885ec76686616ac1fc3010f95484648c"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/days/day_selection.json",
+      "bytes": 1024,
+      "sha256": "82894908390cdea97ce261052cff0ed3f330d35b35906bdfd1c036fb7edc54c9"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/days/target_days.json",
+      "bytes": 1969,
+      "sha256": "e979bd5ea9f1ab806c3e3124a732354ae3ee0a8e02c05b47cf333024fadf501d"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/der/pv.json",
+      "bytes": 1036,
+      "sha256": "870292cecbfd6bee5972614adce5526300d164d319251b698762f3412f040de6"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/der/storage.json",
+      "bytes": 337,
+      "sha256": "7e9ab157e2c0384bd29568909ab3af615f3e99bcaca4ceca9cda4247c21882f8"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/evaluation/baseline_protocol.json",
+      "bytes": 906,
+      "sha256": "edc9fa92294a3aa51d98eeb072fed559cbc20f7b5dab3b83a3401c60eafc4258"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/evaluation/methods.json",
+      "bytes": 1997,
+      "sha256": "cb536f66a65f5e03e049030750f10d9369cae136d42c882805186f358fb016c6"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/evaluation/plain_translator_protocol.json",
+      "bytes": 1082,
+      "sha256": "b91cf7680951613f8d4244d4889810ea3162fcc4e712af2928e0f035c7f9a5d1"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/evaluation/proposed_protocol.json",
+      "bytes": 1049,
+      "sha256": "14d51f7d1c8d40f8a6921b9f6bf4104a21fec7135686d75015d2ccd6a7466581"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/evaluation/reviewer_no_feedback_protocol.json",
+      "bytes": 1090,
+      "sha256": "cc36b18b51be0f1458218c913d981fd0c7ea31f8d590854cd80695e0ea19415b"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/evaluation/scoring.json",
+      "bytes": 1111,
+      "sha256": "57478a8140c07dec741abac7939956c764c7fc27f475db6f3ff4ddddd110cd5d"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/evaluation/unstructured_actor_protocol.json",
+      "bytes": 1086,
+      "sha256": "aa183793710841b0f91ed72daf213a117eb7922a07ed636604b9efbb3b78cb0e"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/README.md",
+      "bytes": 3975,
+      "sha256": "87c4265c0cd41de5ee1d51786ebb7ac2853b9ae57da098f526c687c052db6682"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/contract_oracles.jsonl",
+      "bytes": 927249,
+      "sha256": "ff26b5b8db832d7481a9b0a3ff3e82e6ed90a574614165331053c9c316b83c63"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/contract_verification.jsonl",
+      "bytes": 80600,
+      "sha256": "7f5976ccbd445c06ec1d43589e5464db527815191ce48f142c78f45298a40aea"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/manifest.json",
+      "bytes": 18711,
+      "sha256": "97ae9c2946be27ffd16f940caace209b3c94ccf99c2db11ccc44b67e33183fe4"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracle_fingerprint_migration.json",
+      "bytes": 18456,
+      "sha256": "0da399b38bd87b233826ebe0b3511a01fa041400d14e35009360c183fd43a1f9"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/README.md",
+      "bytes": 1172,
+      "sha256": "d71db3a28c7e92e499a3d7c1d7ddb34140608a315fb4ae881d5a1cf1d0781e9a"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-001.json",
+      "bytes": 26810,
+      "sha256": "d9da6d5300eb4448036e8e68f138e0137851a660d7603cc9b23184cc22b59a40"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-006.json",
+      "bytes": 35083,
+      "sha256": "fbd113e4429b3e01482653010ea85e32cd059b1388b66f8221b536176997261d"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-008.json",
+      "bytes": 74615,
+      "sha256": "8816e6d380590d170840bacf179fe54ea6a0eb6b7a78493a542cea2ff267e3f1"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-009.json",
+      "bytes": 71480,
+      "sha256": "2bc45a0d8196a226c5916739f75aaeec3325d264c9a27f9906764f25cb6bf6f0"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-010.json",
+      "bytes": 220619,
+      "sha256": "a23384bf27357fe8fdf5044d4f7364c918e42ee317ba2176261a2c2163e77ff3"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-012.json",
+      "bytes": 27157,
+      "sha256": "0ab4bddbea54a6be406643b31550d23ac7a72344b9f1e38271c4b66df9e79468"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-013.json",
+      "bytes": 69351,
+      "sha256": "d568660d4dac6a8c34dc9ecede88e3977dd424fcc2a1c5c86191a453341ab629"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-014.json",
+      "bytes": 65007,
+      "sha256": "aeeaa7fc1285cedd2d90425343d8a676891ea9bbca298696d28564a9be7db2b2"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-016.json",
+      "bytes": 30066,
+      "sha256": "d521453a0b668841417ab9fd08e9021815a4b92968116afa28f4546f11ce8766"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-018.json",
+      "bytes": 80179,
+      "sha256": "502c2168350883a8702001978949e9a9236fff1e9f7822436073bdfc69c1b940"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-021.json",
+      "bytes": 26599,
+      "sha256": "a24ae55f18a6ce7b97bc1df80ed1e7621112a43e2e59d7c7927fc55d1f9cd512"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-022.json",
+      "bytes": 26116,
+      "sha256": "6bed195d4fe9d8eff6c942c0db55091bb3c4b3e3d139396ff3bb2c97491485ae"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-025.json",
+      "bytes": 225946,
+      "sha256": "bf888a60eee89cf30a8fcbb4a6a84983b3792a91ff0a3597902af404b21f0faa"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-026.json",
+      "bytes": 28056,
+      "sha256": "45a225ed230883faca160ae56964e9f49ff6f89676b9fe4748eaa55610bec71f"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-027.json",
+      "bytes": 25606,
+      "sha256": "8d48dff459d5e4624b52ec4ceaf4307cc37c79fea4abd9cab54043a34e6a6835"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-029.json",
+      "bytes": 73104,
+      "sha256": "87d4b349d13109fa2f820565a558dba49ab26192c4e53d484ca02f0181ffa03d"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-037.json",
+      "bytes": 25774,
+      "sha256": "d82ae5911471244d4419e575f2461e73b797c81a0d03d83f951fc897e25d13b2"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-038.json",
+      "bytes": 73979,
+      "sha256": "b37089fa4f45cf5cdc14e86b065c6d047b5c361c76ae5e92415b969520d5917a"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-041.json",
+      "bytes": 26014,
+      "sha256": "79f2828d47a4dc869a189b31a8d1b9befa8af59537b26eebcb9897846d8018f4"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-043.json",
+      "bytes": 69298,
+      "sha256": "4286422d04fd0adebe66ac806bdfe0893e9c4e3aaa0e5ab1a4f0c543c05947e8"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-044.json",
+      "bytes": 65243,
+      "sha256": "65095f0406de4c863752463c8630957709c40f95f3c1508bdd6ba2d754b7f2fe"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-046.json",
+      "bytes": 29569,
+      "sha256": "b0549ba163452eabf795d9a0f0e65eb00e3a2c44b0b1c3f3c1c75601f6d38567"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-047.json",
+      "bytes": 26047,
+      "sha256": "1b72941fcae0bee80aac35a7648a905535dc492d8cbff5fcf052df1b34d52d53"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-052.json",
+      "bytes": 26397,
+      "sha256": "e08c37201775596bb1a0341adba6529226de4d696575e4bfe2325d9f0c90c486"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-054.json",
+      "bytes": 70041,
+      "sha256": "5b41c72b4a4d24b2e164671ce1dbc02878b4ff4799821c359bde36bdcf2a4c24"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-055.json",
+      "bytes": 223192,
+      "sha256": "71738af7687f0415312ecabdf544fb41ee7f729dd806a0e6057f6cf98c50a7ee"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-059.json",
+      "bytes": 73296,
+      "sha256": "03aa0a0f9a214b8af04642e9454c4c6f05f21bb9478a6c4b94165ef2e74d7ac6"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-060.json",
+      "bytes": 8653,
+      "sha256": "f06509d3b18f6a5b1f92fe8d2363e5c07e7cfa61c0e7f23a036e073bec49aed5"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-062.json",
+      "bytes": 25773,
+      "sha256": "6c010671d8e1c168e6e5062e4de7689a6bcac9ae6dad9a7e69c9b01e69d1cfe9"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-064.json",
+      "bytes": 68848,
+      "sha256": "2adc2e0d4d70eae73180a195ad62997a5995b91fb014e870372b11af6b10a72d"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-065.json",
+      "bytes": 119992,
+      "sha256": "fcfa65894841d92b217b00d6f14118362be9dab62b599d829919c9bf87e70b64"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-069.json",
+      "bytes": 72177,
+      "sha256": "1c353f3f0df74c9cfc5bf65653f8bf2d1a74b1749d99a0a9eb75052b5f182e5b"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-071.json",
+      "bytes": 25992,
+      "sha256": "3a80422abcbce8df78f28b46dfbe654bdf667b0918b329cb30df4a484394b255"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-072.json",
+      "bytes": 25686,
+      "sha256": "fa20a95572a61037e69d8fb19de0136c291d8286a277cb31cf0dce064ab2ed56"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-077.json",
+      "bytes": 26460,
+      "sha256": "37bb6df01cc00833fd0d75d82bb48974d2fad05e931aa30f70435cbe0633694b"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-080.json",
+      "bytes": 209702,
+      "sha256": "77e02f257aef65151962e14ab2f3b3dee4a8245e0b60acfdcb1ff83e0038a6f5"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-082.json",
+      "bytes": 25933,
+      "sha256": "1f708afdc629bf6dfd724378ed95c7a9dbfa491b8a57c2a1d89d48e3034c46a7"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-083.json",
+      "bytes": 71507,
+      "sha256": "f992cc1b1f6ff47430782c5211ef780427ea94df29d1dd77df956325d4a32ad7"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-084.json",
+      "bytes": 65513,
+      "sha256": "56bd51d3dfb6c350db95aa955b6628637a970f8a8b694679ae2b1c28b0f58c02"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-085.json",
+      "bytes": 224504,
+      "sha256": "fca593c5d60c078cdd878843d45552aec0acffca26c28c1075321d9d9bcdd0e4"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-086.json",
+      "bytes": 27686,
+      "sha256": "15f51b01122f82d2b65db6c93c21e80da28350e8f683c21a1616f68ffe894991"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-089.json",
+      "bytes": 74042,
+      "sha256": "80e84fba0e7ee82543ff6d48050061d28bebc51c28eed4bde3f7decabe079f48"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-093.json",
+      "bytes": 69469,
+      "sha256": "8a91c26ef13466fdc00c2b2ec717ad93856c8ca7c5fb390edba5b8fdf292c7e1"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-094.json",
+      "bytes": 76143,
+      "sha256": "fc0b919f64798b0bdbe3f81f3fc312fd323829153653cf6eae29b4b87c8751b9"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-095.json",
+      "bytes": 244091,
+      "sha256": "bb661ec07b0a086605c4231d15f6ae9aa23e97fe82b1729e32d42111e44f19d6"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-103.json",
+      "bytes": 69320,
+      "sha256": "2ed9b788d51116fc4bdb3abebd5aa29948c1ea6e43281f8dc7dfefa1848ad599"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-107.json",
+      "bytes": 29745,
+      "sha256": "dc4f6c131ebb6a7cd2fb36b735c7c7a40f3956dd48488ec3ba5ea053fa6e6d8c"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-110.json",
+      "bytes": 231910,
+      "sha256": "4e5dfdca9f41bdbf7ef4d1d3e2855aa7fd6a319856998538fc962bb05fa252aa"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-111.json",
+      "bytes": 53880,
+      "sha256": "b75e76f2082ebb32e914860791bb8cb045e91b964426253b13c06d44cc9cb782"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-112.json",
+      "bytes": 57366,
+      "sha256": "d2d7ba55b78adf9ec053369c29adb8f7be0b97c0890af6ca9fd1c83365f211cc"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-115.json",
+      "bytes": 511369,
+      "sha256": "f07def3897143f11a76ca473d0ed2f38413e9c98ff1e91a5fd2ddd79c0861bc8"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-116.json",
+      "bytes": 57012,
+      "sha256": "da22b278d453e1521dbb8e4559edd55177ed5b89cddec1ebdf6d83a160ef4e90"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-118.json",
+      "bytes": 167986,
+      "sha256": "256cb408c9c891901710c985cb368bf62439267f4023f94ca94d2ecdd6c94292"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-119.json",
+      "bytes": 161781,
+      "sha256": "ef44242b7478fd6390be89339252509fd55a8a6e91babc7b7dedf41c941ed810"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-120.json",
+      "bytes": 257571,
+      "sha256": "494571ce7d11884e6c5f7957e61ec64f2520c4d4d8cfb4768ccdfb4f6fe73b06"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-122.json",
+      "bytes": 56022,
+      "sha256": "f03dc27312bf3dc10e90f692dc63fd500c8b167e639153ebe27c2cbc4c0df984"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-124.json",
+      "bytes": 116617,
+      "sha256": "5d8bc034225a1124b54739ce4dc7fca4f0f7196ba1d48f6dc38ad9d08ea0632b"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-125.json",
+      "bytes": 519568,
+      "sha256": "ac5f1dec59b975e88ec97f3f4b462adb0983376a194fc1efb6c2d9d73db9a0a5"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-126.json",
+      "bytes": 70234,
+      "sha256": "48436d1d95b54ff5787ad69e70100733794c2d88c4ba291189c33db7ecfff85e"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-127.json",
+      "bytes": 54359,
+      "sha256": "5b49304fe0a6b82fa067694dc181ab9c07d070c98d55d3adf8fddd6fea9f831e"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-128.json",
+      "bytes": 158448,
+      "sha256": "d303eaa01367141f6c2d30a720e04f238fac0bf07ad2edc09f0a3aae4d7c19cf"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-129.json",
+      "bytes": 158608,
+      "sha256": "93fc817bb49a2a8ef07b209ad927cb373f20636887de5dc3fa77cf0aa7e8106d"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-130.json",
+      "bytes": 253647,
+      "sha256": "74271f2aab657dc6baa8f10ace6c2227ad1094db21ef03ac09a07ed48518e9d9"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-131.json",
+      "bytes": 26036,
+      "sha256": "0c3bd91fbb67cceba20834329a6a8a27a5d91bd5aa29f098e9dd39b22252d42c"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-134.json",
+      "bytes": 66199,
+      "sha256": "19be60fac6f287b719889360e0134a97a91c01e5e68373d9b40e2b6dd24310d3"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-135.json",
+      "bytes": 224410,
+      "sha256": "6672d5bd03aa7cf579ac0dc83d7cd44dfffbb9a587d1341263d2d34562fe5d40"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-136.json",
+      "bytes": 29978,
+      "sha256": "619f37e746a9f5119d7bcff4c9ccd1fab4a44b952747492a29bdc60f694c28d3"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-143.json",
+      "bytes": 71925,
+      "sha256": "dc14102cf0ad1b2124c81cc867778294cfbfcbf790a691e30e4911cb7b3541d5"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-144.json",
+      "bytes": 70065,
+      "sha256": "6f5b71d466f0ecf355963b260437a94f2221904cfc676eb347f4cbe0cad8afc3"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-146.json",
+      "bytes": 28059,
+      "sha256": "72df7bb8f083154625456e10dcc737a2dfee024621116ad9b559af76479c70e4"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-148.json",
+      "bytes": 77233,
+      "sha256": "2c6368bc5943853b58ea1e59d9a3916059243b20c90a3a51208e791b203054d2"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-151.json",
+      "bytes": 26859,
+      "sha256": "66ea2e241e62d335452f27f2dd2b6e5d733292126c58370e9f1f66be530cdf9c"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-153.json",
+      "bytes": 69102,
+      "sha256": "0c5b12ad1c240bfa06da5acf357b9c9c14e71db750daa24b257d90095e975a0c"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-155.json",
+      "bytes": 229910,
+      "sha256": "96d15c7816a939a69fb9f20005b67053a8083f652bd828e59d3bb883b5103c47"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-156.json",
+      "bytes": 57313,
+      "sha256": "b538fece06afbf445de473874e8009de5641cec8b359cf645cbf78568614836c"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-157.json",
+      "bytes": 25883,
+      "sha256": "265e62ba30888c4106443e13dfd56b7e67eab7d842ab307356c53d8170b058d0"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-158.json",
+      "bytes": 74354,
+      "sha256": "46522397c5f629067d381539e79758e816fc03db459ad7988b852fd09c5b75e4"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-160.json",
+      "bytes": 113929,
+      "sha256": "c45e3706a38de2ed32d8e54672026be1ef637a824185851aeecd49ec084f17b2"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-161.json",
+      "bytes": 25732,
+      "sha256": "1362302a3736ae1a9f9ae1fb5b47f5452b9250114893d25bb56d0c511674a4a8"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-163.json",
+      "bytes": 151275,
+      "sha256": "61793e13e12a4842e68c43dc7d809f350dccc64e417a3f23f38f0ce3152502d2"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-164.json",
+      "bytes": 66108,
+      "sha256": "cfbdc0ad64c3e35eac59d44b0804fddbcdc6f2d8c055f9dd1811a162a04bd9f7"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-167.json",
+      "bytes": 26685,
+      "sha256": "3438de42ffd702659e44a90ca1771b7ca59ff1c77f65ee327dc6312715ad3b23"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-168.json",
+      "bytes": 41865,
+      "sha256": "4adb9810cebe82f45f32bacabf565cb8eccd4b58dc69781cf1eaf9cbde5a3f75"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-169.json",
+      "bytes": 74482,
+      "sha256": "e69000bc65b6e5ba9dd0e3117fa3d224d137694737657056e8bebfc8dda67670"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-170.json",
+      "bytes": 476696,
+      "sha256": "9977e3adcae9bf46b728273c4ea5c3550a4d2c243eb933d72ba9c936395f76b8"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-171.json",
+      "bytes": 27142,
+      "sha256": "7b9914415204807b7987f5bde6d20d6f30cb0d083fb53a49e8c80d48fdcf94d0"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-176.json",
+      "bytes": 29972,
+      "sha256": "240d5af5ec1c6ccaff559c5199754cb1a2a11e253f9706651b32b9399b105f6b"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-177.json",
+      "bytes": 54395,
+      "sha256": "484b99fd44a25e78f8e39d605e0d7d6c8eeca959f9eae64a7df7261c64b232f9"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-178.json",
+      "bytes": 76643,
+      "sha256": "0181e22787cc54fc9c4db4fd353b92c24611a73408b3d7f197db3e0f890d79ac"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-179.json",
+      "bytes": 74157,
+      "sha256": "787eb994bc6b9c38eb5bd5f1dd1f1bfb9e1dc31c0284ca6e8c608ce0dc3affad"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-182.json",
+      "bytes": 26339,
+      "sha256": "ec442de65682e9dc6be24501a02be83f65be040751fbfbe1f40930f40005acb2"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-185.json",
+      "bytes": 231148,
+      "sha256": "4dca78d950516a8a343152ffc1a46d6c2b848bbf03b768646571139b736f9d86"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-186.json",
+      "bytes": 36490,
+      "sha256": "e76a6e62d96ad6a6ab004cd5aa95746a0a98dd34c45aaa3685b67677753eea29"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-187.json",
+      "bytes": 54389,
+      "sha256": "403f44cc5098c733da5f5fb026ceffe348d0e8d2c783cf6c26a16087fc04a910"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-189.json",
+      "bytes": 73213,
+      "sha256": "0427c0714eca62a83e909ca7f1b2d88992952b59fed54f097fb946d0ffd7d127"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-192.json",
+      "bytes": 28600,
+      "sha256": "7100bf15c894309d7b8f726ae63658d27d5b3b9a08c40bd2c1a96f73681ab6df"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-195.json",
+      "bytes": 226213,
+      "sha256": "65be03e76d905db4e112617c8c90709e11de8173576aa47062d5ca37a41f5799"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-197.json",
+      "bytes": 26532,
+      "sha256": "7d933b455d19e210c89a563d02fb946d545ef31d0a3f59ac2a7abc1575c357d3"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-198.json",
+      "bytes": 162060,
+      "sha256": "dd13f7c192c937a48c1a407d5db7c785886f12771f8f38d6c756cf4381c66df8"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/groundtruth/numeric_oracles/ep-200.json",
+      "bytes": 211289,
+      "sha256": "ceef0e84b101f7d9647d9e67dee7c6fb5b7fd53dfd265c8e683dabd6262e672d"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/network/bem_to_bus.csv",
+      "bytes": 763,
+      "sha256": "a2c18d110330c0bb3f8d1f29631ed892a1c2c50a3d9bb424f886c57358b1b6a2"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/network/line_limits.csv",
+      "bytes": 1276,
+      "sha256": "2fee8d5a97fc912ec87f9f26be8046afe7f601579b54d31f78dc7b9df432c564"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/network/network_derivation.json",
+      "bytes": 921,
+      "sha256": "c9bba88c478cc3c9ae528f987653f1c9b767e4ae1e5b0cd38c8e3254f064941b"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/network/operational_limits_policy.json",
+      "bytes": 420,
+      "sha256": "5650405e20636958ec554cfd0bf1155c85868a2c29cb9ad3d995f1e1390ec3d9"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/network/source_case33bw.json",
+      "bytes": 88535,
+      "sha256": "a4b24fa680d4cd16804880338787300b9c535c6ec9026a630a9efb7d5cb28c04"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/network/source_case33bw_metadata.json",
+      "bytes": 1214,
+      "sha256": "461ad44144a16571b8c4caca285efcf41f321226621068aeb39a1c3239edb2ec"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/network/study_network.json",
+      "bytes": 88782,
+      "sha256": "d96114b737ca874b6e06a05ec48a62f465edf97dd093d5ea2239d0e011eff28f"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/network/transformer.json",
+      "bytes": 447,
+      "sha256": "1cf8134357a5cac544363f861f18421fc87e92147a668a270b83c817023693f3"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/optimization/joint_dispatch.json",
+      "bytes": 5327,
+      "sha256": "3c95c07853c4cdec0ccb26908de1205f0a510522db593543bf0414de6480887c"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/optimization/rc_identification.json",
+      "bytes": 1490,
+      "sha256": "35c8fdabe58e9fecf5141f79272f3ab92c10ed82ad0d0e7d9aa2d1bb08af6db4"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/profiles/README.md",
+      "bytes": 579,
+      "sha256": "b645cc840094a2ef18d723932456498f9f811f4f1dc1868e3121733f063d76b6"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/profiles/profile_specifications.json",
+      "bytes": 4324,
+      "sha256": "15cf7319955f370edc4598b6142faae1f5965f83df0c1baaee094d20fd6eaf3a"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/reviewer_memory/README.md",
+      "bytes": 663,
+      "sha256": "192e99f6a4b2e39435ae007689c18b937468003c836727a3389ef4932b294b0b"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/reviewer_memory/manifest.json",
+      "bytes": 1000,
+      "sha256": "95955bc34fb906a851fa68f5274bf03fc87d43476feb3193dd6a32bd0af17558"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/reviewer_memory/schema.json",
+      "bytes": 901,
+      "sha256": "507e2956452ef4bc8a147f7f483e771b5efd661caf64cc887de4b6746bfe898d"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/reviewer_memory/verified_seed.jsonl",
+      "bytes": 191913,
+      "sha256": "19d038b77a7cefee58dfc086bf734776609d1b54ab6adccd94a6cd36a762e14b"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/sources/references.bib",
+      "bytes": 2813,
+      "sha256": "aa311278ff049dbdb5356560d932ea703ab3d77235defec21efc5c1de37a0322"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/sources/source_registry.json",
+      "bytes": 4690,
+      "sha256": "86413cf5320e79fa42b782c713f4b216f14d20b03e1024bd782ddb34e70a1029"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/tasks/episodes.jsonl",
+      "bytes": 220143,
+      "sha256": "fab5d82e4d90398432998954df0796eec2240f6f502ef69f01f72fb22fcb9824"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/tasks/sender_messages.jsonl",
+      "bytes": 108122,
+      "sha256": "7cb129f211a5b0f8a24cc33abcad0e190deb7ec6c309d346164b1f855ce79cb8"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/tasks/splits/development.txt",
+      "bytes": 240,
+      "sha256": "f34cad5d48ee4705b416d737acb2d827ebaeff57e2f9fb13fd473f0582f8fd97"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/tasks/splits/memory_seed.txt",
+      "bytes": 160,
+      "sha256": "7e0dcbdb91893e5615c8b7c5b2acec4bed8e635ca4d4fc52dd1a5d864900b785"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/tasks/splits/test.txt",
+      "bytes": 1200,
+      "sha256": "c6dfa1ac285941612f0d7340812c66ba4a74a013a8c003755f87e2121245d380"
+    },
+    {
+      "path": "B2G-Agent/cases/ieee33_10bem_15min/tasks/summary.json",
+      "bytes": 2287,
+      "sha256": "67f944b9d384e1a76a25463dac2166ace48866b1bcd96a9f4775ed2451a5b826"
+    },
+    {
+      "path": "B2G-Agent/docs/ablation-evaluation.md",
+      "bytes": 1401,
+      "sha256": "3a10e0dd4624896603d407c1799bcabbb9ea0ae243f03a15ecbd5bff2a4a5327"
+    },
+    {
+      "path": "B2G-Agent/docs/architecture.md",
+      "bytes": 14425,
+      "sha256": "670c8bb69fb1c490af9262cab665e9d736f3e59e4e7aff426367295b1f257f69"
+    },
+    {
+      "path": "B2G-Agent/docs/baseline-evaluation.md",
+      "bytes": 3415,
+      "sha256": "1b2968b2a9211efa09d44d41196d909c6b1898bb40fcda0d22992597c7c11bd3"
+    },
+    {
+      "path": "B2G-Agent/docs/data-acquisition.md",
+      "bytes": 5762,
+      "sha256": "4710cebe7ab7de799c454bfbe968f64e7a9842560dcc5c7ac78eef7c4581f313"
+    },
+    {
+      "path": "B2G-Agent/docs/evaluation-protocol.md",
+      "bytes": 13553,
+      "sha256": "8058b999ff69465dbfcbabe2224847d877aa16b5e59cd293e88486893d50a3a4"
+    },
+    {
+      "path": "B2G-Agent/docs/knowledge-bases.md",
+      "bytes": 4128,
+      "sha256": "d8b7fa33aaf0fc433731ee92f3914cb6d490b8cbf73c9a25dd4334ab956c3f66"
+    },
+    {
+      "path": "B2G-Agent/docs/publication.md",
+      "bytes": 2853,
+      "sha256": "617b131f39775364fa424f52c18e3ba6d8f0009c7c044df7ec2c809b3fb53294"
+    },
+    {
+      "path": "B2G-Agent/docs/reproducibility.md",
+      "bytes": 12927,
+      "sha256": "16dce2df3185e7a4b09a6fc50e6485ef0a51055b2e8e822a3789d2f96427dd8e"
+    },
+    {
+      "path": "B2G-Agent/docs/retained-experiments.md",
+      "bytes": 2276,
+      "sha256": "75bd39810aaa30857caa1805bc1123aaf0d6e66e45f5fb9aeefc92c8d5f123e6"
+    },
+    {
+      "path": "B2G-Agent/docs/security.md",
+      "bytes": 2521,
+      "sha256": "fcdf35513f334a4869313ae1755aeba0609e58f2056a78b57988204e24228690"
+    },
+    {
+      "path": "B2G-Agent/experiments/acquire_case_assets.py",
+      "bytes": 13094,
+      "sha256": "52f27a628823e5f04928fa0ebba3caf9462f6b3aa0813112ed9c1342af7d5f0d"
+    },
+    {
+      "path": "B2G-Agent/experiments/audit_comfort_baselines.py",
+      "bytes": 3356,
+      "sha256": "8123550f6543e905a3f49554c6930ef37983e516cfc28e022bce01caba9f6ff5"
+    },
+    {
+      "path": "B2G-Agent/experiments/audit_contract_translation.py",
+      "bytes": 5850,
+      "sha256": "bba74d8c0c9e2c8e2f5c6b3f6435f93760ff0df984a7c5458de25cbeb5907e3c"
+    },
+    {
+      "path": "B2G-Agent/experiments/audit_recorded_recovery.py",
+      "bytes": 6446,
+      "sha256": "07ba566b2a53aec958395e5c9a957bd6eefcf9b95815c5c8be8f6b097e78d426"
+    },
+    {
+      "path": "B2G-Agent/experiments/build_knowledge_bases.py",
+      "bytes": 62067,
+      "sha256": "8e7d5ee6d3ef4295dbad9823a23f3e5cc2b870b84d8d0feb7acd3f676b11c6ea"
+    },
+    {
+      "path": "B2G-Agent/experiments/build_reviewer_memory.py",
+      "bytes": 15577,
+      "sha256": "36ba60ecb7e14db65d4d7ad1b3189552dfa9f718158537741e1238740c3d4549"
+    },
+    {
+      "path": "B2G-Agent/experiments/derive_operational_limits.py",
+      "bytes": 4721,
+      "sha256": "dc9a2ba46783d2fb274d68e076a721ca33958de2140bc0de0eb0211f64296962"
+    },
+    {
+      "path": "B2G-Agent/experiments/finalize_numeric_oracles.py",
+      "bytes": 3687,
+      "sha256": "2db456d120ba8bf42bd95c32c638478d5d466ee2ac4b6cdd6d1223354e50abbe"
+    },
+    {
+      "path": "B2G-Agent/experiments/finalize_selected_reports.py",
+      "bytes": 4757,
+      "sha256": "a7824f157a557bf7c9bfb20aad0406ee067f6bb494885409603f508f7c0cb1df"
+    },
+    {
+      "path": "B2G-Agent/experiments/freeze_numeric_oracle.py",
+      "bytes": 16195,
+      "sha256": "0c9c593ad1c2f11cf4758e484471beefee054af5cca4ed207398daa4c4a7385a"
+    },
+    {
+      "path": "B2G-Agent/experiments/generate_calendar_split.py",
+      "bytes": 1818,
+      "sha256": "fb36c90a18c55df35eb985eb3a5f33f06478149624837ceb6c1353a138d84f1d"
+    },
+    {
+      "path": "B2G-Agent/experiments/generate_episodes.py",
+      "bytes": 42246,
+      "sha256": "f530ce3d8dac299026578ee40be5caf1d57e969fa45fc62f1912c17bf83493b6"
+    },
+    {
+      "path": "B2G-Agent/experiments/identify_rc_models.py",
+      "bytes": 11037,
+      "sha256": "b738f6fcb4436b147459fae3f5cc3d32743fc99f1309729c6aeba8d629f102aa"
+    },
+    {
+      "path": "B2G-Agent/experiments/preflight_evaluation.py",
+      "bytes": 13813,
+      "sha256": "7413de81af3c5c01180303a059936319c4967223977be7bbb61ef356af2b4def"
+    },
+    {
+      "path": "B2G-Agent/experiments/prepare_background_profiles.py",
+      "bytes": 11927,
+      "sha256": "bca25d173af18ca3e71da9d095d694b93c4338f84fc9682f6123bb16a3830d11"
+    },
+    {
+      "path": "B2G-Agent/experiments/prepare_bem_baselines.py",
+      "bytes": 14332,
+      "sha256": "c77e77ddde28b8fe6efaf170cb501f18007bc2ad310dfcaebcb416a22a6cc753"
+    },
+    {
+      "path": "B2G-Agent/experiments/prepare_daily_metrics.py",
+      "bytes": 9771,
+      "sha256": "a4b31732d29a5b2d9ea03ecea3daa9db7ef079720d67e6726ad34ad6b4a059c6"
+    },
+    {
+      "path": "B2G-Agent/experiments/prepare_embedding_model.py",
+      "bytes": 3582,
+      "sha256": "3fa1f6f74cebf079721b32d2533bc685efcc378b7c66a995ebce645547fefc35"
+    },
+    {
+      "path": "B2G-Agent/experiments/prepare_event_idfs.py",
+      "bytes": 5435,
+      "sha256": "b54f02dadab6581cfb110af966d86fcb72adfd7470069a9a42db983358a0179b"
+    },
+    {
+      "path": "B2G-Agent/experiments/prepare_grid_sensitivities.py",
+      "bytes": 10815,
+      "sha256": "f8c9708c58b258cbc54a43027f373a77b9b9870a61c2471a73ee5d4f65330903"
+    },
+    {
+      "path": "B2G-Agent/experiments/prepare_market_profiles.py",
+      "bytes": 15620,
+      "sha256": "178a41a3b18cf025ed7fc0286f10a382c5315c9affbd9772013ee70d7700ed0c"
+    },
+    {
+      "path": "B2G-Agent/experiments/prepare_network.py",
+      "bytes": 3791,
+      "sha256": "586c3b6d6cfda5c30e297b3104ecafc5872116a7b3aea9400434446b1a088b2e"
+    },
+    {
+      "path": "B2G-Agent/experiments/prepare_pv_profiles.py",
+      "bytes": 7279,
+      "sha256": "d1dd8cd5cbc84914bcd7e00a2f11db09c93dd1d1a9bda582b54defad8257aef1"
+    },
+    {
+      "path": "B2G-Agent/experiments/reassess_reviewer_feedback_harms.py",
+      "bytes": 7600,
+      "sha256": "539d143bafd18f6901f4ba6ec9f5a84b5cfa387847b16294c8a9c1f7e1cd9e55"
+    },
+    {
+      "path": "B2G-Agent/experiments/refresh_sender_wording.py",
+      "bytes": 6742,
+      "sha256": "82d66668a7f563acba6e82f1773159615d17ecc9dd424a1e7f2c957947747c2c"
+    },
+    {
+      "path": "B2G-Agent/experiments/report_extended_mechanisms.py",
+      "bytes": 16778,
+      "sha256": "ddec419d5daeed153f87691d93552088b2f778bd6014a358f2c80f8a9e0d95e4"
+    },
+    {
+      "path": "B2G-Agent/experiments/report_proposed_suite.py",
+      "bytes": 46159,
+      "sha256": "a9308f38e9ad66558a44d0a2040292d6f7580d9f3e2cf8b9d8f5f8f9c86abee1"
+    },
+    {
+      "path": "B2G-Agent/experiments/restore_release.py",
+      "bytes": 4026,
+      "sha256": "76208c37ef1caad5338cdb3371f45cbb34619816a0308cc2e58f98a9befebadb"
+    },
+    {
+      "path": "B2G-Agent/experiments/retained_paths.py",
+      "bytes": 482,
+      "sha256": "390fb1185f292d8844cc6e9a18cf503673d8304c4898cb021c192b7e2d9705c6"
+    },
+    {
+      "path": "B2G-Agent/experiments/reviewer_feedback_reference.py",
+      "bytes": 1120,
+      "sha256": "9ac27268cdc1901bc4a7993c1a000680ddee75010c376ebe06f03b47cebb0bf7"
+    },
+    {
+      "path": "B2G-Agent/experiments/run_closed_loop_episode.py",
+      "bytes": 12506,
+      "sha256": "b2b85df1a2b0a1b92fcb59687c845fccd278cd7419527abf0147277f7c40c130"
+    },
+    {
+      "path": "B2G-Agent/experiments/run_contract_evaluation.py",
+      "bytes": 27204,
+      "sha256": "99b3d0c97374a741b54709f9190dee46c8b01a3e3692a5a6bb73f0fbafcd59a3"
+    },
+    {
+      "path": "B2G-Agent/experiments/run_energyplus_event_validation.py",
+      "bytes": 7538,
+      "sha256": "09d9bc8f5d12675d531009ec85975677efe3fd11fd2e691c92e0dbbf29777328"
+    },
+    {
+      "path": "B2G-Agent/experiments/run_flexibility_envelope_episode.py",
+      "bytes": 11629,
+      "sha256": "f473a79e6b10a177dbba8de11209fe2cd8b76a9211e241b386ce01288a762334"
+    },
+    {
+      "path": "B2G-Agent/experiments/run_mechanism_ablations.py",
+      "bytes": 8994,
+      "sha256": "dff800f38a0fda57946c714337c65ee14e134c59b2166aa60e5ad73ccf35a675"
+    },
+    {
+      "path": "B2G-Agent/experiments/run_numeric_oracle_batch.py",
+      "bytes": 10074,
+      "sha256": "ec179f557211a5ce8041763732728cae820358440cabe5c31a15ae990e3122ee"
+    },
+    {
+      "path": "B2G-Agent/experiments/run_proposed_suite.py",
+      "bytes": 10607,
+      "sha256": "0895b2a77435d1d4087396554ae937de0a34d1e06b5d7960b04089ebc99516db"
+    },
+    {
+      "path": "B2G-Agent/experiments/score_interaction_run.py",
+      "bytes": 2419,
+      "sha256": "8cf612c9e85e3a9ada34216ba42d4a0d04538a36ab78fe415ce1e54677e92631"
+    },
+    {
+      "path": "B2G-Agent/experiments/select_target_days.py",
+      "bytes": 3740,
+      "sha256": "362b3272112b5d72314e877dd3a6827394958d603169d52717c691b5d03c76af"
+    },
+    {
+      "path": "B2G-Agent/experiments/smoke_test_energyplus.py",
+      "bytes": 5690,
+      "sha256": "665f418edf7e1417491e2078e944a552b679d55d43b7faf1e70494a8c6af9e50"
+    },
+    {
+      "path": "B2G-Agent/experiments/solve_joint_dispatch.py",
+      "bytes": 5388,
+      "sha256": "c8f935af8686bab5f81840300c0ce7c12238968ae798085cdf0cd18e9b29a1a9"
+    },
+    {
+      "path": "B2G-Agent/experiments/summarize_evaluation_runs.py",
+      "bytes": 1042,
+      "sha256": "aee51e49f649052ef888629c6b18dffe51027af7bd40d377839d92424b7c354d"
+    },
+    {
+      "path": "B2G-Agent/experiments/synchronize_contract_semantic_fields.py",
+      "bytes": 2457,
+      "sha256": "de118bb5e45b354b6de900defd4ffc29b7de689cdfbcc711188af0ea7eed7993"
+    },
+    {
+      "path": "B2G-Agent/experiments/validate_case.py",
+      "bytes": 19782,
+      "sha256": "16e5f1894d9af42ced3e81b9338d7c75cf8d7a42256f887f992e0e72b04111e6"
+    },
+    {
+      "path": "B2G-Agent/experiments/validate_joint_dispatch.py",
+      "bytes": 33985,
+      "sha256": "be9856f605bd86bb123fbe0dbd83189b48fa6403d89cd51bb842bd5b504396ec"
+    },
+    {
+      "path": "B2G-Agent/experiments/verify_retained_layout.py",
+      "bytes": 7663,
+      "sha256": "97f1a18daddcb8fd1f419832b32eb803e3da25c8f6fc023f4e85703556fedb2e"
+    },
+    {
+      "path": "B2G-Agent/knowledge/README.md",
+      "bytes": 2607,
+      "sha256": "c9266e2269c3e3354ee8196f4d7be5dedd58171a3158be05bce3219cb9e494b1"
+    },
+    {
+      "path": "B2G-Agent/knowledge/building/building_flexibility.md",
+      "bytes": 908,
+      "sha256": "07470e07c07ae1b87402d8cbc67bca427a5e9ea694a2cd6bc839a8966bb037a3"
+    },
+    {
+      "path": "B2G-Agent/knowledge/building/records.jsonl",
+      "bytes": 276070,
+      "sha256": "9f78d3e4815d1f62bbf0ac3416745adeee6a40270c71b2099d4dd943a65fd063"
+    },
+    {
+      "path": "B2G-Agent/knowledge/cross_domain/mappings.md",
+      "bytes": 928,
+      "sha256": "a2da67522cd86fd0583dc8d80c313dc140d9257103f3926e00f1d33263373227"
+    },
+    {
+      "path": "B2G-Agent/knowledge/cross_domain/records.jsonl",
+      "bytes": 285648,
+      "sha256": "c16f0e172a935c6c680e4d2b3875651821a07655a388db25cd3c79d0d676016a"
+    },
+    {
+      "path": "B2G-Agent/knowledge/grid/distribution_operations.md",
+      "bytes": 887,
+      "sha256": "d4b45e9eefef9e041d8b95b98eeb45c62a89b14c25fe9002d8d7c7ffca398bb1"
+    },
+    {
+      "path": "B2G-Agent/knowledge/grid/records.jsonl",
+      "bytes": 229104,
+      "sha256": "4b3b2c6f80beb5ce317a4554a0bddee35a1f312d9a43a078fe37790189a9b296"
+    },
+    {
+      "path": "B2G-Agent/knowledge/manifest.json",
+      "bytes": 3519,
+      "sha256": "bf13e36af92b1afd552a70290e2a2e1de834241e03176ddbc2aa43f01e1f210d"
+    },
+    {
+      "path": "B2G-Agent/knowledge/retrieval_config.json",
+      "bytes": 1437,
+      "sha256": "ea0a0fc3aa25adea3d5acdd42d4816874b188e129474bbcdd484b01fbfe32297"
+    },
+    {
+      "path": "B2G-Agent/knowledge/schemas/knowledge_record.schema.json",
+      "bytes": 2585,
+      "sha256": "05da0cb284f7b7321a7d83a74eb8c8e01de5bbf54fcb06785569a720567e5bf8"
+    },
+    {
+      "path": "B2G-Agent/knowledge/sources/asset_lock.json",
+      "bytes": 24931,
+      "sha256": "4173c70b095eea9d7155a3db67aa305bd52b41db05ce586c466156424720a2a4"
+    },
+    {
+      "path": "B2G-Agent/knowledge/sources/datasets.md",
+      "bytes": 642,
+      "sha256": "93e9f4383dfcc34cefc8325152acd942a5d74e775ed5a7eeabe284b74a355bd8"
+    },
+    {
+      "path": "B2G-Agent/knowledge/sources/references.bib",
+      "bytes": 3608,
+      "sha256": "51cfc046b6bfdc032e8138c1eb04a9231d8bee49d18f684b55a440bf66b76f3c"
+    },
+    {
+      "path": "B2G-Agent/knowledge/sources/source_registry.json",
+      "bytes": 10849,
+      "sha256": "f49f1e9c82cb491c251eaed831a18739d059ac39d19eb8b795881ad4a6f5590e"
+    },
+    {
+      "path": "B2G-Agent/pyproject.toml",
+      "bytes": 1217,
+      "sha256": "9f5400303ac23df838a1973302f1e616ecde38d42378212ea370729eff190318"
+    },
+    {
+      "path": "B2G-Agent/results/README.md",
+      "bytes": 220,
+      "sha256": "f6dcbc805734b2269005e64d02ca8d0627b8983fd26e9bbeaefb59889ebdb333"
+    },
+    {
+      "path": "B2G-Agent/results/figures/Fig-Agent_performance.pdf",
+      "bytes": 63441,
+      "sha256": "0ce1903f599fd486fcc92b502963cb5bcbf5d3a6b21604f18014a6decb47ba3e"
+    },
+    {
+      "path": "B2G-Agent/results/figures/Fig-Agent_performance.png",
+      "bytes": 87811,
+      "sha256": "557610e1fb5585f6979f2870996c534bcb4e7aa742a84adb4a70054c84b8e9fc"
+    },
+    {
+      "path": "B2G-Agent/results/figures/Fig-Quality_components.pdf",
+      "bytes": 45926,
+      "sha256": "22fb232985392b126dc0e713f79348370a586010c513520bf525ed0845b10b28"
+    },
+    {
+      "path": "B2G-Agent/results/figures/Fig-Quality_components.png",
+      "bytes": 149985,
+      "sha256": "595d522cc13ca61eff926eb5db9a16a4c439f1d3d2ffba6bed8915eea4f439ec"
+    },
+    {
+      "path": "B2G-Agent/results/figures/Fig-Quality_overall.pdf",
+      "bytes": 51051,
+      "sha256": "fb5dbefef374cc23e210dde40c3d0755e1dc1db6610a3d7e92a8bf2c9e70e28c"
+    },
+    {
+      "path": "B2G-Agent/results/figures/Fig-Quality_overall.png",
+      "bytes": 129993,
+      "sha256": "38e994a071a01638a06c76e98937222d31b738c287a0c93318ae01388f5201c7"
+    },
+    {
+      "path": "B2G-Agent/results/reported_metrics.csv",
+      "bytes": 1354,
+      "sha256": "bcc21b88c8aedc746a28418b7b1aa5ec3df84600a13bc573bc25dcdffde14195"
+    },
+    {
+      "path": "B2G-Agent/results/reported_metrics.json",
+      "bytes": 2853,
+      "sha256": "ac3359a632ae659d3a0699d4674c4626de7c011336406ad23489a2b152e32780"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/__init__.py",
+      "bytes": 99,
+      "sha256": "b0cf97288ba9f225fbb97a88ab79b898d4b6a33d1ea75f25b599c77ef115e9dc"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/__init__.py",
+      "bytes": 408,
+      "sha256": "ede4c0b6a37c259829c5b064c6ce2b082edf7763a05f90dd910608df7649d4c0"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/actor.py",
+      "bytes": 33512,
+      "sha256": "b4794fa4492f0122ab550fadc6d85b656dd1b367456eef46d3b1caf6e4cd7bde"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/free_plan_text.py",
+      "bytes": 7316,
+      "sha256": "f6ce310d9cd1d0d5cf2930611a9c91e727419ccf082a1f35010b06cbffb5ff0d"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/llm.py",
+      "bytes": 23043,
+      "sha256": "60ac04e8e2fe2de481c82b0155334b1784991356daedb8584bb7bf25f0c83760"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/mechanism_ablations.py",
+      "bytes": 14003,
+      "sha256": "9d24f654fc5fea2d22eef6910744529117a152d443275f0ecf97b58f2e756366"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/no_feedback_reviewer.py",
+      "bytes": 384,
+      "sha256": "927cfd60e28378270442af5eb294ef0ddae16ca1adc33670edefb6247b865586"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/response_validation.py",
+      "bytes": 1313,
+      "sha256": "b38ee52ae667e08500a9154722e09da22bb67a6ebafc714f7471e9e59c164388"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/retrieval.py",
+      "bytes": 195,
+      "sha256": "f9b5215847fe1b6e45bd04cef6b1f7b6a3565b64653f52f63c6bb77c34428391"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/retrieval_v3.py",
+      "bytes": 16189,
+      "sha256": "cc00c2a18bdb3071399614810062bc27b4e6a40b93f118bc110b38d1b02fb6aa"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/reviewer.py",
+      "bytes": 37546,
+      "sha256": "9368a6c9d28fde8c70f8f0e3a394a8734ffb57adc20f8f214051dcc3478463d8"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/reviewer_prompt.py",
+      "bytes": 3760,
+      "sha256": "7891bc0383342a2dcb0b21d70aaab88cebd5e0e57cc54b3ce07a63dca0afb452"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/reviewer_validation.py",
+      "bytes": 2772,
+      "sha256": "a18b3af5ba361c6161b0d20e27c57a743524db242e2961df5fc2b7281f1e73fa"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/single_agent.py",
+      "bytes": 11495,
+      "sha256": "efa155f80289ce0fce87943ba2124953a1f6bba90bf19c15d1ba06f33684687e"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/token_budget.py",
+      "bytes": 4637,
+      "sha256": "295f6210cb3bd59ac2d4a65f6468cd143c68f318e202afab10dac0c4863b60fb"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/translator.py",
+      "bytes": 31074,
+      "sha256": "aa988f4a72941a122e5c92e7f3adccee88e0854dddd89e0c3bcb5048891e021b"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/agents/wire_schema.py",
+      "bytes": 6031,
+      "sha256": "4f58404041d07151a24e6d76c491309950e2fa929776aab8f5811a4c79ee3330"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/artifact_paths.py",
+      "bytes": 4365,
+      "sha256": "773570be7f6f2ced603ded9d34b93c66757184ecef89e9a3977fd5b0b45940a2"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/case_io/__init__.py",
+      "bytes": 218,
+      "sha256": "7a66b5fdd5cbd90fb39c2bcd5d0d593495d0d11ea3021de2282b813cbd6a6eda"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/case_io/loader.py",
+      "bytes": 12177,
+      "sha256": "8268967cbe83cef36d88140aa41356589dcac6ed9ba456277ebb8c32a95e4f0d"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/case_io/operating_policy.py",
+      "bytes": 2786,
+      "sha256": "982b75c431e3785014bd2d99645a1d8c2f383b25565bd5820eb64fbf01654f5c"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/collaboration/__init__.py",
+      "bytes": 410,
+      "sha256": "d27d83e262e9fd7da8285fc0ac232c3f77f3012e3c2b47e28fe83080e09fe9a8"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/collaboration/models.py",
+      "bytes": 1345,
+      "sha256": "c6ad780a6a2c249fb9b82da6fd922f8e5432ed2d540c8323a319130b7d35c229"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/collaboration/session.py",
+      "bytes": 18931,
+      "sha256": "f85c90af00d615ee9a917ef52981bd67367e383b11501eef1a5a5b81e48b513f"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/contracts/__init__.py",
+      "bytes": 1305,
+      "sha256": "6f9eb3fbb8fb8d7b1b9b14a357eedd3d13bcf85642870bad4ce36fe6a7135229"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/contracts/models.py",
+      "bytes": 22488,
+      "sha256": "7763a93fc012c8f27587a3bdd1d67ba1fbf89cecd5d59916990bb4d31205f7fe"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/contracts/outcomes.py",
+      "bytes": 7484,
+      "sha256": "8ad6974d335f73d469c9861897b093ea34f09ae2c7855367810a1c8595235811"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/contracts/readiness.py",
+      "bytes": 8550,
+      "sha256": "d4f3c701f76511ae60c38cf9562185bedcba1f40f92b97040a211955bdc7e06b"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/contracts/semantic_audit.py",
+      "bytes": 5764,
+      "sha256": "00837b62c131b8a59c9dfd1380d1ed73fb0589882a2b7be4cb4b662b8618ff46"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/__init__.py",
+      "bytes": 974,
+      "sha256": "969f2dac050f43f0e581de4b3eb0d20a0763a9e0bb448c26174b867bacf066d7"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/agent_metrics.py",
+      "bytes": 22611,
+      "sha256": "e39a70b27206bb7807c44abf41117873badefa1da3993215d346849a1b3bf668"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/computation_cost.py",
+      "bytes": 4210,
+      "sha256": "16dd61090a6102502dd1a7dba09b39221c397e9234f6ee0f99cb515035f3bf2e"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/methods.py",
+      "bytes": 1471,
+      "sha256": "c11c85eeb4cab97aff9c66b1643e22fa40add8353e755337460fb457ec6626d1"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/paper_metrics.py",
+      "bytes": 4107,
+      "sha256": "cbd2bd2ab3186461521ccc1e532679d446f25b387e4ddc8b3cc86c2b1ee0e3c1"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/physics_cache.py",
+      "bytes": 9472,
+      "sha256": "ac6ac6f16c3efdb0f3384bd15d0aece13224c684e1182080e21e003676e36af2"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/protocols.py",
+      "bytes": 2653,
+      "sha256": "33bb817c03d59ba289fb3df99064e564804f79d747efb951707fb82a48f144ed"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/reviewer_feedback_metrics.py",
+      "bytes": 4831,
+      "sha256": "554dfc1948cb66fed238fbba50b4ad23564111b16bf7a5edb981f77545376e76"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/reviewer_process_metrics.py",
+      "bytes": 14204,
+      "sha256": "e4bcf6a0b89fc60cd557842f7a89b3ddbec869df544bd2701c107ee079af9a7f"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/scoring.py",
+      "bytes": 26473,
+      "sha256": "411441e92d2a0c920666d66fb437e396f661d5bc71251d9a270ce40eb3a39cff"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/evaluation/summary.py",
+      "bytes": 10146,
+      "sha256": "ea2e0e5591741b27b0bd1f2de8941255abce1f7014629e548c560a4691780184"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/observability/__init__.py",
+      "bytes": 545,
+      "sha256": "181fad1615cd021e6bb9fbb0f312535d19dde792f14e6e042b30a6394973d74b"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/observability/journal.py",
+      "bytes": 8715,
+      "sha256": "f879bee0841df2aa24590c347f5c2093ab2d0d05adcd3fa5a95b764c85ff518a"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/observability/physics_worker.py",
+      "bytes": 4125,
+      "sha256": "3c9c05e9a245437ad80219bcc7d8e7a837adf8487918ba4f907ca87dab5893e2"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/observability/reproducibility.py",
+      "bytes": 6268,
+      "sha256": "b4b4ae92b9f7798d115071b6f8d1a18ec71b329d5fbb4c5162dbbd475fcd88ae"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/orchestration/__init__.py",
+      "bytes": 496,
+      "sha256": "47c909876fa7accc6d8749e9984522fc54f39ca73e1eb8f1dc25217122abf76d"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/orchestration/exchange.py",
+      "bytes": 6905,
+      "sha256": "349a5f6b63afa5891776c1cfe56b74777256155ec3a8f1534449e4b558f9ebc6"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/orchestration/executor.py",
+      "bytes": 6429,
+      "sha256": "6faaa54ea2b4f62f45386f3165a782a9f57c9d80f58175661651c0ef8a7089d9"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/orchestration/pipeline.py",
+      "bytes": 45746,
+      "sha256": "944ba31cfec9837a3a69ba2657a259df2c75e2d3861129c4c61d1ac25e0e37e5"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/orchestration/task_physics.py",
+      "bytes": 13316,
+      "sha256": "ca354ce25279d702c7b1591ec1e0d4a4b8fc900ef4dc4850d4faac80ae9bd075"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/personal_physics.py",
+      "bytes": 6939,
+      "sha256": "584a5a768fe89736c7b0605aeae41e273e20b4515a73018e5b1fe81915a3ed79"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/personal_workspace.py",
+      "bytes": 4637,
+      "sha256": "ba7a097c6032d9bddd0fce9e45bb067755767a65d6579664e18df37b4e9242dd"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/publication.py",
+      "bytes": 1834,
+      "sha256": "ead033b7ef58237e70211688f2c1371af2bc0ce17289b72843ddc61fffba4e97"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/simulation/__init__.py",
+      "bytes": 648,
+      "sha256": "193f10bbf734557ed90f2c4c5ee1a8ce69c80f2e49933709f7e1136ffc67d5b5"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/simulation/adapters/__init__.py",
+      "bytes": 549,
+      "sha256": "1a9497c60e4f780ee47d764780559183f79c24e2e39abf0e2a245325b9bad1fb"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/simulation/adapters/energyplus.py",
+      "bytes": 10171,
+      "sha256": "4690782aac7b74f4963f6d53443dc17f272efbef2163fb8d27ffe7df6ebd3958"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/simulation/adapters/pandapower.py",
+      "bytes": 9269,
+      "sha256": "bbd00ac1e197e052e9e44277598452b8b349e00cf4ffdf597f234bf11595e20f"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/simulation/energyplus_controls.py",
+      "bytes": 15205,
+      "sha256": "f8b774a6b7da18df314eb5de516a38cacc364bd5b1c4d9657694563c6cfffd98"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/simulation/joint_rc_opf.py",
+      "bytes": 32764,
+      "sha256": "70909331164c0fc34ff67190e5a547de360b1bf1d47831ac472b86d5da1321ae"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/simulation/status.py",
+      "bytes": 1382,
+      "sha256": "ad8fdd4940447c28c2c9833be91ada35e0834ec86816c137c23159ad1ea6ae19"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/web/__init__.py",
+      "bytes": 56,
+      "sha256": "4428f5555e0ebf17d54ffb12c9973f6152c2a064b101fd0a73d805a9f357b692"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/web/app.py",
+      "bytes": 10063,
+      "sha256": "4c54b912e76d75a9d85b9338550ac3375ba6c904f5c7b8572e4faedaf46e8092"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/web/cli.py",
+      "bytes": 589,
+      "sha256": "48c7d3a2416c0274fc1643bf108c592f8f61a838e4bf84662030fa4601f3ba88"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/web/interface.py",
+      "bytes": 7775,
+      "sha256": "9492b2af88e9c4b102bb99b044c583af070f752ed8e23f1ff8296a2a40c3c3b5"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/web/static/app.js",
+      "bytes": 44714,
+      "sha256": "f3d79d610d20f997b47b31d89bb21de0f462747da603e3e45592104ac8439ce7"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/web/static/index.html",
+      "bytes": 16924,
+      "sha256": "72bcd269f977be3afc60d0af6cb374eca3c041f46b7ce678d18127b8ae52338a"
+    },
+    {
+      "path": "B2G-Agent/src/b2g_agent/web/static/styles.css",
+      "bytes": 28933,
+      "sha256": "fec2ec655808923440cbfff2ca0d808904f7744916dc0ab12b78c35143e3c491"
+    },
+    {
+      "path": "B2G-Agent/start_personal.py",
+      "bytes": 537,
+      "sha256": "8ef6213e5e6f440885f2c8e883f9ac0edb68ac3610a7704f2e8b026ec61a5269"
+    },
+    {
+      "path": "B2G-Agent/tests/conftest.py",
+      "bytes": 2396,
+      "sha256": "fe2fe7bcb9c7be22b162e5beb5d5ae0e66ef0c83d3a735162d997b0d0a677ebe"
+    },
+    {
+      "path": "B2G-Agent/tests/fixtures/qualification_reviewer_20261030.json",
+      "bytes": 19668,
+      "sha256": "25ce7831ce5e159e044e9de371fd3c8cfc672af76dd20153b02ff8587d8eb694"
+    },
+    {
+      "path": "B2G-Agent/tests/fixtures/qualification_reviewer_20261030_second.json",
+      "bytes": 46179,
+      "sha256": "12b37811f1f42dbc289a089d55dd03756b270c3db9ae0eb559546d932fae1b32"
+    },
+    {
+      "path": "B2G-Agent/tests/free_plan_fixtures.py",
+      "bytes": 557,
+      "sha256": "51b41947b9f7036995f6f6a4774a79441026b3840a873fe8d227b24d0a215a0e"
+    },
+    {
+      "path": "B2G-Agent/tests/reviewer_fixtures.py",
+      "bytes": 1961,
+      "sha256": "dfa5e5504e50c3866abdc1696c6e7938595b1b30d4e6eec291969b898689f02d"
+    },
+    {
+      "path": "B2G-Agent/tests/test_actor_terminal_metrics.py",
+      "bytes": 7333,
+      "sha256": "a66248a9b0352dd9bc1a724d0de48b54e47d2ae0d70e26493e70a59b69f16c2a"
+    },
+    {
+      "path": "B2G-Agent/tests/test_agents.py",
+      "bytes": 16727,
+      "sha256": "c5b3aeb6d4de65a9385195666e25ae4a641a8ec9ebe8ff4a3c3d1621c053cd51"
+    },
+    {
+      "path": "B2G-Agent/tests/test_artifact_paths.py",
+      "bytes": 1600,
+      "sha256": "f4e77255874942d1ef4f01e34e47f31660d3e1a1683450640221fcc2fa3b5851"
+    },
+    {
+      "path": "B2G-Agent/tests/test_asset_preparation.py",
+      "bytes": 956,
+      "sha256": "2c12f2109d4171cb7b9f0a7165ebbca08b237d3e51427e97c91b172051fcd219"
+    },
+    {
+      "path": "B2G-Agent/tests/test_business_metrics.py",
+      "bytes": 6699,
+      "sha256": "1a6765616cc3ffc9675470cec5b0676c5f37dbea3be71bd42e05f3b2cc9e8799"
+    },
+    {
+      "path": "B2G-Agent/tests/test_case_corpus.py",
+      "bytes": 7885,
+      "sha256": "a43fa588e09dfb20335416c993813ddfd5574281f1a8c9153efc76a87b94d23a"
+    },
+    {
+      "path": "B2G-Agent/tests/test_correction_workflow.py",
+      "bytes": 24976,
+      "sha256": "d452fb3ead21b9ae2a9e552759e1c1638751d5720c16312f8a6b12fd611367e1"
+    },
+    {
+      "path": "B2G-Agent/tests/test_data_preparation.py",
+      "bytes": 3180,
+      "sha256": "290de022eb7ae4494e354eea711aabbfe04ee7eab0787f3fe236a3b969615082"
+    },
+    {
+      "path": "B2G-Agent/tests/test_energyplus_controls.py",
+      "bytes": 3497,
+      "sha256": "5425f7fb9e53cbd7e204b6c0166e68892daa77bdc6d6d438028b8194e4695f36"
+    },
+    {
+      "path": "B2G-Agent/tests/test_evaluation_methods.py",
+      "bytes": 5947,
+      "sha256": "51969725c2926453d10175792566e81305a4b7920f7ec643ca18ee67299754b8"
+    },
+    {
+      "path": "B2G-Agent/tests/test_evaluation_runtime.py",
+      "bytes": 6658,
+      "sha256": "e4d044e86187f5cb9e9278bf19f8b7bc28d5a12fb0efda68c8b4a2a3c997e3f2"
+    },
+    {
+      "path": "B2G-Agent/tests/test_evaluation_scoring.py",
+      "bytes": 7672,
+      "sha256": "64f6f09fb58e8061a1561670e10355ddb6d9b045c7d5b8fd88a482122ef666f2"
+    },
+    {
+      "path": "B2G-Agent/tests/test_evaluation_upgrade.py",
+      "bytes": 20724,
+      "sha256": "ee124067dc08cf3962e839ccee3d2a9a817e55f993a4422fc005e74c258f919d"
+    },
+    {
+      "path": "B2G-Agent/tests/test_joint_rc_opf.py",
+      "bytes": 2937,
+      "sha256": "efa07a845792e4eaf070c0a0e802917bad9e646a24dfefd9c6cbc116e909ce8e"
+    },
+    {
+      "path": "B2G-Agent/tests/test_knowledge_bases.py",
+      "bytes": 5239,
+      "sha256": "571afc98c2d34f0a82e13d9aa751b1e7319cbf9ac954d35ff7b302a58bf2d85a"
+    },
+    {
+      "path": "B2G-Agent/tests/test_llm_records.py",
+      "bytes": 8332,
+      "sha256": "6a0fb1367ceafa2020e1128b5b1f784c6a7aa406b1b78504b59d8891240fe943"
+    },
+    {
+      "path": "B2G-Agent/tests/test_mechanism_ablations.py",
+      "bytes": 7891,
+      "sha256": "8fb41ddbb4289147cd5ae7c96774ebab7e8cff2bbd13dac56112d8670d263a20"
+    },
+    {
+      "path": "B2G-Agent/tests/test_no_feedback_reviewer.py",
+      "bytes": 7270,
+      "sha256": "4e00b129b89f4ee995e904f4f33c1387e663bd3859988be3d0a29684f94028e3"
+    },
+    {
+      "path": "B2G-Agent/tests/test_numeric_oracle_batch.py",
+      "bytes": 2982,
+      "sha256": "3722815b0d91832cb4f84be926c917d447e5d3ea1551b3ece403a934dda767b5"
+    },
+    {
+      "path": "B2G-Agent/tests/test_paper_protocol_and_isolation.py",
+      "bytes": 7757,
+      "sha256": "63007d29612dc2ca46d60ad79e233415cbf6ebc0444b95aca6df13026e8a99b8"
+    },
+    {
+      "path": "B2G-Agent/tests/test_personal_physics.py",
+      "bytes": 11361,
+      "sha256": "316694f7011c5d9c0552ae52db55f05a1b0b72ade07a288235c4fce561b5f8a9"
+    },
+    {
+      "path": "B2G-Agent/tests/test_publication.py",
+      "bytes": 4071,
+      "sha256": "4955ba40dd05be83febc8351aff6468dfbb698af8dbef8649587ac897b442e53"
+    },
+    {
+      "path": "B2G-Agent/tests/test_rc_identification.py",
+      "bytes": 996,
+      "sha256": "f0d6292a2c32ad51086efc8cffd3a666ed658cb8d7c3097e9d75b5a05fa37601"
+    },
+    {
+      "path": "B2G-Agent/tests/test_reproducibility.py",
+      "bytes": 626,
+      "sha256": "acd8bbb25c1ee167737c7fb72186a0c26a51b5d727b714bbe381c156114d14c6"
+    },
+    {
+      "path": "B2G-Agent/tests/test_reviewer_memory_v2.py",
+      "bytes": 7765,
+      "sha256": "afedd84aa36129c5b7aa93e482dc3e95b0575c1aa8a478f5ba5bf99dd98d8f9c"
+    },
+    {
+      "path": "B2G-Agent/tests/test_reviewer_routing_regression.py",
+      "bytes": 14065,
+      "sha256": "31b0753561fb611ebc406cedcaaa905f0c2a7df852b588a18063c6f3997cf7ad"
+    },
+    {
+      "path": "B2G-Agent/tests/test_semantic_audit.py",
+      "bytes": 12476,
+      "sha256": "48319f4fc89c5c9533a1d1db40009ac18b91e0cc316dcf3c146dfe68c3177eee"
+    },
+    {
+      "path": "B2G-Agent/tests/test_simulation_adapters.py",
+      "bytes": 2604,
+      "sha256": "9d011aa727ac0226f3a4e3b4cad0e6dd1216ad28b82854d916099a9bf6189840"
+    },
+    {
+      "path": "B2G-Agent/tests/test_single_agent_workflow.py",
+      "bytes": 9009,
+      "sha256": "4a8777d38143a8774758506e2d2d3816d36419f02cb09163ccc68c1e80d280b3"
+    },
+    {
+      "path": "B2G-Agent/tests/test_token_budget.py",
+      "bytes": 8449,
+      "sha256": "1e904775bb1e2ac65d5083198b542a4d419108331a3387d8ec885ef4125ce729"
+    },
+    {
+      "path": "B2G-Agent/tests/test_ui_input_examples.py",
+      "bytes": 5935,
+      "sha256": "e8d919caaa1295533d2c3c0e2ce9d77d90feb65dce11b6216717ff4463d279e7"
+    },
+    {
+      "path": "B2G-Agent/tests/test_web_app.py",
+      "bytes": 11431,
+      "sha256": "d1e080f72977222f07b3e48ec2364874eb85b1cf2dd1c2b31231115bb219ab36"
+    },
+    {
+      "path": "B2G-Agent/tests/test_web_interface.py",
+      "bytes": 11408,
+      "sha256": "29484923c644e4074148f1ee8c5aa22e28451ef4da28b3f953edf3fa6e60d5aa"
+    },
+    {
+      "path": "Personal-workspace/.gitignore",
+      "bytes": 52,
+      "sha256": "7f5e1b63729ee33a7c58c5d7d2d52d4ae3523ec6bfdf2c2b88a882229a10d90b"
+    },
+    {
+      "path": "Personal-workspace/README.md",
+      "bytes": 774,
+      "sha256": "a7b86641a514b460274dc6e670ff7e112015a4af24932ab6369020bbfa21ae17"
+    },
+    {
+      "path": "Personal-workspace/settings.example.json",
+      "bytes": 98,
+      "sha256": "2c562c70903525879b372996ca68539cc6d297350f4e1facddf5fdea9b630972"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13743,
+      "sha256": "1be334347cfd8138b9a257601eaa00e24dc410cbfbeaf0cf1a346eb7a2e775c9"
+    }
+  ],
+  "integration_only_files": [
+    ".gitattributes",
+    "POWERWF.md",
+    "SNAPSHOT.json"
+  ]
+}

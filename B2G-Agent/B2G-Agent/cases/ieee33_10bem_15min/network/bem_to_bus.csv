@@ -1,0 +1,11 @@
+bem_id,bus,building_type,electrical_distance_ohm,selection_rule
+bem_01,3,Small Office,0.5852,cumulative_path_resistance_quantile
+bem_02,5,Medium Office,1.3323,cumulative_path_resistance_quantile
+bem_03,8,Primary School,3.0499,cumulative_path_resistance_quantile
+bem_04,11,Secondary School,5.3205,cumulative_path_resistance_quantile
+bem_05,15,Stand-alone Retail,8.2955,cumulative_path_resistance_quantile
+bem_06,18,Strip Mall,11.0628,cumulative_path_resistance_quantile
+bem_07,21,Small Hotel,2.1699,cumulative_path_resistance_quantile
+bem_08,27,Mid-rise Apartment,2.6385,cumulative_path_resistance_quantile
+bem_09,29,Outpatient Healthcare,4.5017,cumulative_path_resistance_quantile
+bem_10,33,Warehouse (non-refrigerated),6.6351,cumulative_path_resistance_quantile

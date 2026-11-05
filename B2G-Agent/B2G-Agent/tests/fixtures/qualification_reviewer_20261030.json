@@ -1,0 +1,311 @@
+{
+  "purpose": "Offline regression inputs only. Original captured judgements, not corrected responses or evaluation truth. Never supplied to runtime knowledge or memory.",
+  "records": [
+    {
+      "request_sha256": "084f5f932fc1dbc9f9e0b81be3eb2d771105f5017bea33660ac912c636eb70a2",
+      "original_parsed_sha256": "5e0ab90743291131f1a405a0430108f7cd4f400bfcc12f8bd9e6fee3c2463aca",
+      "response": {
+        "status": "failed",
+        "issues": [],
+        "checks": [
+          {
+            "check_id": "semantic_objective",
+            "channel": "semantic",
+            "score": 0.5,
+            "weight": 1.0,
+            "message": "The source requests peak shaving, and the draft preserves that objective. The structured objective specifies minimizing feeder peak, consistent with the request; no objective contradiction is evident.",
+            "responsible_agent": "none",
+            "source_excerpt": "For peak shaving",
+            "structured_field": "objectives[0]: peak_shaving; metric=feeder_peak_kw; operator=minimize",
+            "basis_locator": "knowledge:cross_domain:boptest; locator=knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_action_direction",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "The draft retains the requested direction to schedule the building resource to provide power for peak shaving.",
+            "responsible_agent": "none",
+            "source_excerpt": "please schedule bem_01 at buses 3 to provide 60 kW",
+            "structured_field": "fields.target_power.value=60.0 kW; task_families=[peak_shaving]",
+            "basis_locator": "knowledge:cross_domain:boptest; locator=knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_objects",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "The BEM and bus are both retained; the singular bus phrasing is consistent with the single listed bus.",
+            "responsible_agent": "none",
+            "source_excerpt": "bem_01 at buses 3",
+            "structured_field": "target_bems=[bem_01]; target_buses=[3]",
+            "basis_locator": "verified memory mem-003: BEM-to-bus binding validation; applicability requires authoritative mapping"
+          },
+          {
+            "check_id": "semantic_quantities_units",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "The 60 kW target and voltage and line-loading limits are preserved with matching units and bounds.",
+            "responsible_agent": "none",
+            "source_excerpt": "provide 60 kW ... voltage within 0.95-1.05 p.u. and line loading at or below 100%",
+            "structured_field": "fields.target_power=60.0 kW; voltage_band=[0.95,1.05] p.u.; line_thermal_limit<=100.0%",
+            "basis_locator": "knowledge:cross_domain:boptest; locator=knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_time_windows",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "The draft preserves the 16:00–18:00 window and winter peak 01 operating day; the structured timezone and 15-minute resolution are consistent case-derived details.",
+            "responsible_agent": "none",
+            "source_excerpt": "during 16:00-18:00 on the winter peak 01 operating day",
+            "structured_field": "windows=[16:00,18:00,America/New_York]; operating_day=winter_peak_01; time_resolution=15 min (inferred)",
+            "basis_locator": "knowledge:cross_domain:boptest; locator=knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_constraints",
+            "channel": "semantic",
+            "score": 0.5,
+            "weight": 1.0,
+            "message": "The draft preserves the stated voltage and line-loading constraints. The structured contract additionally encodes a hard zero-comfort-violation limit, while the source asks for comfort evidence without explicitly setting that limit; this is an added constraint not stated in the request.",
+            "responsible_agent": "translator",
+            "source_excerpt": "report comfort evidence",
+            "structured_field": "constraints[comfort_limit]: comfort_violation_minutes at_most 0.0 min; hard=true",
+            "basis_locator": "knowledge:cross_domain:boptest; locator=knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_requested_outputs",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "The draft requests comfort violation minutes, delivered reduction, and feeder peak results, matching the structured requested outputs and elaborating the source's request for comfort evidence.",
+            "responsible_agent": "none",
+            "source_excerpt": "report comfort evidence",
+            "structured_field": "requested_outputs=[comfort_violation_minutes, delivered_reduction_kw, feeder_peak_kw]",
+            "basis_locator": "knowledge:cross_domain:boptest; locator=knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_decision_completion",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "The draft retains the request for a clear commitment for the specified intervals and does not claim execution or completed results.",
+            "responsible_agent": "none",
+            "source_excerpt": "We need a clear commitment for those intervals.",
+            "structured_field": "receiver_message: with a clear commitment for those intervals; simulation_status=not_run",
+            "basis_locator": "knowledge:cross_domain:boptest; locator=knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          }
+        ]
+      }
+    },
+    {
+      "request_sha256": "53842661212d8e06c7c2ae4626f9753f7ac28a3e5478b53726387497f237cdfe",
+      "original_parsed_sha256": "2e20644a9771086413c50111beef8b3d72b8096c00deec00a990dcb2b2afe18c",
+      "response": {
+        "status": "failed",
+        "issues": [],
+        "checks": [
+          {
+            "check_id": "semantic_objective",
+            "channel": "semantic",
+            "score": 0.5,
+            "weight": 1.0,
+            "message": "The draft preserves peak shaving, but the structured objective is to minimize feeder peak and the draft only says “for peak shaving”; it does not explicitly state the feeder-peak minimization objective. This may be implicit in the task label, so uncertain.",
+            "responsible_agent": "translator",
+            "source_excerpt": "For peak shaving",
+            "structured_field": "objectives[0]: name=peak_shaving, metric=feeder_peak_kw, operator=minimize",
+            "basis_locator": "knowledge:cross_domain:boptest; knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_action_direction",
+            "channel": "semantic",
+            "score": 0.5,
+            "weight": 1.0,
+            "message": "The source requests a clear commitment, and the draft retains that request, but it does not explicitly say the 60 kW is a reduction or specify the direction of the scheduled power action. The source itself is ambiguous on that direction.",
+            "responsible_agent": "translator",
+            "source_excerpt": "schedule bem_01 at buses 3 to provide 60 kW",
+            "structured_field": "fields.target_power.value=60.0; fields.target_power.unit=kW",
+            "basis_locator": "knowledge:cross_domain:boptest; knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_objects",
+            "channel": "semantic",
+            "score": 0.5,
+            "weight": 1.0,
+            "message": "The draft identifies bem_01 at bus 3, but changes the source's plural “buses 3” to singular “bus 3”; the structured target is bus 3, so this is likely a harmless normalization but the source wording is not exact.",
+            "responsible_agent": "translator",
+            "source_excerpt": "bem_01 at buses 3",
+            "structured_field": "target_bems=[bem_01]; target_buses=[3]",
+            "basis_locator": "verified memory mem-003: BEM-to-bus bindings should be validated against case mapping"
+          },
+          {
+            "check_id": "semantic_quantities_units",
+            "channel": "semantic",
+            "score": 0.5,
+            "weight": 1.0,
+            "message": "The 60 kW target and voltage band are preserved. The draft adds delivered reduction as an output, but the source does not define whether the 60 kW is a reduction target or another power quantity; this remains uncertain rather than a demonstrated contradiction.",
+            "responsible_agent": "translator",
+            "source_excerpt": "provide 60 kW",
+            "structured_field": "fields.target_power={value:60.0,unit:kW}; requested_outputs includes delivered_reduction_kw",
+            "basis_locator": "knowledge:cross_domain:boptest; knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_time_windows",
+            "channel": "semantic",
+            "score": 0.5,
+            "weight": 1.0,
+            "message": "The time interval and operating day are retained. The structured window includes America/New_York, which the draft omits; timezone is inferred from the case rather than explicitly requested, so omission is uncertain and not a source contradiction.",
+            "responsible_agent": "translator",
+            "source_excerpt": "during 16:00-18:00 on the winter peak 01 operating day",
+            "structured_field": "windows[0]={start:16:00,end:18:00,timezone:America/New_York}; operating_day=winter_peak_01",
+            "basis_locator": "structured case_id=ieee33_10bem_15min; inferred windows field"
+          },
+          {
+            "check_id": "semantic_constraints",
+            "channel": "semantic",
+            "score": 0.5,
+            "weight": 1.0,
+            "message": "Voltage limits are preserved, but the draft omits the source's line-loading limit of at or below 100%.",
+            "responsible_agent": "translator",
+            "source_excerpt": "line loading at or below 100%",
+            "structured_field": "constraints[name=line_thermal_limit]: maximum_line_loading_pct at_most 100.0%",
+            "basis_locator": "knowledge:cross_domain:boptest; knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_requested_outputs",
+            "channel": "semantic",
+            "score": 0.5,
+            "weight": 1.0,
+            "message": "Comfort evidence is requested and the draft adds comfort violation minutes, delivered reduction, and feeder peak results, consistent with the structured requested outputs. No material omission is evident; the score is uncertain only because the source names comfort evidence generally rather than these specific metrics.",
+            "responsible_agent": "translator",
+            "source_excerpt": "report comfort evidence",
+            "structured_field": "requested_outputs=[comfort_violation_minutes,delivered_reduction_kw,feeder_peak_kw]",
+            "basis_locator": "knowledge:cross_domain:boptest; knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_decision_completion",
+            "channel": "semantic",
+            "score": 0.5,
+            "weight": 1.0,
+            "message": "The draft retains the request for a clear commitment for the intervals. It does not state a separate acceptance/rejection or completion condition, but none is specified in the source or structured contract.",
+            "responsible_agent": "none",
+            "source_excerpt": "We need a clear commitment for those intervals.",
+            "structured_field": "clarification_required=false; no explicit decision/completion field",
+            "basis_locator": "structured_transfer_state episode_id=ep-001; no decision/completion requirement"
+          }
+        ]
+      }
+    },
+    {
+      "request_sha256": "65f70bdda6c8de63bc99d7aae871a28597807ca29129d68d6ccb2610412b86bc",
+      "original_parsed_sha256": "ad6e1d06a46470dd0611080bc5e895e413d766bf8418793532ba57c0788d7045",
+      "response": {
+        "status": "failed",
+        "issues": [
+          {
+            "code": "semantic_action_direction_unclear",
+            "message": "The source explicitly requests bem_01 to “provide 60 kW,” but the draft recasts this as an unclear direction and asks whether it should be a load reduction or another action. This changes a stated action into a clarification rather than preserving the requested provision.",
+            "responsible_agent": "translator",
+            "evidence_locator": "knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility",
+            "correction_required": "Preserve the source’s stated 60 kW provision action; do not replace it with an assertion that direction is unclear.",
+            "score": 1.0,
+            "source_excerpt": "please schedule bem_01 at buses 3 to provide 60 kW",
+            "structured_field": "fields.target_power={value:60.0,unit:kW,status:declared}; clarification_required=true; clarification_question asks whether to reduce load or provide another action",
+            "basis_locator": "knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          }
+        ],
+        "checks": [
+          {
+            "check_id": "semantic_objective",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "Peak shaving is retained and expressed as minimizing feeder peak, consistent with the source objective.",
+            "responsible_agent": "none",
+            "source_excerpt": "For peak shaving",
+            "structured_field": "objectives=[{name:peak_shaving,metric:feeder_peak_kw,operator:minimize}]",
+            "basis_locator": "knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_action_direction",
+            "channel": "semantic",
+            "score": 1.0,
+            "weight": 1.0,
+            "message": "The source specifies providing 60 kW; the draft instead says the direction/action is unclear and asks for clarification.",
+            "responsible_agent": "translator",
+            "source_excerpt": "to provide 60 kW",
+            "structured_field": "fields.target_power={value:60.0,unit:kW,status:declared}; clarification_required=true",
+            "basis_locator": "knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_objects",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "The BEM and bus are retained as bem_01 at bus 3.",
+            "responsible_agent": "none",
+            "source_excerpt": "bem_01 at buses 3",
+            "structured_field": "target_bems=[bem_01]; target_buses=[3]",
+            "basis_locator": "knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_quantities_units",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "The 60 kW target and voltage and line-loading limits are preserved with their units and values.",
+            "responsible_agent": "none",
+            "source_excerpt": "60 kW ... voltage within 0.95-1.05 p.u. and line loading at or below 100%",
+            "structured_field": "fields.target_power=60.0 kW; voltage_band=[0.95,1.05] p.u.; line_thermal_limit<=100%",
+            "basis_locator": "knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_time_windows",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "The 16:00–18:00 interval and winter peak 01 operating day are retained; the explicit case timezone is consistent with the inferred window timezone.",
+            "responsible_agent": "none",
+            "source_excerpt": "during 16:00-18:00 on the winter peak 01 operating day",
+            "structured_field": "windows=[{start:16:00,end:18:00,timezone:America/New_York}]; operating_day=winter_peak_01",
+            "basis_locator": "knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_constraints",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "Voltage and line-loading constraints are retained. The draft correctly does not impose a zero-comfort-violation limit absent from the source.",
+            "responsible_agent": "none",
+            "source_excerpt": "keep voltage within 0.95-1.05 p.u. and line loading at or below 100%",
+            "structured_field": "constraints: service_voltage_floor>=0.95 p.u.; service_voltage_ceiling<=1.05 p.u.; line_thermal_limit<=100%; comfort_violation_minutes=null",
+            "basis_locator": "knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_requested_outputs",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "Comfort evidence is requested as in the source; delivered reduction and feeder peak results are consistent tool-required outputs for evaluating the declared service and objective.",
+            "responsible_agent": "none",
+            "source_excerpt": "report comfort evidence",
+            "structured_field": "requested_outputs=[comfort_violation_minutes,delivered_reduction_kw,feeder_peak_kw]",
+            "basis_locator": "knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          },
+          {
+            "check_id": "semantic_decision_completion",
+            "channel": "semantic",
+            "score": 0.0,
+            "weight": 1.0,
+            "message": "The draft retains the request for a clear commitment for the specified intervals and does not claim execution or physical results.",
+            "responsible_agent": "none",
+            "source_excerpt": "We need a clear commitment for those intervals.",
+            "structured_field": "receiver_message contains “we need a clear commitment for those intervals”; simulation_status=not_run",
+            "basis_locator": "knowledge/cross_domain/records.jsonl#mapping-building-kpi-to-feasibility"
+          }
+        ]
+      }
+    }
+  ]
+}

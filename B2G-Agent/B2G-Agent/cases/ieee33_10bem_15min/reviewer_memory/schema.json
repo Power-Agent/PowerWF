@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verified Reviewer failure memory",
+  "type": "object",
+  "required": [
+    "schema_version", "memory_id", "source_episode_id", "source_split",
+    "generation_method", "failure_channel", "failure_signature",
+    "responsible_agent", "direction", "task_families", "affected_fields",
+    "trigger", "root_cause", "wrong_output", "correction", "verification_evidence",
+    "generalized_rule", "applicability_boundary", "status", "created_before_test"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0"},
+    "source_split": {"enum": ["development", "memory_seed", "test"]},
+    "failure_channel": {"enum": ["semantic", "evidence"]},
+    "responsible_agent": {"enum": ["translator", "actor", "human"]},
+    "status": {"enum": ["programmatically_verified_seed", "verified_online"]}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,10 @@
+{
+  "label": "experiment-specific upstream transformer",
+  "development_p99_kva": 2093.580286101197,
+  "rating_kva": 2512.2963433214363,
+  "multiplier": 1.2,
+  "development_interval_count": 24768,
+  "source_profile": "ieee33_10bem_15min/profiles/background_load_15min.csv",
+  "source_profile_sha256": "039d6fe27e2b311dc49f4354382f3ad34181d15edb37c988896236db1f02c46f",
+  "derivation_script": "experiments/derive_operational_limits.py"
+}

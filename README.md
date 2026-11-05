@@ -39,7 +39,7 @@ Check out these demos showcasing PowerWorkflow in action:
 
 ### Community Workflow Examples
 
-- [**B2G-Agent: Building--Grid Co-Design**](B2G-Agent/README.md): An LLM-mediated workflow in which a Building Engineer and a Distribution Power Engineer negotiate grid-upgrade or demand-response decisions through natural language. The workflow translates between disciplines, delegates analysis, preserves an auditable decision record, and keeps engineers responsible for final approval. A runnable source snapshot is included in this repository. B2G-Agent is independently developed and maintained by [Xueyuan Cui](https://github.com/cuixueyuan); ongoing development remains in the canonical [cuixueyuan/B2G-Agent](https://github.com/cuixueyuan/B2G-Agent) repository.
+- [**B2G-Agent: Building-Grid Interaction Toolkit**](B2G-Agent/README.md): A Translator-Actor-Reviewer toolkit and local browser interface for an IEEE 33-bus feeder with ten building energy managers and 15-minute intervals. The complete source snapshot supports the final five-method study (200 tasks repeated three times per method), with [result figures](B2G-Agent/README.md#results), reproduction instructions, and separately hosted data. See [PowerWF setup and snapshot provenance](B2G-Agent/POWERWF.md) for the working-directory layout. B2G-Agent is independently developed and maintained by [Xueyuan Cui](https://github.com/cuixueyuan); ongoing development remains in the canonical [cuixueyuan/B2G-Agent](https://github.com/cuixueyuan/B2G-Agent) repository.
 
 ### Useful Agentic Workflow Development Platforms
 

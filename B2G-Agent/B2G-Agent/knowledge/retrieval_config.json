@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "method_id": "bm25+minilm-dense-embedding+weighted-rrf-v4",
+  "rrf_k": 60,
+  "embedding": {
+    "implementation": "sentence_transformers_local",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "local_model_path": ".local-data/models/all-MiniLM-L6-v2-1110a243",
+    "dimension": 384,
+    "network_required_after_preparation": false
+  },
+  "directions": {
+    "building_to_grid": {
+      "source": {"bm25": 0.45, "semantic_embedding": 0.55},
+      "target": {"bm25": 0.55, "semantic_embedding": 0.45},
+      "map": {"bm25": 0.40, "semantic_embedding": 0.60}
+    },
+    "grid_to_building": {
+      "source": {"bm25": 0.55, "semantic_embedding": 0.45},
+      "target": {"bm25": 0.45, "semantic_embedding": 0.55},
+      "map": {"bm25": 0.40, "semantic_embedding": 0.60}
+    }
+  },
+  "calibration_status": "author_selected_frozen_without_relevance_judgments",
+  "selection_basis": "Mapping retrieval gives the semantic branch the largest share because terminology mismatch is the primary cross-domain risk; source and target branches use a modest domain-direction asymmetry while retaining both exact-field BM25 matching and semantic matching.",
+  "future_tuning_required": false,
+  "leakage_rule": "The frozen weights were selected without test tasks, test outputs, or ground-truth values and will not be tuned on evaluation results."
+}

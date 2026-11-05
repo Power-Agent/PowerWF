@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0",
+  "knowledge_release": "case-derived-kb-v3",
+  "retrieved_on": "2026-10-26",
+  "policy": {
+    "allowed_content": [
+      "general domain concepts",
+      "open-source case structures",
+      "unit and temporal conventions",
+      "building-grid interface patterns",
+      "interaction protocol vocabulary"
+    ],
+    "excluded_content": [
+      "cases/**/tasks",
+      "cases/**/groundtruth",
+      "episode-specific final actions",
+      "episode-specific numeric oracle values",
+      "reviewer episodic memory"
+    ],
+    "raw_storage": ".local-data/knowledge_sources",
+    "redistribution_rule": "Only the deterministic derived records, lock file, and provenance manifest are committed. Raw upstream assets remain ignored local data."
+  },
+  "sources": [
+    {
+      "source_id": "tesp",
+      "title": "Transactive Energy Simulation Platform",
+      "publisher": "Pacific Northwest National Laboratory",
+      "landing_page": "https://github.com/pnnl/tesp",
+      "revision": "812271479f42f2a203f780229f0be7773571f81c",
+      "license_note": "Repository license file governs upstream assets; raw files are not redistributed here.",
+      "domains": ["building", "cross_domain"],
+      "assets": [
+        {"asset_id": "tesp-eplus-federate", "path": "examples/capabilities/energyplus/eplusH.json"},
+        {"asset_id": "tesp-eplus-agent", "path": "examples/capabilities/energyplus/eplus_agentH.json"},
+        {"asset_id": "tesp-eplus-agent-example", "path": "examples/capabilities/energyplus/eplusHelicsExample/helics_eplus_agent2.json"},
+        {"asset_id": "tesp-loadshed-eplus", "path": "examples/capabilities/loadshed-HELICS3-EPlus/helics_eplus.json"},
+        {"asset_id": "tesp-loadshed-agent", "path": "examples/capabilities/loadshed-HELICS3-EPlus/helics_eplus_agent.json"},
+        {"asset_id": "tesp-energyplus-readme", "path": "data/energyplus/README.md"}
+      ]
+    },
+    {
+      "source_id": "urbanopt",
+      "title": "URBANopt Example GeoJSON Project",
+      "publisher": "URBANopt project",
+      "landing_page": "https://github.com/urbanopt/urbanopt-example-geojson-project",
+      "revision": "46d70351e308c8da210b42e6baf57f8180d2c189",
+      "license_note": "Repository terms govern upstream assets; raw files are not redistributed here.",
+      "domains": ["building", "grid", "cross_domain"],
+      "assets": [
+        {"asset_id": "urbanopt-electric-network", "path": "example_project/example_project_with_electric_network.json"},
+        {"asset_id": "urbanopt-pv-project", "path": "example_project/example_project_with_PV.json"},
+        {"asset_id": "urbanopt-baseline-scenario", "path": "example_project/baseline_scenario.csv"},
+        {"asset_id": "urbanopt-thermostat-shedding", "path": "example_project/peak_hours_thermostat_adjust_scenario.csv"},
+        {"asset_id": "urbanopt-mels-shedding", "path": "example_project/peak_hours_mels_shedding_scenario.csv"}
+      ]
+    },
+    {
+      "source_id": "boptest",
+      "title": "BOPTEST building control test cases",
+      "publisher": "IBPSA Project 1",
+      "landing_page": "https://github.com/ibpsa/project1-boptest",
+      "revision": "a29024f8c453517ccbd1186006a3fa6af8de1ae2",
+      "license_note": "Repository license file governs upstream assets; raw files are not redistributed here.",
+      "domains": ["building"],
+      "assets": [
+        {"asset_id": "boptest-bestest-air-config", "path": "testcases/bestest_air/models/config.json"},
+        {"asset_id": "boptest-bestest-air-days", "path": "testcases/bestest_air/models/days.json"},
+        {"asset_id": "boptest-bestest-air-kpis", "path": "testcases/bestest_air/models/kpis.json"},
+        {"asset_id": "boptest-heat-pump-config", "path": "testcases/bestest_hydronic_heat_pump/models/config.json"},
+        {"asset_id": "boptest-heat-pump-days", "path": "testcases/bestest_hydronic_heat_pump/models/days.json"},
+        {"asset_id": "boptest-heat-pump-kpis", "path": "testcases/bestest_hydronic_heat_pump/models/kpis.json"},
+        {"asset_id": "boptest-office-config", "path": "testcases/multizone_office_simple_air/models/config.json"},
+        {"asset_id": "boptest-office-days", "path": "testcases/multizone_office_simple_air/models/days.json"},
+        {"asset_id": "boptest-office-kpis", "path": "testcases/multizone_office_simple_air/models/kpis.json"},
+        {"asset_id": "boptest-commercial-config", "path": "testcases/singlezone_commercial_hydronic/models/config.json"},
+        {"asset_id": "boptest-commercial-days", "path": "testcases/singlezone_commercial_hydronic/models/days.json"},
+        {"asset_id": "boptest-commercial-kpis", "path": "testcases/singlezone_commercial_hydronic/models/kpis.json"}
+      ]
+    },
+    {
+      "source_id": "citylearn",
+      "title": "CityLearn datasets",
+      "publisher": "CityLearn project",
+      "landing_page": "https://github.com/citylearn-project/CityLearn",
+      "revision": "834575c1a0194c8ae9d648ae858376a94dfceb78",
+      "license_note": "MIT; see the upstream repository license.",
+      "domains": ["building", "grid", "cross_domain"],
+      "assets": [
+        {"asset_id": "citylearn-schema-definition", "path": "assets/tables/citylearn_schema_definition.csv"},
+        {"asset_id": "citylearn-ev-schema", "path": "data/datasets/citylearn_challenge_2022_phase_all_plus_evs/schema.json"},
+        {"asset_id": "citylearn-three-phase-schema", "path": "data/datasets/citylearn_three_phase_electrical_service_demo/schema.json"}
+      ]
+    },
+    {
+      "source_id": "ochre",
+      "title": "OCHRE controllable residential building models",
+      "publisher": "National Laboratory of the Rockies",
+      "landing_page": "https://github.com/NatLabRockies/OCHRE",
+      "revision": "0bf050355048a92301ece3122f8e5043889ad81c",
+      "license_note": "BSD-3-Clause; see the upstream repository license.",
+      "domains": ["building", "cross_domain"],
+      "assets": [
+        {"asset_id": "ochre-variable-units", "path": "ochre/defaults/Variable names and units.csv"},
+        {"asset_id": "ochre-battery-parameters", "path": "ochre/defaults/Battery/default_parameters.csv"},
+        {"asset_id": "ochre-ev-profiles", "path": "ochre/defaults/EV/EV Profiles.csv"},
+        {"asset_id": "ochre-water-heater-parameters", "path": "ochre/defaults/Water Heating/default_paramters.csv"},
+        {"asset_id": "ochre-building-template", "path": "ochre/defaults/OSW Templates/Minimal_building.csv"}
+      ]
+    },
+    {
+      "source_id": "brick",
+      "title": "Brick ontology and examples",
+      "publisher": "Brick Schema project",
+      "landing_page": "https://github.com/BrickSchema/Brick",
+      "revision": "ed436f08989e44dfbb64ef1aca3b2d028b84c4bb",
+      "license_note": "BSD-3-Clause; see the upstream repository license.",
+      "domains": ["building", "cross_domain"],
+      "assets": [
+        {"asset_id": "brick-definitions", "path": "bricksrc/definitions.csv"},
+        {"asset_id": "brick-building-meter", "path": "examples/building_meter/building_meter.ttl"},
+        {"asset_id": "brick-solar-array", "path": "examples/solar_array/solar_array.ttl"},
+        {"asset_id": "brick-evse", "path": "examples/evse/evse.ttl"},
+        {"asset_id": "brick-submeter", "path": "examples/submeter_hierarchies/main-and-submeter.ttl"}
+      ]
+    },
+    {
+      "source_id": "saref",
+      "title": "SAREF4BLDG and SAREF4GRID ontologies",
+      "publisher": "ETSI",
+      "landing_page": "https://saref.etsi.org/",
+      "revision": "saref4bldg-2.1.1+saref4grid-1.1.1",
+      "license_note": "See the machine-readable ontology and ETSI SAREF portal terms.",
+      "domains": ["building", "grid", "cross_domain"],
+      "assets": [
+        {"asset_id": "saref4bldg-ontology", "url": "https://saref.etsi.org/saref4bldg/v2.1.1/saref4bldg.ttl"},
+        {"asset_id": "saref4grid-ontology", "url": "https://saref.etsi.org/saref4grid/v1.1.1/saref4grid.ttl"}
+      ]
+    },
+    {
+      "source_id": "openleadr",
+      "title": "OpenLEADR Python implementation of OpenADR 2.0b",
+      "publisher": "OpenLEADR project",
+      "landing_page": "https://github.com/OpenLEADR/openleadr-python",
+      "revision": "3276fd5c46c5626044c77493c3406a7fd938c84c",
+      "license_note": "Apache-2.0; see the upstream repository license.",
+      "domains": ["cross_domain"],
+      "assets": [
+        {"asset_id": "openleadr-enums", "path": "openleadr/enums.py"},
+        {"asset_id": "openleadr-objects", "path": "openleadr/objects.py"},
+        {"asset_id": "openleadr-event", "path": "openleadr/templates/parts/eiEvent.xml"},
+        {"asset_id": "openleadr-active-period", "path": "openleadr/templates/parts/eiActivePeriod.xml"},
+        {"asset_id": "openleadr-event-signal", "path": "openleadr/templates/parts/eiEventSignal.xml"},
+        {"asset_id": "openleadr-event-target", "path": "openleadr/templates/parts/eiEventTarget.xml"},
+        {"asset_id": "openleadr-distribute-event", "path": "openleadr/templates/oadrDistributeEvent.xml"}
+      ]
+    },
+    {
+      "source_id": "simbench",
+      "title": "SimBench open grid data",
+      "publisher": "SimBench project",
+      "landing_page": "https://github.com/e2nIEE/simbench",
+      "revision": "876e7a7be470258cefa524a36eeb08293008b5dc",
+      "license_note": "Code and network data use different upstream terms; see the SimBench license documentation. Raw files are not redistributed here.",
+      "domains": ["grid"],
+      "assets": [
+        {"asset_id": "simbench-node", "path": "simbench/test/converter/test_network/Node.csv"},
+        {"asset_id": "simbench-line", "path": "simbench/test/converter/test_network/Line.csv"},
+        {"asset_id": "simbench-load", "path": "simbench/test/converter/test_network/Load.csv"},
+        {"asset_id": "simbench-load-profile", "path": "simbench/test/converter/test_network/LoadProfile.csv"},
+        {"asset_id": "simbench-transformer", "path": "simbench/test/converter/test_network/Transformer.csv"},
+        {"asset_id": "simbench-external-net", "path": "simbench/test/converter/test_network/ExternalNet.csv"},
+        {"asset_id": "simbench-study-cases", "path": "simbench/networks/1-complete_data-mixed-all-0-sw/StudyCases.csv"}
+      ]
+    },
+    {
+      "source_id": "smart-ds",
+      "title": "SMART-DS synthetic distribution systems",
+      "publisher": "Open Energy Data Initiative",
+      "landing_page": "https://data.openei.org/submissions/2981",
+      "revision": "catalog-reviewed-2026-10-26",
+      "license_note": "Use the terms published with the selected OEDI subset.",
+      "domains": ["grid", "cross_domain"],
+      "ingestion_status": "catalog_only_not_bulk_downloaded",
+      "scope_note": "The multi-terabyte collection is intentionally excluded from bulk local acquisition. A feeder/geography subset must be selected and separately locked before ingestion.",
+      "assets": []
+    }
+  ]
+}

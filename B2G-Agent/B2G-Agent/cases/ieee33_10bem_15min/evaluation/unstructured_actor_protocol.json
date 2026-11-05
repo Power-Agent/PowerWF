@@ -1,0 +1,41 @@
+{
+  "protocol_id": "unstructured_actor-luna-full200-12-v2",
+  "method": "unstructured_actor",
+  "episodes": 200,
+  "repeats": 3,
+  "split": "all",
+  "model": "gpt-6-luna",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "seed": 2026,
+  "reasoning_effort": "none",
+  "max_output_tokens_per_call": 9000,
+  "max_total_tokens_per_task": null,
+  "maximum_agent_revisions": 4,
+  "maximum_schema_repairs": 2,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "embedding_dimension": 384,
+  "online_memory_updates": false,
+  "quality_metrics": [
+    "Q_qua",
+    "Q_tsr",
+    "Q_F",
+    "Q_A",
+    "Q_V",
+    "Q_G"
+  ],
+  "agent_metrics": [
+    "F_act_1",
+    "F_act_2",
+    "F_act_3"
+  ],
+  "cost_metrics": [
+    "total_token_consumption",
+    "llm_inference_latency",
+    "retrieval_time"
+  ],
+  "episode_selection": "ascending_episode_id_all_200",
+  "agent_metrics_protocol_id": "selected-18-feedback-impact-20261103",
+  "scoring_protocol_id": "interaction-quality-f085-v2"
+}

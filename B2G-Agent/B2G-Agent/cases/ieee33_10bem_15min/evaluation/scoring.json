@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.1",
+  "scoring_protocol_id": "interaction-quality-f085-v2",
+  "semantic_field_weights": {
+    "sender_role": 1.0,
+    "receiver_role": 1.0,
+    "task_families": 2.0,
+    "operating_day": 1.0,
+    "windows": 2.0,
+    "target_bems": 2.0,
+    "target_buses": 2.0,
+    "target_power": 2.0,
+    "objectives": 2.0,
+    "constraints": 2.0,
+    "requested_outputs": 1.0,
+    "offer_price": 1.0
+  },
+  "reverse_field_weights": {
+    "decision": 2.0,
+    "committed_power_kw": 2.0,
+    "completion_percentage": 2.0,
+    "clarification": 2.0,
+    "numeric_output": 1.0
+  },
+  "actionability_field_weights": {
+    "target_objects": 1.0,
+    "action_direction": 1.0,
+    "quantity": 1.0,
+    "time_windows": 1.0,
+    "operating_constraints": 1.0,
+    "decision_status": 1.0,
+    "modification_terms": 1.0,
+    "final_delivery": 1.0,
+    "residual_gap": 1.0
+  },
+  "numeric_absolute_tolerance": 1e-06,
+  "numeric_relative_tolerance": 1e-06,
+  "goal_gap_epsilon": 1e-06,
+  "semantic_success_threshold": 0.85,
+  "goal_success_threshold": 0.9,
+  "objective_weight_rule": "normalized_inverse_priority"
+}

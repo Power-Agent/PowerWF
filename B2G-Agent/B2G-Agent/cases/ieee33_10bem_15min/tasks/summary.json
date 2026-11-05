@@ -1,0 +1,65 @@
+{
+  "schema_version": "3.0",
+  "case_id": "ieee33_10bem_15min",
+  "generator_version": "episode-generator-v7",
+  "seed": 2026,
+  "episode_count": 200,
+  "frozen_sender_messages_per_episode": 1,
+  "runtime_communication_acts": 2,
+  "runtime_information_states": 4,
+  "single_family_count": 150,
+  "composite_count": 50,
+  "primary_family_counts": {
+    "baseline_flexibility": 20,
+    "composite": 50,
+    "congestion_management": 24,
+    "market_trading": 20,
+    "peak_shaving": 24,
+    "renewable_absorption": 20,
+    "reserve_service": 20,
+    "voltage_management": 22
+  },
+  "split_counts": {
+    "development": 30,
+    "memory_seed": 20,
+    "test": 150
+  },
+  "communication_counts": {
+    "conflicting_constraints": 33,
+    "direct": 100,
+    "implicit_unit": 34,
+    "missing_field": 33
+  },
+  "spatial_scope_counts": {
+    "feeder_wide": 40,
+    "multi_bem": 80,
+    "single_bem": 80
+  },
+  "temporal_scope_counts": {
+    "full_day": 25,
+    "multi_window": 74,
+    "single_window": 101
+  },
+  "feasibility_counts": {
+    "feasible": 150,
+    "infeasible": 50
+  },
+  "physics_truth_status_counts": {
+    "not_required_for_current_turn": 100,
+    "pending": 0,
+    "verified": 100
+  },
+  "start_role_counts": {
+    "building_energy_manager": 54,
+    "distribution_grid_operator": 146
+  },
+  "unique_episode_ids": 200,
+  "unique_group_ids": 200,
+  "unique_sender_messages": 200,
+  "sender_messages_sha256": "7cb129f211a5b0f8a24cc33abcad0e190deb7ec6c309d346164b1f855ce79cb8",
+  "groundtruth_contract_sha256": "ff26b5b8db832d7481a9b0a3ff3e82e6ed90a574614165331053c9c316b83c63",
+  "split_leakage": false,
+  "split_leakage_definition": "No exact physical/group identity appears in more than one split.",
+  "structural_template_overlap": true,
+  "note": "Each episode freezes only the sender's initial natural-language message; receiver-side interpretation, receiver feedback, and sender-side final interpretation are runtime records. Each exact physical group has one canonical wording in v7, so no paraphrase of the same scenario can cross splits. Structural task-family templates do span splits and must be reported as such. Feasibility is a preregistered design label until physics_truth_status becomes verified."
+}

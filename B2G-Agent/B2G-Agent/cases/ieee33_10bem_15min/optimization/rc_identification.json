@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "model_family": "scalar seasonal ARX approximation of the paper RC state equation",
+  "time_resolution_minutes": 15,
+  "training_split": "days/calendar_split.json#development_dates",
+  "validation_split": "days/calendar_split.json#reference_dates",
+  "regimes": {
+    "heating": {"maximum_outdoor_temperature_c": 15.0},
+    "shoulder": {"minimum_outdoor_temperature_c": 15.0, "maximum_outdoor_temperature_c": 18.0},
+    "cooling": {"minimum_outdoor_temperature_c": 18.0}
+  },
+  "features": [
+    "mean_zone_temperature_c",
+    "single_building_electricity_kw",
+    "outdoor_dry_bulb_c",
+    "global_horizontal_irradiance_kw_per_m2",
+    "sin_time_of_day",
+    "cos_time_of_day",
+    "weekend_indicator"
+  ],
+  "ridge_lambda": 0.001,
+  "minimum_training_samples_per_regime": 192,
+  "control_coefficient_minimum_absolute_value": 1e-06,
+  "validation_rmse_limit_c": 1.0,
+  "interpretation": "The control regressor is whole-building facility electricity, not HVAC thermal power. These observational EnergyPlus ARX models may screen candidate schedules, but EnergyPlus remains the comfort oracle and pandapower remains the grid oracle.",
+  "forbidden_claims": [
+    "Do not describe the observational electricity coefficient as a measured thermal response.",
+    "Do not use one-step fit quality as proof that a multi-step dispatch is physically feasible.",
+    "Do not publish an optimized schedule until the EnergyPlus-pandapower validation chain passes."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "2.0",
+  "retrieved_or_verified_on": "2026-10-24",
+  "sources": [
+    {
+      "source_id": "pandapower-case33bw",
+      "title": "pandapower case33bw network",
+      "url": "https://pandapower.readthedocs.io/en/v3.3.1/networks/power_system_test_cases.html",
+      "upstream_origin": "MATPOWER case33bw; Baran and Wu (1989)",
+      "doi": "10.1109/61.25627",
+      "pinned_software_version": "3.5.6",
+      "license_or_terms": "See pandapower and MATPOWER distributions",
+      "local_role": "feeder topology and original node P/Q loads"
+    },
+    {
+      "source_id": "doe-commercial-prototypes-2019",
+      "title": "DOE/PNNL ASHRAE 90.1-2019 Commercial Prototype Building Models",
+      "url": "https://www.energycodes.gov/prototype-building-models",
+      "source_energyplus_version": "22.1.0",
+      "runtime_energyplus_version": "23.1.0",
+      "local_role": "ten building IDFs",
+      "scope_note": "The official family contains 16 commercial building types and 19 climate locations; the case uses ten climate-zone 5A models."
+    },
+    {
+      "source_id": "doe-buffalo-tmy3",
+      "title": "USA_NY_Buffalo.Niagara.Intl_.AP_.725280_TMY3.epw",
+      "url": "https://www.energycodes.gov/sites/default/files/2023-10/USA_NY_Buffalo.Niagara.Intl_.AP_.725280_TMY3.epw",
+      "local_role": "shared climate-zone 5A weather for EnergyPlus and pvlib",
+      "time_basis": "typical meteorological year, local standard time"
+    },
+    {
+      "source_id": "oedi-eulp-2021-tmy3-ny",
+      "title": "End-Use Load Profiles for the U.S. Building Stock, 2021 TMY3 New York aggregates",
+      "landing_page": "https://data.openei.org/submissions/4520",
+      "bucket_readme": "https://oedi-data-lake.s3.amazonaws.com/nrel-pds-building-stock/end-use-load-profiles-for-us-building-stock/README.md",
+      "doi": "10.25984/1876417",
+      "method_report_doi": "10.2172/1854582",
+      "license_or_terms": "CC BY 4.0",
+      "releases": [
+        "2021/comstock_tmy3_release_1/timeseries_aggregates/by_state/state=NY",
+        "2021/resstock_tmy3_release_1/timeseries_aggregates/by_state/state=NY"
+      ],
+      "local_role": "15-minute nonparticipating background-load shapes",
+      "selection": "All fourteen New York ComStock building-class aggregates plus the ResStock Multi-Family with 5+ Units aggregate; exact object URLs and SHA-256 values are recorded by prepare_background_profiles.py.",
+      "time_basis": "source interval-ending TMY3 shape is remapped to 2025 interval-starting local-standard-time timestamps; it is not treated as measured 2018 demand"
+    },
+    {
+      "source_id": "iso-ne-2025-smd-hourly",
+      "title": "ISO New England 2025 SMD Hourly Data",
+      "discovery_page": "https://www.iso-ne.com/isoexpress/web/reports/load-and-demand/-/tree/zone-info",
+      "file_url": "https://www.iso-ne.com/static-assets/documents/100020/2025_smd_hourly.xlsx",
+      "location": "NEMA/Boston load zone",
+      "location_id": 4008,
+      "local_role": "exogenous final hourly real-time LMP expanded piecewise-constantly to 15-minute intervals",
+      "resolution_caveat": "This annual workbook is hourly. It is not described as five-minute data and no within-hour price variation is invented.",
+      "causal_caveat": "Historical 2025 prices are not claimed to be causally paired with TMY weather."
+    },
+    {
+      "source_id": "iso-ne-2025-five-minute-reserve",
+      "title": "ISO New England 2025 Five-Minute Reserve Zone Prices and Designations",
+      "discovery_page": "https://www.iso-ne.com/isoexpress/web/reports/pricing/-/tree/historical-annual-five-minute-reserve-zone-prices-and-designations",
+      "file_url": "https://www.iso-ne.com/static-assets/documents/100031/5min_reserve_price_and_designation_2025.xlsx",
+      "reserve_zone": "NEMA/Boston",
+      "reserve_zone_id": 7002,
+      "local_role": "TMSR, TMNSR, and TMOR reserve-zone price and designation series aggregated arithmetically from 5 to 15 minutes",
+      "field_caveat": "The published desg_mw fields are reserve designations, not reserve requirements."
+    },
+    {
+      "source_id": "pvlib-python",
+      "title": "pvlib python",
+      "documentation_url": "https://pvlib-python.readthedocs.io/",
+      "doi": "10.21105/joss.05994",
+      "pinned_version": "0.16.1",
+      "local_role": "deterministic EPW-to-PV conversion using a frozen ModelChain configuration"
+    }
+  ],
+  "provenance_rule": "Every downloaded or derived file must appear in a local asset manifest with SHA-256, source URL, retrieval time, transformation command, time semantics, and software version. Generated or synthetic fields must be labelled and must not be attributed to an external source."
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "optimizer": "scipy.optimize.linprog-highs",
+  "time_resolution_minutes": 15,
+  "finite_difference_reduction_kw": 10.0,
+  "linear_grid_constraints": {
+    "minimum_voltage_pu": 0.95,
+    "maximum_voltage_pu": 1.05,
+    "maximum_line_loading_pct": 100.0,
+    "maximum_transformer_loading_pct": 100.0
+  },
+  "building_flexibility": {
+    "maximum_reduction_fraction_of_baseline": 0.3,
+    "maximum_increase_fraction_of_baseline": 0.25,
+    "minimum_portfolio_power_kw": 0.0
+  },
+  "comfort": {
+    "occupied_start": "08:00",
+    "occupied_end": "18:00",
+    "occupied_minimum_c": 20.0,
+    "occupied_maximum_c": 26.0,
+    "unoccupied_minimum_c": 18.0,
+    "unoccupied_maximum_c": 28.0,
+    "linear_screening_tolerance_c": 0.25,
+    "validation_rule": "Report baseline absolute nominal-band violations separately. Effective time-varying hard bounds are min(nominal lower, baseline lower) minus the screening tolerance and max(nominal upper, baseline upper) plus the screening tolerance. A response violation occurs only outside those effective bounds."
+  },
+  "energyplus_control_translation": {
+    "maximum_setpoint_shift_c": 2.0,
+    "assumed_controllable_electric_fraction": 0.35,
+    "minimum_electric_equipment_schedule_multiplier": 0.2,
+    "maximum_electric_equipment_schedule_multiplier": 1.25,
+    "heating_reduction_action": "for positive load-reduction offsets only, subtract offset from each referenced heating setpoint schedule; load-increase requests leave thermostat offsets at zero to preserve deadband",
+    "cooling_reduction_action": "for positive load-reduction offsets only, add offset to each referenced cooling setpoint schedule; load-increase requests leave thermostat offsets at zero to preserve deadband",
+    "electric_equipment_action": "multiply each indoor ElectricEquipment schedule by a clipped interval multiplier; the final schedule value is clipped to 0-1 inside EnergyPlus EMS",
+    "ems_schedule_sensor_alignment": "Lead both control schedules by one 15-minute source interval, including preloading the preceding day's final interval, because BeginTimestepBeforePredictor schedule sensors produce a one-interval lag in the exported timestep results.",
+    "warmup_days_before_event": 1,
+    "translation_rule": "offset_c = clip(building_reduction_kw / baseline_portfolio_kw, 0, 1) * maximum_setpoint_shift_c so dual-setpoint deadbands are never contracted; equipment_multiplier = clip(1 - building_reduction_kw / (baseline_portfolio_kw * assumed_controllable_electric_fraction), minimum_multiplier, maximum_multiplier)"
+  },
+  "objective_weights": {
+    "unserved_request_kw": 1000000.0,
+    "building_adjustment_kw": 1.0,
+    "storage_throughput_kw": 1.0,
+    "terminal_soc_kwh": 100.0
+  },
+  "service_sign_convention": "positive is net-load reduction; negative is net-load increase or renewable absorption",
+  "multiobjective_window_binding": "When multiple ordered task families and the same number of windows are present, bind them positionally. A single shared window follows the first, explicitly highest-priority task family. Other mismatched family/window counts are rejected.",
+  "reactive_power_approximation": "Finite-difference grid sensitivities assume flexible building power retains the original case33bw node Q/P ratio. Storage and PV are unity power factor in high-fidelity validation.",
+  "validation_policy": "Every candidate schedule must be checked by nonlinear pandapower and EnergyPlus before release; linear RC-OPF feasibility is not final physical feasibility.",
+  "replanning_policy": "After the first EnergyPlus replay, fix each zero-Severe, zero-response-comfort-violation BEM to its measured 96-interval response, set unsafe BEM building capacity to zero, and repair storage/grid dispatch. Do not discard safe building flexibility merely because another BEM failed comfort validation.",
+  "validation_tolerances": {
+    "service_kw": 0.5
+  },
+  "business_metrics": {
+    "baseline_rule": "Run a separate no-response nonlinear pandapower replay with the same background load, BEM baseline, PV, reactive-power convention, and operating day.",
+    "rebound_rule": "Maximum positive response-minus-baseline feeder demand after the final active interval and before the end of the same operating day; null when the task occupies the full day.",
+    "flexibility_envelope_rule": "For baseline-flexibility tasks, validate reduction and absorption directions separately. The reported bounds are target-BEM grid-interface net demand: counterfactual building demand minus validated downward service and plus validated upward service. A negative lower bound denotes permitted net export from BEM-connected storage, not negative building consumption.",
+    "renewable_absorption_rule": "The signed request defines exogenous renewable energy that would otherwise be curtailed. Report remaining curtailment as requested absorption energy minus validated net-load increase, floored at zero. This is request-relative avoided curtailment, not curtailment inferred from unconstrained PV power flow.",
+    "market_settlement_rule": "Simplified pay-as-bid settlement: validated delivered energy in market-bound intervals multiplied by the frozen offer price; the ISO-NE real-time LMP is reported as context and does not gate physical acceptance."
+  }
+}
