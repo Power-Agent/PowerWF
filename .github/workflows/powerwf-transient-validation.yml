@@ -1,0 +1,39 @@
+name: PowerWF transient validation tests
+
+on:
+  push:
+    branches:
+      - feat/cross-engine-transient-validation
+  pull_request:
+    paths:
+      - "Grid Impact Evaluation/src/agent/transient_validation.py"
+      - "Grid Impact Evaluation/src/agent/tools_transient_validation.py"
+      - "Grid Impact Evaluation/src/agent/transient_graph.py"
+      - "Grid Impact Evaluation/src/agent/__init__.py"
+      - "Grid Impact Evaluation/tests/test_transient_validation.py"
+      - "Grid Impact Evaluation/tests/test_transient_validation_tool.py"
+      - "Grid Impact Evaluation/tests/test_transient_graph.py"
+      - ".github/workflows/powerwf-transient-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: Grid Impact Evaluation
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Install test dependencies
+        run: python -m pip install --upgrade pytest "langchain-core>=0.3.19" "langgraph>=0.2.0" "langchain-openai>=0.2.0" "pydantic>=2.0.0" ruff
+      - name: Lint transient validation sources
+        run: ruff check src/agent/transient_validation.py src/agent/tools_transient_validation.py src/agent/transient_graph.py tests/test_transient_validation.py tests/test_transient_validation_tool.py tests/test_transient_graph.py
+      - name: Run transient validation tests
+        env:
+          PYTHONPATH: src
+        run: python -m pytest tests/test_transient_validation.py tests/test_transient_validation_tool.py tests/test_transient_graph.py -q
