@@ -5,8 +5,9 @@ This module contains direct LangGraph tool implementations for pandapower
 power system analysis, replacing the previous MCP-based approach.
 """
 
-import platform
+import copy
 import logging
+import platform
 from typing import Dict, List, Optional, Any
 import numpy as np
 import pandas as pd
@@ -210,55 +211,169 @@ def run_contingency_analysis(contingency_type: str = "N-1",
         Dict containing contingency analysis results
     """
     logger.info("Running contingency analysis")
+    if contingency_type != "N-1":
+        return {
+            "status": "error",
+            "message": f"Unsupported contingency type: {contingency_type}. Only N-1 is implemented."
+        }
+    # Validate caller-controlled selectors before accessing mutable network state.
+    if elements is not None:
+        if not isinstance(elements, (list, tuple)) or any(
+            not isinstance(item, str) for item in elements
+        ):
+            return {
+                "status": "error",
+                "message": "elements must be a list containing only string element types"
+            }
+        unsupported = sorted(set(elements) - {'line', 'trafo'})
+        if unsupported:
+            return {
+                "status": "error",
+                "message": "Unsupported contingency element types: " + ", ".join(unsupported)
+            }
     try:
         net = _get_network()
         
-        # Store original state
-        orig_net = net.deepcopy()
-        results = []
-        
-        # Define elements to analyze
+        # Resolve and validate the scope before running any power-flow calculation.
         if elements is None:
             elements = ['line', 'trafo']
-            
-        # Perform contingency analysis
+        elements = list(dict.fromkeys(elements))
+        if not elements:
+            return {
+                "status": "success",
+                "message": "No contingency elements selected",
+                "summary": {
+                    "tested": 0,
+                    "converged": 0,
+                    "failed": 0,
+                    "converged_with_violations": 0,
+                    "skipped": 0,
+                },
+                "results": [],
+                "skipped_contingencies": [],
+            }
+
+        # A valid N-1 sweep requires a converged base case. Solve a detached
+        # copy so the caller's active network is never mutated by this tool.
+        base_net = copy.deepcopy(net)
+        pp.runpp(base_net)
+        if not base_net.converged:
+            return {
+                "status": "error",
+                "message": "Base-case power flow did not converge; N-1 analysis was not run.",
+                "base_case": {"converged": False},
+                "summary": {
+                    "tested": 0,
+                    "converged": 0,
+                    "failed": 0,
+                    "converged_with_violations": 0,
+                    "skipped": 0,
+                },
+                "results": [],
+                "skipped_contingencies": [],
+            }
+        orig_net = base_net
+        results = []
+        skipped_contingencies = []
+
+        # Perform contingency analysis in stable caller-specified order.
         for element_type in elements:
             for idx in net[element_type].index:
+                if not bool(orig_net[element_type].at[idx, "in_service"]):
+                    skipped_contingencies.append(f"{element_type}_{idx}")
+                    continue
+
                 # Create contingency by taking element out of service
-                contingency_net = orig_net.deepcopy()
+                contingency_net = copy.deepcopy(orig_net)
                 contingency_net[element_type].at[idx, 'in_service'] = False
                 
                 try:
                     pp.runpp(contingency_net)
-                    
-                    # Check for violations
-                    violations = {
-                        'voltage_violations': contingency_net.res_bus[
-                            (contingency_net.res_bus.vm_pu < 0.95) | 
+
+                    if not contingency_net.converged:
+                        results.append({
+                            'contingency': f"{element_type}_{idx}",
+                            'converged': False,
+                            'status': 'failed',
+                            'violations': {
+                                'voltage_violations': [],
+                                'loading_violations': [],
+                                'transformer_loading_violations': []
+                            },
+                            'error': 'Power flow solver returned without convergence'
+                        })
+                    else:
+                        voltage_violations = contingency_net.res_bus[
+                            (contingency_net.res_bus.vm_pu < 0.95) |
                             (contingency_net.res_bus.vm_pu > 1.05)
-                        ].index.tolist(),
-                        'loading_violations': contingency_net.res_line[
+                        ].index.tolist()
+                        loading_violations = contingency_net.res_line[
                             contingency_net.res_line.loading_percent > 100
                         ].index.tolist()
-                    }
-                    
-                    results.append({
-                        'contingency': f"{element_type}_{idx}",
-                        'converged': contingency_net.converged,
-                        'violations': violations
-                    })
-                    
+                        transformer_loading_violations = (
+                            contingency_net.res_trafo[
+                                contingency_net.res_trafo.loading_percent > 100
+                            ].index.tolist()
+                            if not contingency_net.res_trafo.empty else []
+                        )
+                        results.append({
+                            'contingency': f"{element_type}_{idx}",
+                            'converged': True,
+                            'status': 'converged',
+                            'violations': {
+                                'voltage_violations': voltage_violations,
+                                'loading_violations': loading_violations,
+                                'transformer_loading_violations': transformer_loading_violations
+                            }
+                        })
+
                 except Exception as e:
                     results.append({
                         'contingency': f"{element_type}_{idx}",
                         'converged': False,
+                        'status': 'failed',
+                        'violations': {
+                            'voltage_violations': [],
+                            'loading_violations': [],
+                            'transformer_loading_violations': []
+                        },
                         'error': str(e)
                     })
         
+        tested = len(results)
+        failed = sum(1 for result in results if result.get("status") == "failed")
+        converged = tested - failed
+        violation_count = sum(
+            bool(
+                result["violations"]["voltage_violations"]
+                or result["violations"]["loading_violations"]
+                or result["violations"]["transformer_loading_violations"]
+            )
+            for result in results
+            if result.get("status") == "converged"
+        )
+
         return {
             "status": "success",
-            "message": "Contingency analysis completed",
-            "results": results
+            "message": (
+                f"Contingency analysis completed with {failed} failed contingency runs"
+                if failed
+                else (
+                    f"Contingency analysis completed; {len(skipped_contingencies)} "
+                    "out-of-service elements skipped"
+                    if skipped_contingencies
+                    else "Contingency analysis completed"
+                )
+            ),
+            "summary": {
+                "tested": tested,
+                "converged": converged,
+                "failed": failed,
+                "converged_with_violations": violation_count,
+                "skipped": len(skipped_contingencies),
+            },
+            "results": results,
+            "skipped_contingencies": skipped_contingencies
         }
     except RuntimeError as re:
         return {
